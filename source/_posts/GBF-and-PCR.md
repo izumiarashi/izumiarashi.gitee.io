@@ -8,11 +8,12 @@ tags:
 - 公主连接 
 img: https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg
 cover: false
+summary: 比较分析Cygames旗下两款游戏的设计思路
 ---
 
-《公主连接：re》（以下简称“PCR”）和《碧蓝幻想》（以下简称“GBF”）是Cygames研发的两款二次元向游戏，两者的类型玩法相差甚多，拥有不同的玩家画像，但在一些系统的设计上有较多相同之处。
-
 <!--more-->
+
+《公主连接：re》（以下简称“PCR”）和《碧蓝幻想》（以下简称“GBF”）是Cygames研发的两款二次元向游戏，两者的类型玩法相差甚多，拥有不同的玩家画像，但在一些系统的设计上有较多相同之处。
 
 一、基本结构
 

@@ -1,14 +1,15 @@
 ---
-title: '《塞尔达：荒野之息》通关有感——记一次难忘的旅途（未完）'
+title: '《塞尔达：荒野之息》通关有感（未完）'
 date: 2020-08-20 10:50:23
 category: 
 - [胡说乱写]
 tags: 
 - 随笔感悟
 - 塞尔达传说
-img: https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg
+img: https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/img-159758137576917fbbd31c8760f938deca034e91c98f5.jpg
 cover: true
 coverImg: https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png
+summary: 记一次难忘的旅途
 ---
 
 

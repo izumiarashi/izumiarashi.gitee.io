@@ -1,14 +1,15 @@
 ---
 title: 《碧蓝幻想》武器系统拆解 （未完）
-cover: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/'
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/2040375000.png'
 date: 2020-10-09 22:20:54
-category:
-tags:
-coverWidth:
-coverHeight:
+category: 游戏策划
+tags: 
+- 游戏拆解
+- 碧蓝幻想
+cover: true
+coverImg: https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/timg.jpg
+summary: 对碧蓝幻想的核心资源产出和武器、武器盘进行拆解。
 ---
-
-对碧蓝幻想的核心资源产出和武器、武器盘进行拆解。
 
 <!--more-->
 
