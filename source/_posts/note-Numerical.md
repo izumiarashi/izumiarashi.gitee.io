@@ -1,10 +1,12 @@
 ---
 title: 数值笔记
-date: 2020-08-21 10:25:33
+date: 2020-07-21 10:25:33
 categories: 笔记
-tags: 游戏数值
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/-66193fc3dffc4da4.png'
+tags: 
+- 数值策划
 cover: false
-summary: 2020年7月
+summary: 数值基础
 ---
 
 

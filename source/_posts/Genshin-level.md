@@ -3,12 +3,12 @@ title: 《原神》PVE关卡设计
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/0bb47bfbfbedab645b1ddface036afc378311eae.png'
 cover: true
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/7873d29833c490a00214010afcc7fed5.png'
-date: 2020-10-12 21:04:01
+date: 2020-09-18 21:04:01
 category: 游戏策划
 tags: 
 - 原神
 - 关卡设计
-summary: 2020年8月
+summary: 分为两个引导关和一个验证关
 ---
 
 <!--more-->

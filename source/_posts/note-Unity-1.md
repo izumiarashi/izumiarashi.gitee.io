@@ -1,10 +1,11 @@
 ---
-title: Unity笔记
-cover: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/'
+title: Unity笔记（1）
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/unity.jpg'
 date: 2020-08-01 23:02:09
+cover: false
 category: 笔记
 tags: Unity
-summary: 2020年8月
+summary: 基础
 ---
 
 <!--more-->
@@ -128,3 +129,15 @@ shader为material提供具体数值
 （二）实时GI
 
 （三）烘焙GI
+
+
+
+获得水平和垂直的值
+
+Input.GetAxis("Horizontal")
+
+Input.GetAxis("Horizontal")
+
+表示运动的方向和速度
+
+CharacterController.SimpleMove(Vector3)
