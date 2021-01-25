@@ -1,6 +1,6 @@
 ---
 title: 《碧蓝幻想》与《公主连接》公会系统对比
-cover: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/'
+coverimg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/'
 date: 2020-09-15 22:05:31
 category: 游戏拆解
 tags: 
