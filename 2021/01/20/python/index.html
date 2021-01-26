@@ -408,24 +408,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>计算机做什么？</p>
-<p>计算、记录结果。</p>
+                <h1><span id="一-基础介绍">一、基础介绍</span></h1><h2><span id="一计算机做什么">（一）计算机做什么？</span></h2><p>计算、记录结果。</p>
 <p>厂商设置的内置计算、用我们的想法进行计算</p>
-<p>无解问题：图灵停机</p>
+<p><em>无解问题：图灵停机</em></p>
 <p>计算思维？</p>
 <p>计算是什么？</p>
 <p>知识是什么？</p>
-<p>陈述性知识</p>
+<p>陈述性知识：定义</p>
 <p>程序性知识：方法recipe</p>
 <p>固定程序计算机</p>
 <p>存储程序计算机</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210111213518900.png" alt="image-20210111213518900"></p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210111213518900.png" alt="基础集齐结构"></p>
 <p>控制单元：通过程序计数器，按照指令序列顺序执行，让数据进入ALU</p>
 <p>ALU 算术逻辑单元：简单计算并存回内存，每过一段时间执行测试指令</p>
 <p>测试指令：改变程序计数器，是系统跳到代码的某一个地方，改变程序执行的代码位置</p>
 <p>完成程序并输出</p>
-<p>原语</p>
-<p>任何计算只需要6种原语</p>
+<p>原语：任何计算只需要6种原语</p>
 <p>图灵完备</p>
 <p>原语集</p>
 <p>原语结构</p>
@@ -439,78 +437,101 @@
 <p>静态语义错误：编译型语言在执行前就会指出，解释型语言程序会持续地执行然后指出。</p>
 <p>没有语法和静态语义错误，但表达的意思不是我们想要的</p>
 <p>程序崩溃、循环运行、结果不符合预期——通过防御性编程来避免</p>
-<p>配置python环境<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/506debe61423">https://www.jianshu.com/p/506debe61423</a></p>
-<p>1、记得右下角设置语言模式</p>
-<p>2、yapf设置需要添加args</p>
+<p><em>配置python环境<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/506debe61423">https://www.jianshu.com/p/506debe61423</a></em></p>
+<p><em>1、记得右下角设置语言模式</em></p>
+<p><em>2、yapf设置需要添加args</em></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;python.formatting.yapfArgs&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;--style=&#123;based_on_style: pep8, indent_width: 4&#125;&quot;</span></span><br><span class="line">    ], </span><br></pre></td></tr></table></figure>
 
-<p>“选择”</p>
-<p>低级编程语言</p>
-<p>移动数据；执行简单的ALU操作：加、减、比较；根据比较结果跳转。</p>
+
+
+<h1><span id="二-编程语言">二、编程语言</span></h1><h2><span id="一种类">（一）种类</span></h2><h3><span id="1-低级编程语言">1、低级编程语言</span></h3><p>移动数据；执行简单的ALU操作：加、减、比较；根据比较结果跳转。</p>
 <p>检查器进程处理：确认语法和静态语义→解释器进程执行</p>
 <p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210114200811915.png" alt="image-20210114200811915"></p>
-<p>高级编程语言</p>
-<p>编译型语言：检查后，通过编译器转化为低级代码（基本计算机指令）。代码执行更快，如果有bug会难以找到</p>
+<h3><span id="2-高级编程语言">2、高级编程语言</span></h3><p>分为两种</p>
+<p>（1）编译型语言：检查后，通过编译器转化为低级代码（基本计算机指令）。代码执行更快，如果有bug会难以找到</p>
 <p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210114200752507.png" alt="image-20210114200752507"></p>
-<p>解释型语言：将源代码转换成一种内部中间数据结构，然后按序逐句转换成低级编程语言。代码执行稍慢，找bug更简单。</p>
+<p>（2）解释型语言：将源代码转换成一种内部中间数据结构，然后按序逐句转换成低级编程语言。代码执行稍慢，找bug更简单。</p>
 <p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210114201653288.png" alt="image-20210114201653288"></p>
-<p>数据对象Object</p>
-<p>type()查看对象类型</p>
-<h4><span id="标量对象scalar">标量对象scalar</span></h4><p>整数int、浮点数float、布尔bool</p>
-<p>为什么要区分整数运算和浮点数运算呢？因为整数运算的结果永远是精确的，而浮点数运算的结果不一定精确，因为计算机内存再大，也无法精确表示出无限循环小数，比如 0.1 换成二进制表示就是无限循环小</p>
-<p>“no newline at end of file”报错——换行保存</p>
-<p>表达式expression</p>
-<p>基本语法<object><operator><object></object></operator></object></p>
-<p>赋值 =</p>
-<p>等于 ==</p>
-<p>是否等于 !=</p>
-<p>与and或or非not</p>
-<p>类型转换</p>
+<h2><span id="二数据对象object">（二）数据对象Object</span></h2><p>可以使用type()查看对象类型</p>
+<h3><span id="1-标量对象scalar">1、标量对象scalar</span></h3><p><strong>（1）整数int、浮点数float、布尔bool</strong></p>
+<p>​    为什么要区分整数运算和浮点数运算？</p>
+<p><em>因为整数运算的结果永远是精确的，而浮点数运算的结果不一定精确，因为计算机内存再大，也无法精确表示出无限循环小数，比如 0.1 换成二进制表示就是无限循环小</em>。</p>
+<p>​    True和False首字母大写才是布尔类型，因为python是大小写敏感型语言。</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210126222954511.png" alt="来源：http://www.weixueyuan.net/a/380.html"></p>
+<p>拓展一：浅谈Python里面None True False之间的区别<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_30709043/article/details/112883256">https://blog.csdn.net/weixin_30709043/article/details/112883256</a> ：</p>
+<p>“0值的整型/浮点型，空字符串(‘ ‘)，空列表([]),空元组({})，空集合(set())都是等价于False,但是不等于None。”、“0.3 == 3 * 0.1 为False”</p>
+<p>拓展二：Python中的True和False与bool()函数<a target="_blank" rel="noopener" href="https://blog.csdn.net/liuweiyuxiang/article/details/89336980">https://blog.csdn.net/liuweiyuxiang/article/details/89336980</a></p>
+<p><em>“None 为 False、数字类型（整型、浮点型……）0为False、列表类型（list、tuple……）长度为0为False、str类型长度为0的为False、Map类型（字典）条目个数为0的为False，其余都为True”</em></p>
+<p><strong>（2）表达式expression</strong></p>
+<p>基本语法&lt;对象object&gt;&lt;运算符operator&gt;&lt;对象object&gt;</p>
+<p>运算符：</p>
+<p>​    ①赋值 = 、等于 == 、是否等于 !=</p>
+<p>​    ②布尔类型的特殊运算——逻辑运算：与and 或or 非not</p>
+<p>​        与and：如果两个操作数都是 True，那么结果是 True；否则就是 False。</p>
+<p>​        或or：如果有一个操作数的值是 True，那么运算结果就是 True；否则结果是 False。</p>
+<p>​        非：如果操作数是 True，那么结果是 False；如果操作数的值为 False，那么结果就是 True。</p>
+<p><strong>（3）类型转换</strong></p>
 <p>float(3)→3.0</p>
 <p>int（3.9）→3</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b = a+c</span><br></pre></td></tr></table></figure>
+<p><strong>例</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b = a+c  <span class="comment"># 注释的&#x27;#&#x27;前要空两格，后要空一格</span></span><br></pre></td></tr></table></figure>
 
 <p>此时赋值b后存储的是一个数值而非公式，之后改变a或c不会改变b的值</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = <span class="number">10</span></span><br><span class="line">c = b &gt;<span class="number">9</span></span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
 
 <p>结果是bool型，true.而不是int型，10.</p>
-<h4><span id="非标量对象">非标量对象</span></h4><p>字符串str：’abc’、”abc”、’123’、str(123)</p>
-<p>3 * ‘a’→返回’aaa’</p>
-<p>‘aaa’ + str(123)→返回’aaa123’ </p>
-<p>len()查看字母串长度</p>
-<p>单双引号没有区别，可以减少使用转义符\</p>
+<h3><span id="2-非标量对象">2、非标量对象</span></h3><p><strong>（1）字符串str</strong></p>
+<p>①’abc’、”abc”、’123’、str(123)</p>
+<p>​    3 * ‘a’→返回’aaa’</p>
+<p>​    ‘aaa’ + str(123)→返回’aaa123’ </p>
+<p>②通过len()查看字符串长度</p>
+<p>③单双引号没有区别，可以减少使用转义符\</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;I&#x27;m a otaku.&quot;</span>  <span class="comment"># 双引号</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;I\&#x27;m a otaku.&#x27;</span> <span class="comment"># 单引号</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">多行注释里的单双引号也可成套换用</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p>索引indexing</p>
+<p>④索引indexing</p>
 <p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210120203648688.png" alt="image-20210120203648688"></p>
 <p>切片slicing</p>
 <p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210120203620984.png" alt="image-20210120203620984"></p>
 <p>返回的值为开始值到<strong>结束值-1</strong></p>
-<p>补充：str[i:j:k]表示从i到j-1中每间隔k取一次值</p>
+<p>拓展：</p>
+<p>str[i:j:k]表示从i到j-1中每间隔k取一次值</p>
 <p>z = ‘abcdefg’</p>
 <p>z[:3] 返回’abc’</p>
 <p>z[1:] 返回’bcsefg’</p>
 <p>z[:] 返回’abcefg’</p>
 <p>z[1:5:2] 返回’bdf’</p>
 <p>z[::3] 返回’adg’</p>
-<p>获取输入值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = input(<span class="string">&#x27;hint message&#x27;</span>)  <span class="comment">#python 3.x将raw_input改为input，并将原先的input删除</span></span><br></pre></td></tr></table></figure>
+<h1><span id="三-简单脚本">三、简单脚本</span></h1><h2><span id="一直线式程序按顺序执行命令">（一）直线式程序：按顺序执行命令</span></h2><p>获取输入值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = input(<span class="string">&#x27;hint message&#x27;</span>)  <span class="comment"># python 3.x将raw_input改为input，并将原先的input删除</span></span><br></pre></td></tr></table></figure>
 
 <p>输出值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">3</span></span><br><span class="line">print(x*x)  <span class="comment">#返回运算结果9而非公式</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">3</span></span><br><span class="line">print(x*x)  <span class="comment"># 返回运算结果9而非公式</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>直接（直线型）程序：按顺序执行命令</p>
-<p>分支结构Branching structure：通过测试来做决定</p>
-<p>条件语句conditional</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time  <span class="comment">#模块要放在首行</span></span><br><span class="line">x = int(input(<span class="string">&#x27;输入一个数字：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>:  <span class="comment"># %表示余数。注释前要空两格。</span></span><br><span class="line">    print(<span class="string">&#x27;偶数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;奇数&#x27;</span>)</span><br><span class="line">time.sleep(<span class="number">3</span>)  <span class="comment">#延时</span></span><br><span class="line">print(<span class="string">&#x27;计算结束&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2><span id="二分支式程序通过测试来做决定顺序">（二）分支式程序：通过测试来做决定顺序</span></h2><h3><span id="1-分支结构branching-structure条件语句conditional">1、分支结构Branching structure：条件语句conditional</span></h3><p><strong>if()</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time  <span class="comment"># 模块要放在首行</span></span><br><span class="line">x = int(input(<span class="string">&#x27;输入一个数字：&#x27;</span>))  <span class="comment">#要将输入值转为数值，否则报错</span></span><br><span class="line"><span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>:  <span class="comment"># %表示余数。</span></span><br><span class="line">    print(<span class="string">&#x27;偶数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;奇数&#x27;</span>)</span><br><span class="line">time.sleep(<span class="number">3</span>)  <span class="comment">#延时</span></span><br><span class="line">print(<span class="string">&#x27;计算结束&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>↓输入值为str，要转为数值</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210120212817847.png" alt="image-20210120212817847"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> x &gt; <span class="number">2</span>:</span><br><span class="line">    <span class="keyword">if</span> x == <span class="number">3</span>:</span><br><span class="line">        print(<span class="string">&#x27;3&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&#x27;&gt;2 and no 3&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> x == <span class="number">2</span>:</span><br><span class="line">    print(<span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;&lt;2&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>循环lteration</p>
-<p>looping structure</p>
-<p>while():</p>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> x &gt; <span class="number">2</span>:</span><br><span class="line">    <span class="keyword">if</span> x == <span class="number">3</span>:</span><br><span class="line">        print(<span class="string">&#x27;3&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&#x27;&gt;2 and no 3&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> x == <span class="number">2</span>:</span><br><span class="line">    print(<span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;&lt;2&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-循环结构looping-structure循环语句lteration">2、循环结构looping structure：循环语句lteration</span></h3><p><strong>（1）while():</strong></p>
+<p>①要点</p>
+<p>​    需要在循环外部对循环变量初始化</p>
+<p>​    需要通过测试造成循环变量变化，从而能够停止程序</p>
+<p>②猜测检验方法Guess and check：对有限可能的问题有效</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 求立方根</span></span><br><span class="line">x = int(input(<span class="string">&#x27;输入一个数字：&#x27;</span>))</span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i**<span class="number">3</span> &lt; abs(x):</span><br><span class="line">    i = i + <span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> i**<span class="number">3</span> != x:</span><br><span class="line">    print(<span class="string">&#x27;这不是一个完全立方数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</span><br><span class="line">        i = -i</span><br><span class="line">    print(<span class="string">&#x27;立方根为&#x27;</span> + str(i))  <span class="comment"># 字符串必须接字符串，不能str+int</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>（2）for循环：python提供的特殊机制</strong></p>
+<p>①构成</p>
+<p>for &lt;标识符identifier&gt; in &lt;序列sequence&gt;:</p>
+<p>​    &lt;代码块codeblock&gt;</p>
+<p>​    break语句：基于测试结果提示何时跳出循环</p>
+<p>​    值域：作为序列</p>
+<p>​        range(m) = [0,1,2,3…m-1]</p>
+<p>​        range(m, n) = [m,m+1…n-1]</p>
+<p>②测试完序列所有的数，或执行break语句后，结束循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 求立方根v2.0</span></span><br><span class="line">x = int(input(<span class="string">&#x27;输入一个数字：&#x27;</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, abs(x)+<span class="number">1</span>):  <span class="comment"># 因为值域取m到n-1，所以需要给abs(x)加1</span></span><br><span class="line">    <span class="comment"># 值域中间需要空格 (m, n)</span></span><br><span class="line">    <span class="keyword">if</span> i**<span class="number">3</span> == abs(x):  <span class="comment"># 小心赋值和等于混用</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="keyword">if</span> i**<span class="number">3</span> != x:  <span class="comment"># 不能确定结束循环是因为break语句还是因为执行完了序列</span></span><br><span class="line">    print(<span class="string">&#x27;这不是一个完全立方数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</span><br><span class="line">        i = -i</span><br><span class="line">    print(<span class="string">&#x27;立方根为&#x27;</span> + str(i))  <span class="comment"># 字符串必须接字符串，不能str+int</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
             </div>
             <hr/>
