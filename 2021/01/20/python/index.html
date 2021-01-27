@@ -245,7 +245,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/5a6e6c21cacd351.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127162525133.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -463,13 +463,235 @@
 <p>拓展二：Python中的True和False与bool()函数<a target="_blank" rel="noopener" href="https://blog.csdn.net/liuweiyuxiang/article/details/89336980">https://blog.csdn.net/liuweiyuxiang/article/details/89336980</a></p>
 <p><em>“None 为 False、数字类型（整型、浮点型……）0为False、列表类型（list、tuple……）长度为0为False、str类型长度为0的为False、Map类型（字典）条目个数为0的为False，其余都为True”</em></p>
 <p><strong>（2）表达式expression</strong></p>
-<p>基本语法&lt;对象object&gt;&lt;运算符operator&gt;&lt;对象object&gt;</p>
-<p>运算符：</p>
-<p>​    ①赋值 = 、等于 == 、是否等于 !=</p>
-<p>​    ②布尔类型的特殊运算——逻辑运算：与and 或or 非not</p>
-<p>​        与and：如果两个操作数都是 True，那么结果是 True；否则就是 False。</p>
-<p>​        或or：如果有一个操作数的值是 True，那么运算结果就是 True；否则结果是 False。</p>
-<p>​        非：如果操作数是 True，那么结果是 False；如果操作数的值为 False，那么结果就是 True。</p>
+<p>①基本语法&lt;对象object&gt;&lt;运算符operator&gt;&lt;对象object&gt;</p>
+<p>②运算符：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>运算符</th>
+<th>描述</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>算术运算符</td>
+<td>+</td>
+<td>加</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>减</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>*</td>
+<td>乘</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>/</td>
+<td>除</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>%</td>
+<td>取模-返回除法余数</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>**</td>
+<td>幂-返回x的y次幂</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>//</td>
+<td>整除-向下取商的整数部分</td>
+<td></td>
+</tr>
+<tr>
+<td>比较运算符</td>
+<td>==</td>
+<td>是否相等</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>!=</td>
+<td>是否不相等</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>&lt;&gt;</td>
+<td>是否不相等</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>&gt;</td>
+<td>是否大于</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>&lt;</td>
+<td>是否小于</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>&gt;=</td>
+<td>是否大于等于</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>&lt;=</td>
+<td>是否小于等于</td>
+<td></td>
+</tr>
+<tr>
+<td>赋值运算符</td>
+<td>=</td>
+<td>赋值</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>+=</td>
+<td>加法赋值，将a+b的值赋给a</td>
+<td>a += b</td>
+</tr>
+<tr>
+<td></td>
+<td>-=</td>
+<td>减法赋值</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>*=</td>
+<td>乘法赋值</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>/=</td>
+<td>除法赋值</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>%=</td>
+<td>取模赋值</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>**=</td>
+<td>幂赋值</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>//=</td>
+<td>取整赋值</td>
+<td></td>
+</tr>
+<tr>
+<td>位运算符</td>
+<td>&amp;</td>
+<td>按位与运算符：参与运算的两个值相应位都为1，则该位结果为1，否则0</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>|</td>
+<td>按位或运算符：对应的两个值的二进位有一个为1，则结果位为1</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>^</td>
+<td>按位非运算符：对应的两个值二进位不同时，结果为1</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>~</td>
+<td>按位取反运算符：对数据的每个二进制位取反，1变0，0变1</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>&lt;&lt;</td>
+<td>左移动运算符：运算数a的各二进位全部左移b位，高位丢弃，低位补0</td>
+<td>a&lt;&lt;b</td>
+</tr>
+<tr>
+<td></td>
+<td>&gt;&gt;</td>
+<td>右移动运算符：运算数a的各二进位全部右移b位</td>
+<td>a&gt;&gt;b</td>
+</tr>
+<tr>
+<td>逻辑运算符</td>
+<td>and</td>
+<td>布尔“与”：a和b都为True时，返回True，否则False</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>or</td>
+<td>布尔“或”：a或b中有一个为True时，返回True，否则为False</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>not</td>
+<td>布尔“非”：如果a为True，返回为False。如果a为False，返回为True</td>
+<td></td>
+</tr>
+<tr>
+<td>成员运算符</td>
+<td>in</td>
+<td>指定序列b中找到值a则返回True，否则返回False</td>
+<td>a in b</td>
+</tr>
+<tr>
+<td></td>
+<td>not in</td>
+<td>指定序列中没有找到值则返回True，否则返回False</td>
+<td></td>
+</tr>
+<tr>
+<td>身份运算符</td>
+<td>is</td>
+<td>判断两个标识符是否引用自同一对象</td>
+<td>b is a</td>
+</tr>
+<tr>
+<td></td>
+<td>is not</td>
+<td>判断两个标识符是否引用自不同对象</td>
+<td></td>
+</tr>
+<tr>
+<td><em>拓展：身份运算符</em></td>
+<td></td>
+<td><em><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/7c6fb428d6876e80652c9069.html">https://jingyan.baidu.com/article/7c6fb428d6876e80652c9069.html</a></em></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127214727508.png" alt="运算优先级"></p>
 <p><strong>（3）类型转换</strong></p>
 <p>float(3)→3.0</p>
 <p>int（3.9）→3</p>
@@ -479,7 +701,8 @@
 <p>此时赋值b后存储的是一个数值而非公式，之后改变a或c不会改变b的值</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = <span class="number">10</span></span><br><span class="line">c = b &gt;<span class="number">9</span></span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
 
-<p>结果是bool型，true.而不是int型，10.</p>
+<p>结果是bool型——True.而不是int型——10.</p>
+<p><em>拓展：空格的用法<a target="_blank" rel="noopener" href="https://www.imooc.com/article/265705">https://www.imooc.com/article/265705</a></em></p>
 <h3><span id="2-非标量对象">2、非标量对象</span></h3><p><strong>（1）字符串str</strong></p>
 <p>①’abc’、”abc”、’123’、str(123)</p>
 <p>​    3 * ‘a’→返回’aaa’</p>
@@ -488,6 +711,7 @@
 <p>③单双引号没有区别，可以减少使用转义符\</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;I&#x27;m a otaku.&quot;</span>  <span class="comment"># 双引号</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;I\&#x27;m a otaku.&#x27;</span> <span class="comment"># 单引号</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">多行注释里的单双引号也可成套换用</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
+<p><em>拓展：字符串、转义符<a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-strings.html">https://www.runoob.com/python/python-strings.html</a></em></p>
 <p>④索引indexing</p>
 <p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210120203648688.png" alt="image-20210120203648688"></p>
 <p>切片slicing</p>
@@ -510,10 +734,11 @@
 <h2><span id="二分支式程序通过测试来做决定顺序">（二）分支式程序：通过测试来做决定顺序</span></h2><h3><span id="1-分支结构branching-structure条件语句conditional">1、分支结构Branching structure：条件语句conditional</span></h3><p><strong>if()</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time  <span class="comment"># 模块要放在首行</span></span><br><span class="line">x = int(input(<span class="string">&#x27;输入一个数字：&#x27;</span>))  <span class="comment">#要将输入值转为数值，否则报错</span></span><br><span class="line"><span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>:  <span class="comment"># %表示余数。</span></span><br><span class="line">    print(<span class="string">&#x27;偶数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;奇数&#x27;</span>)</span><br><span class="line">time.sleep(<span class="number">3</span>)  <span class="comment">#延时</span></span><br><span class="line">print(<span class="string">&#x27;计算结束&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-
-
+<p><strong>elif()</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> x &gt; <span class="number">2</span>:</span><br><span class="line">    <span class="keyword">if</span> x == <span class="number">3</span>:</span><br><span class="line">        print(<span class="string">&#x27;3&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&#x27;&gt;2 and no 3&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> x == <span class="number">2</span>:</span><br><span class="line">    print(<span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;&lt;2&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<p>一段代码中有多个if()，会逐一进行；有多个elif()，则会在满足条件后跳出if()。</p>
+<p><em>if()领头大哥各自为政，elif()作为小弟服从大哥。</em></p>
 <h3><span id="2-循环结构looping-structure循环语句lteration">2、循环结构looping structure：循环语句lteration</span></h3><p><strong>（1）while():</strong></p>
 <p>①要点</p>
 <p>​    需要在循环外部对循环变量初始化</p>
@@ -531,6 +756,9 @@
 <p>​        range(m, n) = [m,m+1…n-1]</p>
 <p>②测试完序列所有的数，或执行break语句后，结束循环</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 求立方根v2.0</span></span><br><span class="line">x = int(input(<span class="string">&#x27;输入一个数字：&#x27;</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, abs(x)+<span class="number">1</span>):  <span class="comment"># 因为值域取m到n-1，所以需要给abs(x)加1</span></span><br><span class="line">    <span class="comment"># 值域中间需要空格 (m, n)</span></span><br><span class="line">    <span class="keyword">if</span> i**<span class="number">3</span> == abs(x):  <span class="comment"># 小心赋值和等于混用</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="keyword">if</span> i**<span class="number">3</span> != x:  <span class="comment"># 不能确定结束循环是因为break语句还是因为执行完了序列</span></span><br><span class="line">    print(<span class="string">&#x27;这不是一个完全立方数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</span><br><span class="line">        i = -i</span><br><span class="line">    print(<span class="string">&#x27;立方根为&#x27;</span> + str(i))  <span class="comment"># 字符串必须接字符串，不能str+int</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>例</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">school = <span class="string">&#x27;Massachusetts Institute of Technology&#x27;</span></span><br><span class="line"><span class="comment"># 值域为字符串时，会逐个检索字符串的每一个字符，循环结束后输出&#x27;done&#x27;</span></span><br><span class="line">numVowels = <span class="number">0</span></span><br><span class="line">numCons = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> char <span class="keyword">in</span> school:</span><br><span class="line">    <span class="keyword">if</span> char == <span class="string">&#x27;a&#x27;</span> <span class="keyword">or</span> char == <span class="string">&#x27;e&#x27;</span> <span class="keyword">or</span> char == <span class="string">&#x27;i&#x27;</span> \  <span class="comment"># 句末转义符表示换行</span></span><br><span class="line">       <span class="keyword">or</span> char == <span class="string">&#x27;o&#x27;</span> <span class="keyword">or</span> char == <span class="string">&#x27;u&#x27;</span>:</span><br><span class="line">        numVowels += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> char == <span class="string">&#x27;o&#x27;</span> <span class="keyword">or</span> char == <span class="string">&#x27;M&#x27;</span>:</span><br><span class="line">        <span class="keyword">print</span> char  <span class="comment"># python3.0中取消了print语句而引入print()函数，所以print后必须加括号</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        numCons -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">&#x27;numVowels is: &#x27;</span> + str(numVowels)  <span class="comment"># 注意&#x27;i&#x27; != &#x27;I&#x27;</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">&#x27;numCons is: &#x27;</span> + str(numCons)  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
             </div>
@@ -693,7 +921,7 @@
                 <a href="/2021/01/01/12principle/">
                     <div class="card-image">
                         
-                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/5a6e6c21cacd351.jpg" class="responsive-img" alt="动画制作12法则">
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127162758759.png" class="responsive-img" alt="动画制作12法则">
                         
                         <span class="card-title">动画制作12法则</span>
                     </div>
