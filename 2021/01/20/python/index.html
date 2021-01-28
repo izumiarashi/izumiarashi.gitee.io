@@ -457,11 +457,13 @@
 <p>​    为什么要区分整数运算和浮点数运算？</p>
 <p><em>因为整数运算的结果永远是精确的，而浮点数运算的结果不一定精确，因为计算机内存再大，也无法精确表示出无限循环小数，比如 0.1 换成二进制表示就是无限循环小</em>。</p>
 <p>​    True和False首字母大写才是布尔类型，因为python是大小写敏感型语言。</p>
+<p><strong>补充：</strong></p>
 <p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210126222954511.png" alt="来源：http://www.weixueyuan.net/a/380.html"></p>
 <p>拓展一：浅谈Python里面None True False之间的区别<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_30709043/article/details/112883256">https://blog.csdn.net/weixin_30709043/article/details/112883256</a> ：</p>
 <p>“0值的整型/浮点型，空字符串(‘ ‘)，空列表([]),空元组({})，空集合(set())都是等价于False,但是不等于None。”、“0.3 == 3 * 0.1 为False”</p>
 <p>拓展二：Python中的True和False与bool()函数<a target="_blank" rel="noopener" href="https://blog.csdn.net/liuweiyuxiang/article/details/89336980">https://blog.csdn.net/liuweiyuxiang/article/details/89336980</a></p>
 <p><em>“None 为 False、数字类型（整型、浮点型……）0为False、列表类型（list、tuple……）长度为0为False、str类型长度为0的为False、Map类型（字典）条目个数为0的为False，其余都为True”</em></p>
+<p><em>拓展三：round()函数<a target="_blank" rel="noopener" href="https://www.runoob.com/python/func-number-round.html">https://www.runoob.com/python/func-number-round.html</a></em></p>
 <p><strong>（2）表达式expression</strong></p>
 <p>①基本语法&lt;对象object&gt;&lt;运算符operator&gt;&lt;对象object&gt;</p>
 <p>②运算符：</p>
@@ -495,7 +497,7 @@
 <tr>
 <td></td>
 <td>/</td>
-<td>除</td>
+<td>除，python3.0中总是返回浮点数</td>
 <td></td>
 </tr>
 <tr>
@@ -513,7 +515,7 @@
 <tr>
 <td></td>
 <td>//</td>
-<td>整除-向下取商的整数部分</td>
+<td>整除-向下取商的整数部分。进行floor除法，操作数有浮点数时返回浮点数，反之返回整数</td>
 <td></td>
 </tr>
 <tr>
