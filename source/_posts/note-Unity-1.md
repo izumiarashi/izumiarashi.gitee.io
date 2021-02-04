@@ -132,12 +132,5 @@ shader为material提供具体数值
 
 
 
-获得水平和垂直的值
+shadow
 
-Input.GetAxis("Horizontal")
-
-Input.GetAxis("Horizontal")
-
-表示运动的方向和速度
-
-CharacterController.SimpleMove(Vector3)

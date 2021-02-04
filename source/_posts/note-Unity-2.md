@@ -10,6 +10,16 @@ summary: 角色行为及动画
 
 <!--more-->
 
+获得水平和垂直的值
+
+Input.GetAxis("Horizontal")
+
+Input.GetAxis("Vertical")
+
+表示运动的方向和速度
+
+CharacterController.SimpleMove(Vector3)
+
 # 角色移动
 
 ```C#

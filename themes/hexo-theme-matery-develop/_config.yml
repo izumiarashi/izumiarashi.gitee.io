@@ -236,22 +236,22 @@ myProjects:
 mySkills:
   enable: true
   data:
-    拆解分析:
+    吃:
       background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
       percent: 50%
-    Unity3D:
+    喝:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
-      percent: 20%
-    Office:
-      background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
-      percent: 80%
-    产品思维:
-      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
       percent: 70%
-    关卡设计:
+    玩:
+      background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
+      percent: 100%
+    乐:
+      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
+      percent: 100%
+    日语n9:
       background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
-      percent: 60%
-    游戏热爱:
+      percent: 1%
+    玩游戏:
       background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
       percent: 100%
 
