@@ -45,6 +45,8 @@ public class 脚本名 : MonoBehaviour {
 
 ### （三）Vector3插值
 
+1、面向固定
+
 来源：https://www.bilibili.com/video/BV1Qt411M7KG?p=7
 
 ```c#
@@ -70,6 +72,34 @@ public class 脚本名 : MonoBehaviour {
         Quaternion targetRotation = Quaternion.LookRotation(player.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation,targetRotation, speed * Time.deltaTime);
         //Slerp(当前旋转，目标旋转，旋转速度)
+    }
+}
+```
+
+2、始终位于角色背后
+
+https://blog.csdn.net/qq_42434073/article/details/106712990
+
+```c#
+// Update is called once per frame
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FellowCamera : MonoBehaviour {
+    private Transform targetPos;
+    private Vector3 offsetPos;//固定位置
+    private Vector3 temPos;//临时变量
+	// Use this for initialization
+	void Start () {
+        targetPos=GameObject.FindGameObjectWithTag("Player").transform;//注意要将要跟随的物体标签设置为“Player”；
+        offsetPos = this.transform.position - targetPos.transform.position;
+	}
+	void FixedUpdate () 
+    {
+        temPos = targetPos.position + targetPos.TransformDirection(offsetPos);
+        this.transform.position = Vector3.Lerp(transform.position, temPos, Time.fixedDeltaTime*3);//插值跟随，fixedDeltaTime*3,"3"可以调节跟随的效果；
+        transform.LookAt(targetPos);
     }
 }
 ```
