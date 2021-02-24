@@ -1,5 +1,5 @@
 ---
-title: Python零点五基础学习笔记
+title: Python基础学习笔记（一）（可能有二）
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127162525133.png'
 cover: true
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127163046019.png'
@@ -7,7 +7,7 @@ date: 2021-01-20 19:30:07
 category: 笔记
 tags: 
 - python
-summary: 入门数据分析第一步
+summary: 了解计算机原理
 ---
 
 # 一、基础介绍
