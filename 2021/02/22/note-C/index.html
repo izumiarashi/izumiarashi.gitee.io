@@ -410,13 +410,15 @@
             <div id="articleContent">
                 <a id="more"></a>
 
-<h1><span id="一-基础">一、基础</span></h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System; <span class="comment">//引入命名空间</span></span><br><span class="line"></span><br><span class="line">namespace 333 //定义命名空间（类的住址，对类进行划分，避免重名）</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span> <span class="comment">//定义类</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>) <span class="comment">//定义方法、程序的入口方法</span></span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.Title = <span class="string">&quot;222&quot;</span></span><br><span class="line">            Console.Writeline(<span class="string">&quot;111&quot;</span>); <span class="comment">//控制台.写一行：将文本写入控制台中</span></span><br><span class="line">            Console.Readline(); <span class="comment">//控制台.读一行：将输入到控制台中的文本读取到程序</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1><span id="一-基础">一、基础</span></h1><p><em>拓展：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45008173/article/details/104121347">用VSCode进行C#环境搭建</a></em></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yilezhu/p/9926078.html">使用Visual Studio Code开发.NET Core看这篇就够了</a></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System; <span class="comment">//引入命名空间</span></span><br><span class="line"></span><br><span class="line">namespace 333 //定义命名空间（类的住址，对类进行划分，避免重名）</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span> <span class="comment">//定义类</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>) <span class="comment">//定义方法、程序的入口方法</span></span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.Title = <span class="string">&quot;222&quot;</span></span><br><span class="line">            Console.Writeline(<span class="string">&quot;111&quot;</span>); <span class="comment">//控制台.写一行：将文本写入控制台中</span></span><br><span class="line">            Console.Readline(); <span class="comment">//控制台.读一行：将输入到控制台中的文本读取到程序</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>Console 是一个“<strong>类</strong>”（工具、部门）</p>
 <p>Writeline、Readline 是“<strong>方法</strong>”（功能），需要加括号</p>
 <p>Title是“<strong>属性</strong>”</p>
 <p>代码写入“文本文件”.cs</p>
-<p>→生成.exe：在.csproj文件中添加</p>
+<p><del>→生成.exe：在.csproj文件中添加：</del></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">RuntimeIdentifier</span>&gt;</span>win10-x64<span class="tag">&lt;/<span class="name">RuntimeIdentifier</span></span></span><br></pre></td></tr></table></figure>
 
 <hr>
@@ -445,9 +447,50 @@
 <p>​    1.0f - 0.9f !=0.1f</p>
 <p>​    因为二进制无法精确表示1/10</p>
 <p>​    精度要求较高时应使用decimal</p>
+<p>​    加减时应对阶</p>
 <h3><span id="4-字符">4、字符</span></h3><p><strong>字符char：</strong>2字节，存储单个字符（ASCII码），使用<strong>单引号</strong> （单个汉字可为1字符）</p>
 <p><strong>字符串string：</strong>存储文本，使用<strong>双引号</strong> （a可以是字符或字符串，ab只能是字符串）</p>
 <p><strong>布尔类型bool：</strong>1字节，true、false</p>
+<h1><span id="三-语法">三、语法</span></h1><h2><span id="一声明">（一）声明</span></h2><p>1、含义：在内存中开辟一块空间</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量类型 变量名；</span><br></pre></td></tr></table></figure>
+
+<p>2、命名规则</p>
+<p>由字母、数字、下划线组成</p>
+<p>不能以数字开头</p>
+<p>不能使用保留关键字命名（变蓝的字）</p>
+<p><em>拓展：“<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yougmi/p/4549135.html">C# @符号的作用， 可定义关键字为变量名</a>”</em></p>
+<p>3、建议命名规则</p>
+<p>小写字母开头，包含多个单词，除第一个单词外其他单词首字母大写 【helloWorld】</p>
+<p>增加类型前缀便于理解 【想声明字符串“age”：string strAge；】</p>
+<h2><span id="二赋值">（二）赋值</span></h2><p>1、含义：在开辟的空间中存储数据</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量名 = 数据;</span><br></pre></td></tr></table></figure>
+
+<p>2、注意事项：</p>
+<p>（1）变量在使用前必须赋值</p>
+<p>（2）赋值的数据类型和变量声明时的类型必须相同</p>
+<p>（3）同一变量名不可重复声明，但可重复赋值</p>
+<h2><span id="三调试">（三）调试</span></h2><p>在可能出错的语句增加断点</p>
+<p><em>拓展：<a target="_blank" rel="noopener" href="http://blog.yidengxuetang.com/post/202005/27/">VS Code 调试完全攻略（2）：步进逐行调试</a>”</em></p>
+<h2><span id="练习">练习：</span></h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">First</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">gun</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请输入枪的名称：&quot;</span>);</span><br><span class="line">            <span class="keyword">string</span> gunName = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请输入枪的弹匣容量：&quot;</span>);</span><br><span class="line">            String gunVolume = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请输入枪的伤害：&quot;</span>);</span><br><span class="line">            <span class="keyword">string</span> gunDmg = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(gunName + <span class="string">&quot;的弹匣容量为&quot;</span> + gunVolume + <span class="string">&quot;，伤害为&quot;</span> + gunDmg);</span><br><span class="line">            <span class="comment">//拼接容易影响代码可读性</span></span><br><span class="line">            Console.Read();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="拓展占位符">拓展：占位符</span></h3><p>{位置编号}</p>
+<p>从0开始，编号不能大于参数列表长度</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> str = <span class="keyword">string</span>.Format(<span class="string">&quot;&#123;0&#125;的弹匣容量为&#123;1&#125;，容量为&#123;2&#125;。&quot;</span>,gunName,gunVolume,gunDmg);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;枪的名称：&#123;0&#125;&quot;</span>,gunName); </span><br><span class="line"><span class="comment">//只有在控制台中能用，一般都用Format</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//标准数字字符串格式化：以某种格式显示占位符中数据</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;金额：&#123;0:c&#125;&quot;</span>,<span class="number">10</span>);</span><br><span class="line">    <span class="comment">//&quot;0：C&quot;为货币格式，输出￥10</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;金额：&#123;0:d2&#125;&quot;</span>,<span class="number">1</span>);</span><br><span class="line">    <span class="comment">//&quot;0:d2&quot;不足2位用0填充，输出01</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;&#123;0:f1&#125;&quot;</span>,<span class="number">1.25</span>);</span><br><span class="line">    <span class="comment">//&quot;0:f1&quot;根据指定精度，输出1.3</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;&#123;0:p0&#125;&quot;</span>,<span class="number">0.1</span>);</span><br><span class="line">    <span class="comment">//&quot;0:p0&quot;以百分数显示，输出10%</span></span><br><span class="line">    <span class="comment">//&quot;0:p1&quot;输出10.0%</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="拓展转义符">拓展：转义符</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;你好，\&quot;世界\&quot;&quot;</span>);</span><br><span class="line"><span class="comment">//转义引号 \&quot; \&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> a = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line"><span class="comment">//char类型空字符不能用&#x27;&#x27;，需要转义0</span></span><br><span class="line"><span class="comment">//string空字符串可以用&quot;&quot;表示</span></span><br><span class="line"></span><br><span class="line">Console.WriteLine(<span class="string">&quot;达拉崩吧\r\n巴拉巴拉&quot;</span>);</span><br><span class="line"><span class="comment">//新增行\n，回到行首\r</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210224231556322.png" alt="转义符"></p>
+<h3><span id="源代码cs">源代码(.cs)</span></h3><p>电脑只能识别机器码（0 1）</p>
+<p>①源代码</p>
+<p>——②<strong>CLS</strong>（公共语言规范）<strong>第一次编译</strong>【目的：跨语言】</p>
+<p>​        定义.NET平台上运行的语言必须支持的规范，避免不同语言特性产生的错误，实现语言间互操作</p>
+<p>——③<strong>CIL</strong>（通用中间语言）.exe .dll</p>
+<p>——④<strong>CLR</strong>（公共语言运行库）<strong>第二次编译</strong>【目的：优化、跨平台】</p>
+<p>​        是程序运行环境，负责内存分配、垃圾收集、安全检查等</p>
+<p>——⑤机器码 0 1</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210224232818924.png" alt="image-20210224232818924"></p>
+<p>发展史：</p>
+<p>机器语言0 1→汇编语言→高级语言</p>
 
             </div>
             <hr/>
