@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C#笔记, 窝">
+    <meta name="keywords" content="C#笔记(一), 窝">
     <meta name="description" content="随便写写">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C#笔记 | 窝</title>
+    <title>C#笔记(一) | 窝</title>
     <link rel="icon" type="image/png" href="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/45px-Icon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -250,7 +250,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C#笔记</h1>
+                    <h1 class="description center-align post-title">C#笔记(一)</h1>
                 </div>
             </div>
         </div>
@@ -412,6 +412,7 @@
 
 <h1><span id="一-基础">一、基础</span></h1><p><em>拓展：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45008173/article/details/104121347">用VSCode进行C#环境搭建</a></em></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yilezhu/p/9926078.html">使用Visual Studio Code开发.NET Core看这篇就够了</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40346899/article/details/80955788">vscode调试运行c#详细操作过程</a></p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System; <span class="comment">//引入命名空间</span></span><br><span class="line"></span><br><span class="line">namespace 333 //定义命名空间（类的住址，对类进行划分，避免重名）</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span> <span class="comment">//定义类</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>) <span class="comment">//定义方法、程序的入口方法</span></span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.Title = <span class="string">&quot;222&quot;</span></span><br><span class="line">            Console.Writeline(<span class="string">&quot;111&quot;</span>); <span class="comment">//控制台.写一行：将文本写入控制台中</span></span><br><span class="line">            Console.Readline(); <span class="comment">//控制台.读一行：将输入到控制台中的文本读取到程序</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>Console 是一个“<strong>类</strong>”（工具、部门）</p>
@@ -427,6 +428,17 @@
 <p>Ctrl+K+C 注释选中</p>
 <p>Ctrl+K+U 取消注释</p>
 <hr>
+<h3><span id="源代码cs">源代码(.cs)</span></h3><p>电脑只能识别机器码（0 1）</p>
+<p>①源代码</p>
+<p>——②<strong>CLS</strong>（公共语言规范）<strong>第一次编译</strong>【目的：跨语言】</p>
+<p>​        定义.NET平台上运行的语言必须支持的规范，避免不同语言特性产生的错误，实现语言间互操作</p>
+<p>——③<strong>CIL</strong>（通用中间语言）.exe .dll</p>
+<p>——④<strong>CLR</strong>（公共语言运行库）<strong>第二次编译</strong>【目的：优化、跨平台】</p>
+<p>​        是程序运行环境，负责内存分配、垃圾收集、安全检查等</p>
+<p>——⑤机器码 0 1</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210224232818924.png" alt="image-20210224232818924"></p>
+<p>发展史：</p>
+<p>机器语言0 1→汇编语言→高级语言</p>
 <h1><span id="二-变量">二、变量</span></h1><h2><span id="一思考">（一）思考</span></h2><p>程序在哪运行？内存</p>
 <p>程序处理的是什么？数据</p>
 <p>——变量就是内存中开辟的一块用于存储数据的空间</p>
@@ -451,46 +463,105 @@
 <h3><span id="4-字符">4、字符</span></h3><p><strong>字符char：</strong>2字节，存储单个字符（ASCII码），使用<strong>单引号</strong> （单个汉字可为1字符）</p>
 <p><strong>字符串string：</strong>存储文本，使用<strong>双引号</strong> （a可以是字符或字符串，ab只能是字符串）</p>
 <p><strong>布尔类型bool：</strong>1字节，true、false</p>
-<h1><span id="三-语法">三、语法</span></h1><h2><span id="一声明">（一）声明</span></h2><p>1、含义：在内存中开辟一块空间</p>
+<h1><span id="三-语法">三、语法</span></h1><h2><span id="一声明">（一）声明</span></h2><h3><span id="1-含义">1、含义</span></h3><p>在内存中开辟一块空间</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量类型 变量名；</span><br></pre></td></tr></table></figure>
 
-<p>2、命名规则</p>
-<p>由字母、数字、下划线组成</p>
+<h3><span id="2-命名规则">2、命名规则</span></h3><p>由字母、数字、下划线组成</p>
 <p>不能以数字开头</p>
 <p>不能使用保留关键字命名（变蓝的字）</p>
 <p><em>拓展：“<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yougmi/p/4549135.html">C# @符号的作用， 可定义关键字为变量名</a>”</em></p>
-<p>3、建议命名规则</p>
-<p>小写字母开头，包含多个单词，除第一个单词外其他单词首字母大写 【helloWorld】</p>
+<h3><span id="3-建议命名规则">3、建议命名规则</span></h3><p>小写字母开头，包含多个单词，除第一个单词外其他单词首字母大写 【helloWorld】</p>
 <p>增加类型前缀便于理解 【想声明字符串“age”：string strAge；】</p>
-<h2><span id="二赋值">（二）赋值</span></h2><p>1、含义：在开辟的空间中存储数据</p>
+<h2><span id="二赋值">（二）赋值</span></h2><h3><span id="1-含义">1、含义</span></h3><p>在开辟的空间中存储数据</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量名 = 数据;</span><br></pre></td></tr></table></figure>
 
-<p>2、注意事项：</p>
-<p>（1）变量在使用前必须赋值</p>
+<h3><span id="2-注意事项">2、注意事项</span></h3><p>（1）变量在使用前必须赋值</p>
 <p>（2）赋值的数据类型和变量声明时的类型必须相同</p>
 <p>（3）同一变量名不可重复声明，但可重复赋值</p>
+<p><em>拓展（C++）：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Marshalldong/article/details/88049034">声明、定义、初始化与赋值</a></em></p>
 <h2><span id="三调试">（三）调试</span></h2><p>在可能出错的语句增加断点</p>
 <p><em>拓展：<a target="_blank" rel="noopener" href="http://blog.yidengxuetang.com/post/202005/27/">VS Code 调试完全攻略（2）：步进逐行调试</a>”</em></p>
 <h2><span id="练习">练习：</span></h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">First</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">gun</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请输入枪的名称：&quot;</span>);</span><br><span class="line">            <span class="keyword">string</span> gunName = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请输入枪的弹匣容量：&quot;</span>);</span><br><span class="line">            String gunVolume = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请输入枪的伤害：&quot;</span>);</span><br><span class="line">            <span class="keyword">string</span> gunDmg = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(gunName + <span class="string">&quot;的弹匣容量为&quot;</span> + gunVolume + <span class="string">&quot;，伤害为&quot;</span> + gunDmg);</span><br><span class="line">            <span class="comment">//拼接容易影响代码可读性</span></span><br><span class="line">            Console.Read();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3><span id="拓展占位符">拓展：占位符</span></h3><p>{位置编号}</p>
+<h3><span id="四占位符">（四）占位符</span></h3><p>{位置编号}</p>
 <p>从0开始，编号不能大于参数列表长度</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> str = <span class="keyword">string</span>.Format(<span class="string">&quot;&#123;0&#125;的弹匣容量为&#123;1&#125;，容量为&#123;2&#125;。&quot;</span>,gunName,gunVolume,gunDmg);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;枪的名称：&#123;0&#125;&quot;</span>,gunName); </span><br><span class="line"><span class="comment">//只有在控制台中能用，一般都用Format</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//标准数字字符串格式化：以某种格式显示占位符中数据</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;金额：&#123;0:c&#125;&quot;</span>,<span class="number">10</span>);</span><br><span class="line">    <span class="comment">//&quot;0：C&quot;为货币格式，输出￥10</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;金额：&#123;0:d2&#125;&quot;</span>,<span class="number">1</span>);</span><br><span class="line">    <span class="comment">//&quot;0:d2&quot;不足2位用0填充，输出01</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;&#123;0:f1&#125;&quot;</span>,<span class="number">1.25</span>);</span><br><span class="line">    <span class="comment">//&quot;0:f1&quot;根据指定精度，输出1.3</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;&#123;0:p0&#125;&quot;</span>,<span class="number">0.1</span>);</span><br><span class="line">    <span class="comment">//&quot;0:p0&quot;以百分数显示，输出10%</span></span><br><span class="line">    <span class="comment">//&quot;0:p1&quot;输出10.0%</span></span><br></pre></td></tr></table></figure>
 
-<h3><span id="拓展转义符">拓展：转义符</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;你好，\&quot;世界\&quot;&quot;</span>);</span><br><span class="line"><span class="comment">//转义引号 \&quot; \&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> a = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line"><span class="comment">//char类型空字符不能用&#x27;&#x27;，需要转义0</span></span><br><span class="line"><span class="comment">//string空字符串可以用&quot;&quot;表示</span></span><br><span class="line"></span><br><span class="line">Console.WriteLine(<span class="string">&quot;达拉崩吧\r\n巴拉巴拉&quot;</span>);</span><br><span class="line"><span class="comment">//新增行\n，回到行首\r</span></span><br></pre></td></tr></table></figure>
+<h3><span id="五转义符">（五）转义符</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;你好，\&quot;世界\&quot;&quot;</span>);</span><br><span class="line"><span class="comment">//转义引号 \&quot; \&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> a = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line"><span class="comment">//char类型空字符不能用&#x27;&#x27;，需要转义0</span></span><br><span class="line"><span class="comment">//string空字符串可以用&quot;&quot;表示</span></span><br><span class="line"></span><br><span class="line">Console.WriteLine(<span class="string">&quot;达拉崩吧\r\n巴拉巴拉&quot;</span>);</span><br><span class="line"><span class="comment">//新增行\n，回到行首\r</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210224231556322.png" alt="转义符"></p>
-<h3><span id="源代码cs">源代码(.cs)</span></h3><p>电脑只能识别机器码（0 1）</p>
-<p>①源代码</p>
-<p>——②<strong>CLS</strong>（公共语言规范）<strong>第一次编译</strong>【目的：跨语言】</p>
-<p>​        定义.NET平台上运行的语言必须支持的规范，避免不同语言特性产生的错误，实现语言间互操作</p>
-<p>——③<strong>CIL</strong>（通用中间语言）.exe .dll</p>
-<p>——④<strong>CLR</strong>（公共语言运行库）<strong>第二次编译</strong>【目的：优化、跨平台】</p>
-<p>​        是程序运行环境，负责内存分配、垃圾收集、安全检查等</p>
-<p>——⑤机器码 0 1</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210224232818924.png" alt="image-20210224232818924"></p>
-<p>发展史：</p>
-<p>机器语言0 1→汇编语言→高级语言</p>
+<h2><span id="六运算符">（六）运算符</span></h2><p>详见python笔记</p>
+<h3><span id="1-一元运算符">1、一元运算符</span></h3><p>++ –</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n1 = <span class="number">1</span>;</span><br><span class="line">++n1;</span><br><span class="line"><span class="keyword">int</span> n2 = <span class="number">1</span>;</span><br><span class="line">n2++;</span><br><span class="line">Console.WriteLine(n1,n2); <span class="comment">//输出 2 2</span></span><br><span class="line"><span class="keyword">int</span> x1 = <span class="number">1</span>,x2 = <span class="number">1</span>;</span><br><span class="line">Console.WriteLine(x1++); <span class="comment">//输出 1</span></span><br><span class="line">Console.WriteLine(++x2); <span class="comment">//输出 2</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-二元运算符">2、二元运算符</span></h3><p><strong>（1）赋值运算符</strong></p>
+<p>右边结果复制一份给左边</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n1 = <span class="number">2</span>,n2 = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//利用逗号，同时声明并赋值多个变量</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（2）算术运算符</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x1 = <span class="number">5</span>,x2 = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">int</span> y = x1/x2; <span class="comment">//int型，对小数截断删除，输出2</span></span><br><span class="line"><span class="comment">//取模%用处</span></span><br><span class="line"><span class="comment">//（1）判断是否能被整除</span></span><br><span class="line"><span class="keyword">bool</span> y2 = x1/x2 == <span class="number">0</span></span><br><span class="line"><span class="comment">//（2）获取整数个位</span></span><br><span class="line"><span class="keyword">int</span> y3 = x1 % <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<p>算数运算符中只有“+”可以用于字符串的拼接</p>
+<p>（3）比较运算符</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> x1 = <span class="string">&quot;1&quot;</span>,x2 = <span class="string">&quot;2&quot;</span>;</span><br><span class="line"><span class="keyword">bool</span> x1 == x2; <span class="comment">//比较文本内容</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（4）逻辑运算符</strong></p>
+<p>&amp;&amp;  ||  !</p>
+<p><strong>应用：</strong></p>
+<p>移动到场地边缘时停下——当 玩家位于左侧/右侧 &amp;&amp; 仍想往左侧/右侧移动 时→停下。</p>
+<p>（5）快捷运算符 += *= /= %=</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n1 = n1 + <span class="number">3</span></span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line">n1 += <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="3-三元运算符">3、三元运算符</span></h3><p>数据类型 变量名 = 条件? 满足条件结果 :不满足条件结果</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> str01 = <span class="number">1</span>&gt;<span class="number">2</span>?<span class="string">&quot;ok&quot;</span>:<span class="string">&quot;no&quot;</span>;</span><br><span class="line"><span class="comment">//两个结果类型必须是兼容的</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="4-优先级">4、优先级</span></h3><h2><span id="七数据类型转换">（七）数据类型转换</span></h2><h3><span id="1-parse">1、Parse</span></h3><p>string类型 转换 为其他数据类型</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> strNumber = <span class="string">&quot;19&quot;</span>;</span><br><span class="line"><span class="keyword">int</span> n1 = <span class="keyword">int</span>.Parse(strNumber); <span class="comment">//待转数据必须类似目标数据类型</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-tostring">2、ToString</span></h3><p>任意类型 转换为 string类型</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n1 = <span class="number">19</span>;</span><br><span class="line"><span class="keyword">string</span> str = n1.ToString();</span><br></pre></td></tr></table></figure>
+
+<h3><span id="练习">练习</span></h3><p>输入四位整数，输出个十百千位相加的结果</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;请输入四位整数：&quot;</span>);</span><br><span class="line"><span class="keyword">string</span> strNumber = Console.ReadLine();</span><br><span class="line"><span class="keyword">int</span> number = <span class="keyword">int</span>.Parse(strNumber);</span><br><span class="line"><span class="keyword">int</span> r = number % <span class="number">10</span>;</span><br><span class="line">r += number / <span class="number">10</span> % <span class="number">10</span>;</span><br><span class="line">r += number /<span class="number">100</span> % <span class="number">10</span>;</span><br><span class="line">r += number /<span class="number">1000</span> %<span class="number">10</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;结果为：&quot;</span> + r);</span><br><span class="line">Console.ReadLine();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;请输入四位整数：&quot;</span>);</span><br><span class="line"><span class="keyword">string</span> strNumber = Console.ReadLine();</span><br><span class="line"><span class="comment">//千位</span></span><br><span class="line"><span class="keyword">char</span> c1 = strNumber[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">string</span> s1 = c1.ToString();</span><br><span class="line"><span class="keyword">int</span> i1 = <span class="keyword">int</span>.Parse(s1);</span><br><span class="line"><span class="keyword">int</span> r = i1;</span><br><span class="line"><span class="comment">//百十个位</span></span><br><span class="line">r += <span class="keyword">int</span>.Parse(strNumber[<span class="number">1</span>].ToString());</span><br><span class="line">r += <span class="keyword">int</span>.Parse(strNumber[<span class="number">2</span>].ToString());</span><br><span class="line">r += <span class="keyword">int</span>.Parse(strNumber[<span class="number">3</span>].ToString());</span><br><span class="line">Console.WriteLine(<span class="string">&quot;结果为：&quot;</span> + r);</span><br><span class="line">Console.ReadLine();</span><br></pre></td></tr></table></figure>
+
+<h3><span id="3-隐式转换">3、隐式转换</span></h3><p>小转大</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span> b = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> i = b;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="4-显式强制转换">4、显式（强制）转换</span></h3><p>大转小，可能精度丢失</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">300</span>; <span class="comment">//300——100101100</span></span><br><span class="line"><span class="keyword">byte</span> b = (<span class="keyword">byte</span>)i; <span class="comment">//44——00101100</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210301195612089.png" alt="image-20210301195612089"></p>
+<p><strong><em>float和decimal不能相加：内存存储结构不同</em></strong></p>
+<p>快捷运算符不做类型提升</p>
+<hr>
+<h2><span id="八语句">（八）语句</span></h2><h3><span id="1-选择语句">1、选择语句</span></h3><p><strong>（1）if-else</strong></p>
+<p>-if后不加分号</p>
+<p>-if后如果只有一句话，可以不加大括号</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//错误案例</span></span><br><span class="line"><span class="keyword">if</span>(sex == <span class="string">&quot;男&quot;</span>);</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;你好，先生&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(sex == <span class="string">&quot;女&quot;</span>);</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;你好，女士&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;请输入正确的性别“男”、“女”。&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出“你好先生”、“请输入正确的性别“男”、“女”。因为if-else是一一对应</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//解法：if(sex == &quot;女&quot;)——else if(sex == &quot;女&quot;)</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>练习：</strong></p>
+<p>用户在控制台录入两个数字，一个运算符，求结果。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//普通方案</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;请输入第一个数：&quot;</span>);</span><br><span class="line"><span class="keyword">float</span> n1 = <span class="keyword">float</span>.Parse(Console.ReadLine());</span><br><span class="line">Console.WriteLine(<span class="string">&quot;请输入第一个数：&quot;</span>);</span><br><span class="line"><span class="keyword">float</span> n2 = <span class="keyword">float</span>.Parse(Console.ReadLine());</span><br><span class="line">Console.WriteLine(<span class="string">&quot;请输入运算符：&quot;</span>);</span><br><span class="line"><span class="keyword">string</span> op = Console.ReadLine();</span><br><span class="line"><span class="keyword">float</span> result = <span class="number">0</span>; <span class="comment">//需要初始化，否则会被视为result未赋值</span></span><br><span class="line"><span class="keyword">if</span>(op == <span class="string">&quot;+&quot;</span> || op == <span class="string">&quot;-&quot;</span> || op == <span class="string">&quot;*&quot;</span> || op == <span class="string">&quot;/&quot;</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (op == <span class="string">&quot;+&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        result = n1 + n2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (op == <span class="string">&quot;-&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        result = n1 - n2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (op == <span class="string">&quot;*&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        result = n1 * n2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (op == <span class="string">&quot;/&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        result = n1 / n2;</span><br><span class="line">    &#125;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;运算结果为：&quot;</span> + result);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;请输入正确的运算符。&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//缺点：需要逐个判断+-*/，效率低</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//优化方案</span></span><br><span class="line">……</span><br><span class="line">    <span class="keyword">if</span> (op == <span class="string">&quot;+&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        result = n1 + n2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;-&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        result = n1 - n2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;*&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        result = n1 * n2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;/&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        result = n1 / n2;</span><br><span class="line">    &#125;</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+
+<p><strong>(2)switch-case</strong></p>
+<p>①if是逐句进行到符合条件的一项，switch直接进入到符合条件的那一行。</p>
+<p>②switch-case代码在三种分支以上时，代码可读性更强</p>
+<p>③switch-case只能判断bool、char、string、整型、枚举或相应的可以为Null的类型</p>
+<p>④不同case条件进行相同运算时，可以将其合并（见练习）</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//题干同上文练习</span></span><br><span class="line"><span class="keyword">switch</span>(op)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;+&quot;</span>:</span><br><span class="line">        result = n1 + n2;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;-&quot;</span>:</span><br><span class="line">        result = n1 - n2;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;*&quot;</span>:</span><br><span class="line">        result = n1 * n2;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;/&quot;</span>:</span><br><span class="line">        result = n1 / n2;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>④switch-case只能判断确定的值，不能判断范围</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//错误</span></span><br><span class="line"><span class="keyword">switch</span>(op)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> op&gt;<span class="number">10</span>:</span><br><span class="line">        result = <span class="string">&quot;111&quot;</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        result = <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>练习：</strong></p>
+<p>输入月份，返回每月天数（2月为28）</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;请输入月份：&quot;</span>);</span><br><span class="line"><span class="keyword">int</span> month = <span class="keyword">int</span>.Parse(Console.ReadLine());</span><br><span class="line"><span class="keyword">int</span> day = <span class="number">0</span>;<span class="comment">// 要初始化变量</span></span><br><span class="line"><span class="keyword">if</span>(month&gt;=<span class="number">1</span> &amp;&amp; month &lt;=<span class="number">12</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">switch</span>(month)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            day = <span class="number">28</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">            day = <span class="number">30</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="comment">//case 1:</span></span><br><span class="line">        <span class="comment">//case 3:</span></span><br><span class="line">        <span class="comment">//case 5:</span></span><br><span class="line">        <span class="comment">//case 7:</span></span><br><span class="line">        <span class="comment">//case 8:</span></span><br><span class="line">        <span class="comment">//case 10:</span></span><br><span class="line">        <span class="comment">//case 12:</span></span><br><span class="line">            <span class="comment">//day = 31;</span></span><br><span class="line">            <span class="comment">//break;</span></span><br><span class="line">        <span class="comment">//还有个default没写，别把所有条件都写上</span></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            day = <span class="number">31</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Console.WriteLine(month + <span class="string">&quot;月有&quot;</span> + day + <span class="string">&quot;天。&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;请输入正确的月份。&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">Console.ReadLine();</span><br></pre></td></tr></table></figure>
+
 
             </div>
             <hr/>
@@ -597,29 +668,31 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/22/note-C/">
+                <a href="/2021/03/01/note-C2/">
                     <div class="card-image">
                         
-                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/v2-dd5961912671a8b7c9901bf645a3fbf2_720w.jpg" class="responsive-img" alt="C#笔记">
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/v2-dd5961912671a8b7c9901bf645a3fbf2_720w.jpg" class="responsive-img" alt="note-C2">
                         
-                        <span class="card-title">C#笔记</span>
+                        <span class="card-title">note-C2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            bilibili大学一年级
+                            
+
+111
+
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -632,7 +705,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -864,7 +936,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
-                   id="57664624"
+                   id="58088799"
                    fixed='true'
                    autoplay='false'
                    theme='#42b983'
