@@ -1,7 +1,7 @@
 ---
 title: 《原神》PVE关卡设计
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/0bb47bfbfbedab645b1ddface036afc378311eae.png'
-cover: true
+cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/7873d29833c490a00214010afcc7fed5.png'
 date: 2020-09-18 21:04:01
 category: 游戏策划
