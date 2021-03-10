@@ -593,7 +593,7 @@ if(month>=1 && month <=12)
         //case 12:
             //day = 31;
             //break;
-        //还有个default没写，别把所有条件都写上
+        //还有个default，不用把所有条件都写上
         default:
             day = 31;
             break;
