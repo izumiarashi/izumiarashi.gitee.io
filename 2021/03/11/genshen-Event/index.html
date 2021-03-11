@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="《原神》PVE关卡设计, 窝">
+    <meta name="keywords" content="《原神》多人玩法设计案（未完）, 窝">
     <meta name="description" content="随便写写">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>《原神》PVE关卡设计 | 窝</title>
+    <title>《原神》多人玩法设计案（未完） | 窝</title>
     <link rel="icon" type="image/png" href="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/45px-Icon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/0bb47bfbfbedab645b1ddface036afc378311eae.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">《原神》PVE关卡设计</h1>
+                    <h1 class="description center-align post-title">《原神》多人玩法设计案（未完）</h1>
                 </div>
             </div>
         </div>
@@ -371,8 +371,8 @@
                                 <span class="chip bg-color">原神</span>
                             </a>
                         
-                            <a href="/tags/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1/">
-                                <span class="chip bg-color">关卡设计</span>
+                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A1%88/">
+                                <span class="chip bg-color">设计案</span>
                             </a>
                         
                     </div>
@@ -396,7 +396,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-18
+                    2021-03-11
                 </div>
                 
 
@@ -414,235 +414,58 @@
             <div id="articleContent">
                 <a id="more"></a>
 
-<p>创建于2020秋招，尚未体验原神，可能会有部分与实际玩法不符之处，也因此限制了对关卡内容的拓展。</p>
-<h1><span id="sheet1-关卡概述">Sheet1  关卡概述</span></h1><h2><span id="一-关卡简介">一、关卡简介</span></h2><p><strong>（一）关卡背景：</strong>在破解了流传于大陆上有关宝藏的谜语后，你来到了谜底指示的地点。这是一片废弃了许久的遗迹，两侧的墙壁上灯照出微弱而稳定的光芒。盘踞于此的怪物发现了你。寡不敌众的你是否能够探索到最深层的奥秘，取得宝藏？</p>
-<p><strong>（二）关卡流程：</strong>线性探索。必须攻克当前房间才能进入下一区域，共有三个房间。</p>
-<p><strong>（三）关卡奖励：</strong></p>
-<p>1、探索奖励：进入到第二个房间后可获得。</p>
-<p>2、隐藏奖励：位于第一个房间的高处，可通过清理完第二个房间后发现密道获取。</p>
-<p>3、通关奖励：击败Boss后于场地中央获取。</p>
-<p><strong>（四）关卡地图</strong></p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012211139942.png" alt="地图配置"></p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012211204537.png" alt="关卡外观"></p>
-<p><strong>（五）角色选择</strong></p>
-<p>1、推荐攻略角色：火属性角色、双手剑角色、迪卢克、温迪</p>
-<p>2、不推荐角色：水、冰属性角色</p>
-<h2><span id="二-核心规则">二、核心规则</span></h2><p><strong>（一）规则名称：</strong>冰</p>
-<p><strong>（二）规则说明：</strong></p>
-<p>1、利用冰为固体的特性，可以将冰设置为障碍物。玩家可通过飞行或攀爬越过障碍，也可用其遮挡攻击。</p>
-<p>2、利用冰遇火即化的特性，玩家也可以通过生成火焰或是点燃地面提高温度从而弱化冰的强度。</p>
-<p>3、利用冰硬度不高的特点，可以让较脆弱，较薄的冰块能被重击、火焰所击破。</p>
-<p>4、利用冰可以反射一定程度的光的特点，可将其作为镜子。</p>
-<p><strong>（三）相关参数：</strong></p>
-<p>1、温度（计量单位：℃）</p>
-<p>（1）设计目的：实现玩家与环境的交互、空间校验、时间校验。</p>
-<p>（2）规则：</p>
-<p>①温度上限为30℃，下限为-60℃。</p>
-<p>②室内温度会随着时间的变化而降低，或是Boss、玩家角色使用特定冰属性技能，会使温度降低。玩家角色使用火属性技能时会使室内温度升高。</p>
-<p>③开启通风口时，温度会以10℃/的速度升温，最高回升到0℃。</p>
-<p>（3）UI表现：于画面左侧以温度计的形式显示。温度低于-25℃时显示“DEF↑”，下方放置史莱姆icon，示意怪物防御上升。</p>
-<p>2、冰封值</p>
-<p>（1）设计目的：对玩家的操作水平提出要求。</p>
-<p>（2）规则：</p>
-<p>①Boss的技能会对命中的玩家角色造成冰元素伤害的同时，使冰封值计数器+1.</p>
-<p>②玩家角色冰封值初始为0，上限为5.</p>
-<p>③当玩家角色身上的寒冷状态发生元素反应（超导、熔化、冻结）时，冰封值-1.</p>
-<p>（3）效果：当玩家冰封值达到5时，会在原地被施加状态[冰封]，同时冰封值归零。</p>
-<p>（4）UI表现：当冰封值≥1时，将一个冰块icon显示在玩家血条上方的状态栏中，同时在icon右上角显示具体冰封值数字。</p>
-<p>3、碎裂值、融化值</p>
-<p>（1）设计目的：实现特定角色的不同体验。</p>
-<p>（2）规则：</p>
-<p>①碎裂值：为物体添加实体，命名碎裂体。当重击/火属性攻击命中时，积累一定的碎裂值。累计碎裂值达到99的阈值后，物体碎裂。若此时融化值=0，则碎裂值归零。</p>
-<p>②为物体添加实体，命名融化体。当火属性攻击命中时，积累一定的融化值。累计融化值和碎裂值都达到阈值时，物体融化。阈值=1。</p>
-<p>③碎裂值和融化值不会随时间衰减</p>
-<p>（3）效果：</p>
-<p>①碎裂：对物体造成可修复的状态变化。</p>
-<p>②融化：对物体造成不可逆的状态变化。</p>
-<p>（4）UI表现：当物体可被碎裂/融化时，在其上方显示圆圈形积蓄槽，命名为“毁坏槽”，圆圈内为状态图标显示，初始为冰块上有裂纹的icon。碎裂值和融化值共同反映于毁坏槽。</p>
-<p>4、UI示例</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012211943834.png"></p>
-<h2><span id="三-名词解释">三、名词解释</span></h2><p><strong>冰封：</strong>不同于水加冰的元素反应“冻结”，而是直接将目标封入比人稍大的冰块之中。被冰封的角色无法主动挣脱，可更换角色。冰可被火属性攻击融化。</p>
-<p><strong>米（m）：</strong>游戏内比例尺单位，简写m，仅用于本文档中比较长短所用，并不代表游戏内实际设计。设主角的身高为1.5米。</p>
-<p><strong>障碍物：</strong>墙壁、冰岩、荒星一类有碰撞体积的场景实体。</p>
-<p><strong>引导：</strong>技能释放类型。在释放需要引导的技能时，会持续对目标释放该技能，引导时间结束后停止释放。部分技能会在引导结束时禅城特殊效果。</p>
-<p><strong>吟唱：</strong>技能释放类型。在释放需要吟唱的技能时需先蓄力，期间无法使用其他技能，吟唱结束后释放该技能。</p>
-<p><strong>完成时间：</strong>指一个技能从开始释放到完整释放，再到怪物恢复到初始状态一共需要的时间。单位为“秒”。</p>
-<p><strong>冷却时间：</strong>为了放缓战斗节奏，设定怪物在释放一次技能并恢复初始状态后，无论技能是否完整释放，下一个技能至少在X秒后才能释放。X即为冷却时间。</p>
-<p><strong>重击属性角色：</strong>即使用双手剑的角色，其使用蓄力攻击造成重击效果。</p>
-<h1><span id="sheet2-怪物设计">Sheet2  怪物设计</span></h1><h2><span id="一-小怪冰岩巨人">一、小怪：冰岩巨人</span></h2><p><strong>（一）特性：</strong></p>
-<p>1、免疫冰属性攻击，受到火属性攻击伤害翻倍。</p>
-<p>2、有实体碰撞体积，不可攀爬。</p>
-<p>3、各类技能均不会攻击到BOSS和其他怪物，仅对玩家生效。</p>
-<p>4、死亡后于原地掉落一颗冰岩，有实体碰撞体积，不可被玩家破坏，可攀爬。</p>
-<p>5、右腿在[践踏]后3秒内拥有毁坏槽，仅此时可导致右腿[碎裂]或[融化]。</p>
-<p><strong>（二）行动规则：</strong></p>
-<p>1、向玩家位置移动，当与玩家小于4米时，随机释放技能，冷却时间4秒。</p>
-<p>2、技能随机权重[101]：[102]：[103]=0.4:0.4:0.2。</p>
-<p><strong>（三）形象：</strong>与《塞尔达：荒野之息》的冰巨人类似，但没有其头上的弱点，且双腿和双臂同样粗壮。</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012212509104.png" alt="比例关系"></p>
-<p><strong>（四）技能</strong></p>
+<p>一、修改列表</p>
 <table>
 <thead>
 <tr>
-<th>技能ID</th>
-<th>技能名</th>
-<th align="center">完成时间</th>
-<th>技能说明</th>
+<th>修改日期</th>
+<th>修改内容</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>101</td>
-<td>重拳</td>
-<td align="center">4</td>
-<td>向前方地面砸出重拳，对被直接命中的目标造成中等物理伤害。</td>
+<td>2021/03/05</td>
+<td>创建文档</td>
 </tr>
 <tr>
-<td>102</td>
-<td>左右冲拳</td>
-<td align="center">6</td>
-<td>左手朝前方从左至右打出一记摆拳，造成少量物理伤害；1秒后右拳向前方砸下，造成中等物理伤害并击退一小段距离。</td>
-</tr>
-<tr>
-<td>103</td>
-<td>践踏</td>
-<td align="center">4+3</td>
-<td>①蓄力2秒后用右脚向目标位置重重踩下并产生冲击波，冲击波会击退目标并造成少量物理伤害，直接踩中目标会对其造成大量冰元素伤害。②之后右脚上出现裂纹并蔓延至右腿上，导致自身僵直，3秒后修复裂纹。若此时受到一定的重击伤害会使其右腿[碎裂]，修复裂纹时间+5秒。③若此时受到一定的火焰伤害会使其右腿[融化]倒地，永久失去攻击和移动能力。</td>
-</tr>
-</tbody></table>
-<h2><span id="二-小怪冰镜">二、小怪：冰镜</span></h2><p><strong>（一）特性：</strong></p>
-<p>1、无法移动、无法攻击。</p>
-<p>2、会且仅会产生一个与之伴生的幻象，冰镜死亡时幻象死亡。</p>
-<p>3、有实体碰撞体积，不可攀爬。</p>
-<p>4、每次受到的伤害固定为1点。</p>
-<p><strong>（二）行动规则：</strong>半径为30米，角度为面前180°的视野范围内检测到玩家角色时，生成幻象。</p>
-<p><strong>（三）形象：</strong>3米宽、1米高。全部由冰制成，镜面是一面完整光滑的冰，镜框上有精致的雕花。</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012212957139.png"></p>
-<p><strong>（四）技能：</strong></p>
-<table>
-<thead>
-<tr>
-<th>技能ID</th>
-<th>技能名</th>
-<th>完成时间</th>
-<th>技能说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>021</td>
-<td>召唤</td>
-<td>3</td>
-<td>召唤一个幻象，冰镜死亡时幻象死亡。该技能一个冰镜只能发动一次。</td>
-</tr>
-</tbody></table>
-<h2><span id="三-召唤物幻象">三、召唤物：幻象</span></h2><p><strong>（一）特性：</strong></p>
-<p>1、不会受到伤害。当产生该幻象的冰镜被摧毁时，幻象消失。</p>
-<p>2、继承Boss本体的60%的攻击力。</p>
-<p>3、各类技能均不会攻击到BOSS和其他怪物，仅对玩家生效。</p>
-<p><strong>（二）行动规则：</strong></p>
-<p>1、于生成位置（冰镜前）停留。使用技能后瞬移至外环内的随机位置。技能释放间隔5秒。</p>
-<p>2、当与玩家距离≤4米时，主动缩短距离至3米并释放技能[004:冰刃]。</p>
-<p>3、当与玩家距离＞4米时，释放技能[001:冰枪]。</p>
-<p><strong>（三）形象：</strong>模型与Boss一致，材质为淡蓝色。</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012213216321.png"></p>
-<p><strong>（四）技能：</strong></p>
-<table>
-<thead>
-<tr>
-<th>技能ID</th>
-<th>技能名</th>
-<th>完成时间</th>
-<th>技能说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>001</td>
-<td>冰枪</td>
-<td>（详见“Boss房间”工作表——“三、基础技能”——“2、技能一览”）</td>
-<td></td>
-</tr>
-<tr>
-<td>004</td>
-<td>冰刃</td>
 <td></td>
 <td></td>
 </tr>
 </tbody></table>
-<h2><span id="四-小怪小型冰史莱姆原神原版怪物">四、小怪：小型冰史莱姆（《原神》原版怪物）</span></h2><p><strong>（一）特性：</strong></p>
-<p>1、自带冰元素效果</p>
-<p>2、技能不会影响到Boss和其他怪物，仅对玩家生效。</p>
-<p><strong>（二）行动规则：</strong>脱战状态蠕动滑行，进入战斗后利用跳跃向目标位置靠近。当目标进入到技能范围时，使用技能。</p>
-<p><strong>（三）形象：</strong>蓝色果冻状，头顶有淡蓝色角，头顶白色。</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012213528450.png"></p>
-<p><strong>（四）技能：</strong></p>
-<table>
-<thead>
-<tr>
-<th>技能ID</th>
-<th>技能名</th>
-<th>完成时间</th>
-<th>技能说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>110</td>
-<td>冲撞_冰</td>
-<td>1</td>
-<td>对目标发起冲撞，造成少量冰元素伤害。</td>
-</tr>
-</tbody></table>
-<h2><span id="五-召唤物冰墙">五、召唤物：冰墙</span></h2><p><strong>（一）特性：</strong></p>
-<p>1、有碰撞体积，不可攀爬。</p>
-<p>2、冰墙拥有血量和毁坏槽，当血量=0或毁坏槽≥99时，冰墙被击破。</p>
-<p><strong>（二）行动规则：</strong>无</p>
-<p><strong>（三）形象：</strong>冰做的墙，长2米，宽0.2米，高2米。</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012213743851.png"></p>
-<p><strong>（四）技能：</strong>无</p>
-<h1><span id="sheet3-关卡流程">Sheet3  关卡流程</span></h1><h2><span id="一-房间一">一、房间一</span></h2><p><strong>（一）设计目的：</strong></p>
-<p>1、设置较低的初始温度和冰系怪物，使玩家了解温度值的效果。</p>
-<p>2、让玩家明白“冰岩巨人——冰岩”，“拉杆——通风口——温度——防御”之间的关系。</p>
-<p>3、通过设置可获取的宝箱，引导玩家行为；并设置暂时无法获取的宝箱，拉动玩家探索欲望。</p>
-<p><strong>（二）房间概述：</strong></p>
-<p>房间内有三扇打开的门，分别为南侧的入口（门1）、北侧的出口（门2）。东侧墙较高位置也有一扇（门3），该扇门前有一个突出的平台，玩家抬高视角能看到平台边缘的宝箱2。但平台被栏杆遮挡，仅能通过门3进入。</p>
-<p>中间位置横着一条0.1“米”深的凹槽，槽内有水，水面与地面相平，房间内没有怪物。初始温度-30℃。</p>
-<p>门2旁的墙壁上有一个拉杆，东侧墙壁上有未开启的通风口。拉杆旁有一个高台，上面放置一个宝箱，可以通过梯子登上高台。</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012214256951.png" alt="房间一地图"></p>
-<p><strong>（三）怪物配置：</strong></p>
-<p>小型冰史莱姆×4、冰岩巨人×1。</p>
-<p><strong>（四）关卡事件：</strong>玩家角色渡过水槽时房间所有门关闭，刷新小型冰史莱姆×4、冰岩巨人×1</p>
-<p><strong>（五）一般对策：</strong>玩家从门1进入房间——来到水槽前看到近处的拉杆和上方的宝箱1——渡过水槽身上[潮湿]—— 门1、2、3关闭——刷出冰史莱姆×4、冰岩巨人×1——温度降低造成伤害降低—— 击败冰史莱姆——门1、2、3开启——取得宝箱1——从门2离开房间一</p>
-<p><strong>（六）优化对策：</strong></p>
-<p>1、使用上升气流、冰冻等手段越过水槽，避免以“潮湿”状态与冰系怪物开战。</p>
-<p> 2、温度较低时攻击拉杆，使温度升高，伤害能力恢复，提高效率。</p>
-<h2><span id="二-房间二">二、房间二</span></h2><p><strong>（一）设计目的：</strong>让玩家提前熟悉Boss的核心技能[009:冰幻]。</p>
-<p><strong>（二）房间概况：</strong>房间内有三扇打开的门，分别为西侧的入口（门4）、北侧的出口（门5）、分支通道门（门6）。在门4能看到在房间二里一个火深渊法师背对玩家，面前有一块冰镜。房间初始温度30℃。</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012222253678.png" alt="房间二地图"></p>
-<p><strong>（三）怪物配置：</strong>冰深渊法师×1、冰镜×1</p>
-<p><strong>（四）关卡事件：</strong>玩家角色踏过门4进入房间二时，播放CG：“幻象从冰镜里走出，凝出冰枪秒杀火深渊法师，然后回到冰镜中。播放CG时游戏时间静止，删除房间内的火深渊法师。CG结束的同时关闭房间所有的门。</p>
-<p><strong>（五）一般对策：</strong>玩家从门4进入房间——观看CG——门1、2、3关闭——进入冰镜视野范围，生成幻象—— 尝试攻击幻象——无效——发现冰镜的血条——尝试攻击冰镜——击破冰镜，幻象死亡—— 从门5离开房间二</p>
-<p><strong>（六）优化对策：</strong>从门6进入通道回到房间一，拿到宝箱2。</p>
-<h2><span id="三-boss房间">三、Boss房间</span></h2><p>（详见“Boss房间”工作表）</p>
-<h1><span id="sheet3-boss房间">Sheet3  Boss房间</span></h1><p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/Boss%E6%88%BF1.png"></p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012215723140.png"></p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/boss%E6%88%BF3.png"></p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/Boss%E6%88%BF4.png"></p>
-<h1><span id="sheet4-规则数值设计">Sheet4  规则数值设计</span></h1><h2><span id="一-规则参数温度">一、规则参数：温度</span></h2><p><strong>（一）体验期望：</strong></p>
-<p>1、让没有火属性角色的玩家在Boss战中每过约1分钟便要拉动拉杆。</p>
-<p>2、用有一个火属性角色的玩家即可在Boss战中仅在冰域后需要拉动拉杆。</p>
-<p><strong>（二）具体设计：</strong></p>
-<p>1、设每秒温度下降0.5℃。</p>
-<p>2、已知Boss基础技能冷却时间为3秒，最短技能完成时间为2秒，则一分钟最多可释放12次技能。根据Boss技能权重选取[冰刃]、[冰刺]、[冰棱]作为降温手段。每次释放会使温度-5℃。</p>
-<p>3、计算火属性角色技能频率以迪卢克为准，单角色1分钟内最多可放6次元素战技、4次元素爆发。规定火属性元素战技+5℃，火属性元素爆发+10℃。</p>
-<p>4、冰属性角色释放冰属性元素战技-5℃，冰属性元素爆发-10℃。</p>
-<p>5、仅在技能释放时改变温度，多次造成火属性伤害的技能（如香菱的锅巴）不会造成多次升温。</p>
-<p>6、风属性技能遇火扩散时时，不会判定为使用火属性技能而升温。</p>
-<p>7、无论何时释放[冰域]都使温度降到下限，则释放[冰域]-90℃。</p>
-<h2><span id="二-规则参数碎裂值-融化值">二、规则参数：碎裂值、融化值</span></h2><p><strong>（一）体验期望：</strong></p>
-<p>1、重击属性角色蓄力攻击2次后达到阈值。</p>
-<p>2、火属性角色的玩家使用1次火属性伤害技能后达到阈值。</p>
-<p><strong>（二）具体设计：</strong></p>
-<p>1、每次蓄力攻击造成50点碎裂值</p>
-<p>2、每次火焰技能攻击造成100点碎裂值和1点融化值</p>
-<h1><span id="sheet5-附录设计思路">Sheet5  附录：设计思路</span></h1><p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012222825683.png"></p>
+<p>二、设计概述</p>
+<p>（一）设计目的</p>
+<p>1、丰富多人联机可玩内容，强化社交元素</p>
+<p>2、通过PVP内容，延长玩法的生命周期，提高玩法复用率</p>
+<p>3、增加养成材料获取途径，加快低等级玩家养成进度</p>
+<p>（二）设计思路</p>
+<p>1、直线型竞速关卡，最先到达终点的获胜。</p>
+<p>2、设计局内可获得随机道具，使对局增加不可控性。</p>
+<p>3、段位设计，使玩家能够匹配到实力相近的对手，维持心流体验。</p>
+<p>4、兼顾沉浸感，活动的奖励发放及积分计算都通过配置的NPC来进行。</p>
+<p>三、玩法简述</p>
+<p>玩法场景内可划分为三个相连的区域。区域一为起始区域有4条赛道，匹配成功后四名玩家分别位于4条赛道起点处；区域二4条赛道两两合并为2条赛道；区域三2条赛道合并为1条赛道。玩家可以收集散落在赛道上的风信子增加自己的移动速度；也可以在赛道中的指定位置消耗风信子兑换道具，增幅自身或削弱对手。赛道中有各种地形、可交互物品和怪物，最先到达终点的玩家获得比赛胜利。</p>
+<p>四、详细设定</p>
+<p>（一）玩法开放时间</p>
+<p>（二）背景设定</p>
+<p>（三）玩法流程</p>
+<p>（四）匹配规则</p>
+<p>（五）获胜规则</p>
+<p>（六）异常情况</p>
+<p>1、玩家掉线后即为该玩家判负，取最后一名。</p>
+<p>【近战破坏元素石，远程可收集高处奖励】</p>
+<p>六、需求整理</p>
+<p>（一）美术需求</p>
+<p>（二）程序需求</p>
+<p>（三）音频需求</p>
+<p>（四）运营需求</p>
+<p>（五）数据统计需求</p>
+<p>1、每日活跃玩家活动平均参与率、胜率、获得积分</p>
+<p>2、积分商店各道具兑换情况</p>
+<p>3、关卡内风信子商店兑换情况</p>
+<p>4、每日任务及本期活动任务完成比例</p>
+<hr>
+<p><strong><em>随便说点</em></strong></p>
+<p>​        一开始只想简单的做个123木头人式的小游戏，总想加点增强竞技性的功能，越想越跑偏，从马车8歪到马创2，最后还加了点马里奥3d世界。结果整出个四不像，花了大量时间调整。</p>
+<p>​        在构思过程中再一次的感叹《原神》这块璞玉的潜力巨大，多样的移动和交互手段可以实现很多有趣的玩法。不过也尚有不足：《原神》之于市面上其他开放世界游戏，其最大的优势就在于它是一款线上游戏，并拥有广大用户的基础，但其多人游戏功能却依然如《崩坏3》一般鸡肋。如何利用并扩大这一优势，应当也是《原神》日后空余之时需要思考的方向之一。</p>
 
             </div>
             <hr/>
@@ -668,7 +491,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/izumiarashi/izumiarashi.github.io/2020/09/18/genshin-Level/">https://github.com/izumiarashi/izumiarashi.github.io/2020/09/18/genshin-Level/</a>
+                    <a href="https://github.com/izumiarashi/izumiarashi.github.io/2021/03/11/genshen-Event/">https://github.com/izumiarashi/izumiarashi.github.io/2021/03/11/genshen-Event/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -710,8 +533,8 @@
                                     <span class="chip bg-color">原神</span>
                                 </a>
                             
-                                <a href="/tags/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1/">
-                                    <span class="chip bg-color">关卡设计</span>
+                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A1%88/">
+                                    <span class="chip bg-color">设计案</span>
                                 </a>
                             
                         </div>
@@ -753,28 +576,82 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/09/19/GBF-System/">
+                <a href="/2021/03/11/genshen-Event/">
                     <div class="card-image">
                         
-                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/2040375000.png" class="responsive-img" alt="《碧蓝幻想》系统拆解 （2020.10.13更新）">
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg" class="responsive-img" alt="《原神》多人玩法设计案（未完）">
                         
-                        <span class="card-title">《碧蓝幻想》系统拆解 （2020.10.13更新）</span>
+                        <span class="card-title">《原神》多人玩法设计案（未完）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对碧蓝幻想的核心资源产出和武器、武器盘进行拆解。
+                            具体设计细节还需要仔细打磨
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/" class="post-category">
+                                    游戏策划
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8E%9F%E7%A5%9E/">
+                        <span class="chip bg-color">原神</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A1%88/">
+                        <span class="chip bg-color">设计案</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/09/genshin-System/">
+                    <div class="card-image">
+                        
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/paimon.jpg" class="responsive-img" alt="《原神》系统拆解及经济循环分析">
+                        
+                        <span class="card-title">《原神》系统拆解及经济循环分析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            没有找到比较全面的经验表，且个人水平有限，暂不分析数值投放。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -794,60 +671,8 @@
                         <span class="chip bg-color">游戏拆解</span>
                     </a>
                     
-                    <a href="/tags/%E7%A2%A7%E8%93%9D%E5%B9%BB%E6%83%B3/">
-                        <span class="chip bg-color">碧蓝幻想</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/09/15/GBF-and-PCR/">
-                    <div class="card-image">
-                        
-                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg" class="responsive-img" alt="《碧蓝幻想》与《公主连接》公会系统对比">
-                        
-                        <span class="card-title">《碧蓝幻想》与《公主连接》公会系统对比</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            比较分析Cygames旗下两款游戏的设计思路
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/" class="post-category">
-                                    游戏拆解
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%A2%A7%E8%93%9D%E5%B9%BB%E6%83%B3/">
-                        <span class="chip bg-color">碧蓝幻想</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%85%AC%E4%B8%BB%E8%BF%9E%E6%8E%A5/">
-                        <span class="chip bg-color">公主连接</span>
+                    <a href="/tags/%E5%8E%9F%E7%A5%9E/">
+                        <span class="chip bg-color">原神</span>
                     </a>
                     
                 </div>
