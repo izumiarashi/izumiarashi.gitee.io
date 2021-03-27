@@ -1,8 +1,6 @@
 ---
 title: 《原神》PVE关卡设计
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/0bb47bfbfbedab645b1ddface036afc378311eae.png'
-cover: false
-coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/7873d29833c490a00214010afcc7fed5.png'
 date: 2020-09-18 21:04:01
 category: 游戏策划
 tags: 
@@ -13,7 +11,9 @@ summary: 分为两个引导关和一个验证关
 
 <!--more-->
 
-创建于2020秋招，尚未体验原神，可能会有部分与实际玩法不符之处，也因此限制了对关卡内容的拓展。
+创建于2020秋招，当时尚未体验原神，可能会有部分与实际玩法不符之处，也因此限制了对关卡内容的拓展。
+
+
 
 # Sheet1  关卡概述
 

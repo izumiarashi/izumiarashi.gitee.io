@@ -1,6 +1,6 @@
 ---
 title: C#笔记(一)
-img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/v2-dd5961912671a8b7c9901bf645a3fbf2_720w.jpg'
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127155254217.png'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2021-02-22 19:40:49
@@ -276,15 +276,18 @@ Console.WriteLine("达拉崩吧\r\n巴拉巴拉");
 
 ++ --
 
+自增1 自减1
+
 ```c#
 int n1 = 1;
 ++n1;
 int n2 = 1;
 n2++;
 Console.WriteLine(n1,n2); //输出 2 2
+
 int x1 = 1,x2 = 1;
-Console.WriteLine(x1++); //输出 1
-Console.WriteLine(++x2); //输出 2
+Console.WriteLine(x1++); //输出 1，先执行当前行指令再自增
+Console.WriteLine(++x2); //输出 2，先自增再执行当前行指令
 ```
 
 ### 2、二元运算符
@@ -606,4 +609,83 @@ else
 }
 Console.ReadLine();
 ```
+
+### 2、短路语句
+
+```c#
+int n1 =1,n2 = 2;
+
+bool re1 = n1 > n2 && n1++ > 1; //短路与
+Console.WriteLine(n1);
+
+bool re2 = n1 < n2 || n2++ <1; //短路或
+Console.WriteLine(n2);
+```
+
+**（1）使用目的**
+
+​	减少计算量。
+
+**（2）短路与**
+
+​	当第一个条件时不满足时，不再对第二个条件做判断。
+
+**（3）短路或**
+
+​	当第一个条件满足时，不再对第二个条件做判断。
+
+**（4）Continue**
+
+​	在循环体中使用，当满足条件时，跳过后续代码，并进行下一次循环。
+
+### 3、循环语句
+
+**（1）For循环**
+
+```c#
+for (int i = 0;i<5;i++)//for (初始化;循环条件;增减变量)
+//执行过程： 0 1 2 3 4
+{
+	Console.WriteLine("11");//循环体
+}
+```
+
+```c#
+int i = 0;
+//将初始化提前，变量的作用域不同
+//写在for语句内，作用域只在{ }之间
+for (i<5;i++)
+{
+	Console.WriteLine("11");
+}
+Console.WriteLine(i);
+//将初始化提前了，所以此处可以输出i，否则会找不到i的定义
+
+for (int i = 0;i<5)
+{
+	Console.WriteLine("11");
+    i++; //将增减变量放到循环体内，作用等效
+}
+Console.WriteLine(i);
+```
+
+应用场景：做预定次数的循环。
+
+**（2）While循环**
+
+```c#
+//小球弹起多少次后落地（高度小于0.01）
+int count = 0; //弹起次数
+float height = 100; //当前高度
+float sum = 0; //累计路程
+while (height/2 >= 0.01f) //不加上除以2的话会将高度<0.01（即落地）的那一次也计入弹起次数
+{
+	height /= 2;
+	conut ++;
+	sum += 100 + height*2;//加上初始高度
+} 
+Console.WriteLine("第{0}次弹起高度为{1},累计弹起路程为{2}",count,height,sum);
+```
+
+应用场景：做不确定次数的循环。
 

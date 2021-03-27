@@ -1,12 +1,14 @@
 ---
-title: 二次元游戏及其目标用户特征
-img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127155254217.png'
+title: 二次元游戏及用户特征
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/v2-dd5961912671a8b7c9901bf645a3fbf2_720w.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
-date: 2021-01-27 14:21:28
-category: 游戏运营
-tags: 二次元
-summary: 老二次元了
+date: 2021-02-22 19:40:49
+category: 笔记
+tags:
+- 游戏运营
+- 二次元
+summary: 浅析
 ---
 
 
