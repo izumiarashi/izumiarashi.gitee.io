@@ -1,6 +1,6 @@
 ---
 title: 二次元游戏及用户特征
-img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/v2-dd5961912671a8b7c9901bf645a3fbf2_720w.jpg'
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127155254217.png'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2021-02-22 19:40:49
@@ -10,8 +10,6 @@ tags:
 - 二次元
 summary: 浅析
 ---
-
-
 
 <!--more-->
 

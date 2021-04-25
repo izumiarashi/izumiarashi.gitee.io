@@ -1,8 +1,8 @@
 ---
 title: C#笔记(一)
-img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127155254217.png'
-cover: false
-coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/v2-dd5961912671a8b7c9901bf645a3fbf2_720w.jpg'
+cover: true
+coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/src=http___attach.bbs.miui.com_forum_201804_18_172344g6tsuasyytq2dd7a.png&refer=http___attach.bbs.miui.jpg'
 date: 2021-02-22 19:40:49
 category: 笔记
 tags: C#
@@ -536,7 +536,7 @@ switch(op)
 {
     case "+":
         result = n1 + n2;
-        break;
+        break; // 退出switch语句
     case "-":
         result = n1 - n2;
         break;
@@ -566,7 +566,7 @@ switch(op)
 }
 ```
 
-**练习：**
+**<font color=#FF0000 >练习：</font>**
 
 输入月份，返回每月天数（2月为28）
 
@@ -610,35 +610,7 @@ else
 Console.ReadLine();
 ```
 
-### 2、短路语句
-
-```c#
-int n1 =1,n2 = 2;
-
-bool re1 = n1 > n2 && n1++ > 1; //短路与
-Console.WriteLine(n1);
-
-bool re2 = n1 < n2 || n2++ <1; //短路或
-Console.WriteLine(n2);
-```
-
-**（1）使用目的**
-
-​	减少计算量。
-
-**（2）短路与**
-
-​	当第一个条件时不满足时，不再对第二个条件做判断。
-
-**（3）短路或**
-
-​	当第一个条件满足时，不再对第二个条件做判断。
-
-**（4）Continue**
-
-​	在循环体中使用，当满足条件时，跳过后续代码，并进行下一次循环。
-
-### 3、循环语句
+### 2、循环语句
 
 **（1）For循环**
 
@@ -688,4 +660,118 @@ Console.WriteLine("第{0}次弹起高度为{1},累计弹起路程为{2}",count,h
 ```
 
 应用场景：做不确定次数的循环。
+
+**<span id="jump2"><font color=#FF0000 >练习：do-while语句</font></span>**
+
+```c#
+//猜1-10内的随机数字，猜对为止
+Random r1 = new Random(); //创建随机数类
+int ranNum = r1.Next(1,11); //取不到右边那个数，取值范围1-10
+int inpNum; //提前声明，否则while无法判断循环体内的局部变量
+int count = 0;
+
+//解法1
+do
+{
+    count++;
+	Console.WriteLine("输入值：");
+	inpNum = int.Parse(Console.ReadLine());
+	if(inpNum > ranNum)
+		Console.WriteLine("大了");
+	else if(inpNum < ranNum)
+		Console.WriteLine("小了");
+	else
+		Console.WriteLine("猜对了,猜了{0}次",count);
+}
+while (ranNum != inpNum); //先执行一次循环体，满足条件时，重新循环
+
+//解法2
+while(true) //死循环
+{
+    count++;
+	Console.WriteLine("输入值：");
+	inpNum = int.Parse(Console.ReadLine());
+	if(inpNum > ranNum)
+		Console.WriteLine("大了");
+	else if(inpNum < ranNum)
+		Console.WriteLine("小了"); //同上
+    else
+    {
+        Console.WriteLine("猜对了,猜了{0}次",count);
+    	break;//退出循环体
+    }
+}
+```
+
+### 3、短路语句
+
+```c#
+int n1 =1,n2 = 2;
+
+bool re1 = n1 > n2 && n1++ > 1; //短路与
+Console.WriteLine(n1);
+
+bool re2 = n1 < n2 || n2++ <1; //短路或
+Console.WriteLine(n2);
+```
+
+**（1）使用目的**
+
+​	减少计算量。
+
+**（2）短路与**
+
+​	当第一个条件时不满足时，不再对第二个条件做判断。
+
+**（3）短路或**
+
+​	当第一个条件满足时，不再对第二个条件做判断。
+
+**（4）Continue**
+
+<span id="jump1">在循环体中使用，当满足条件时，跳过后续代码，并进行下一次循环。</span>
+
+```c#
+//求1-100内能被3整除的数字之和
+//解法1
+int sum = 0;
+for (int i = 1;i<100;i++)
+{
+    if (i % 3 == 0)
+    	sum += i;
+}
+Console.WriteLine(sum);
+//解法2
+int sum = 0;
+for (int i = 1;i<100;i++)
+{
+    if(i % 3 != 0)continue;
+        sum += i;
+}
+Console.WriteLine(sum);
+```
+
+### 4、跳转语句
+
+将控制转移给另一端代码
+
+**（1）goto**
+
+*（与面向对象的封装思想相悖，可读性差，不建议使用）*
+
+**（2）continue**
+
+退出本次循环，执行下次循环。
+
+（案例见[上文](#jump1)）
+
+**（3）break**
+
+退出本次循环
+
+（案例见[上文](#jump2)）
+
+**（4）return**
+
+（见[《笔记（二）》](https://izumiarashi.github.io/2021/03/01/note-C2/#jump1)）
 
