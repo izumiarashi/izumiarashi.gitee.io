@@ -1,6 +1,6 @@
 ---
 title: C#练习（一）——制作年历
-img: 'C:\Users\wb.chenyihao\Pictures\满\微信图片_20210424230602.jpg'
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20210424230602.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2021-04-25 15:52:11
