@@ -399,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-25
+                    2021-04-26
                 </div>
                 
 
@@ -415,20 +415,17 @@
             <div id="articleContent">
                 <a id="more"></a>
 
-<h1><span id="一-方法">一、方法</span></h1><h2><span id="1-什么是方法">1、什么是方法</span></h2><p><strong>（1）含义：</strong>对一系列语句的命名，表示<strong>一个</strong>功能和行为。有的语言称其为函数、过程。</p>
-<p><strong>（2）目的：</strong>提高代码的可复用性和可维护性，代码层次结构更清晰。</p>
-<h2><span id="2-语法">2、语法</span></h2><p><strong>（1）定义方法</strong></p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">访问修饰符</span>][可选修饰符]返回类型 方法名称(参数列表)</span><br><span class="line">&#123;</span><br><span class="line">    方法体</span><br><span class="line">    <span class="keyword">return</span> 结果;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1><span id="一-方法">一、方法</span></h1><h2><span id="一什么是方法">（一）什么是方法</span></h2><h3><span id="1-含义">1、含义</span></h3><p>对一系列语句的命名，表示<strong>一个</strong>功能和行为。有的语言称其为函数、过程。</p>
+<h3><span id="2-目的">2、目的</span></h3><p>提高代码的可复用性和可维护性，代码层次结构更清晰。</p>
+<h2><span id="二语法">（二）语法</span></h2><h3><span id="1-定义方法">1、定义方法</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">访问修饰符</span>][可选修饰符]返回类型 方法名称(参数列表)</span><br><span class="line">&#123;</span><br><span class="line">    方法体</span><br><span class="line">    <span class="keyword">return</span> 结果;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>例</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>（2）调用方法</strong></p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方法名称(参数);</span><br></pre></td></tr></table></figure>
+<h3><span id="2-调用方法">2、调用方法</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方法名称(参数);</span><br></pre></td></tr></table></figure>
 
 <p>C#编译器自动调用Main方法（主方法）</p>
-<p><strong>（3）返回类型</strong></p>
-<p>①返回值：功能的结果</p>
+<h3><span id="3-返回类型">3、返回类型</span></h3><p>①返回值：功能的结果</p>
 <p>②类型：</p>
 <p>数据类型（int、string、double、float……）：有返回值，方法体内<strong>必须有</strong>return关键字，且返回数据必须与返回类型兼容。</p>
 <p>空（void）：无返回值，方法体内<strong>可以有</strong>return关键字，表示退出方法体。</p>
@@ -436,20 +433,40 @@
 
 <p><em>方法的返回值类型显示在描述开头</em></p>
 <p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210421222045105.png" alt="image-20210421222045105"></p>
-<p><span id="jump1"><strong>（4）return关键字</strong></span></p>
-<p>return后的语句不在执行</p>
+<h3><span id="4-return关键字"><span id="jump1">4、return关键字</span></span></h3><p>return后的语句不在执行</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">float</span> a = X1(); <span class="comment">//*记得加上(参数)</span></span><br><span class="line">    Console.WriteLine(<span class="string">&quot;返回&#123;0&#125;&quot;</span>,a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">float</span> <span class="title">X1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;执行X1&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">20</span>;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;重复执行X1&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出“执行X1”、“返回20”</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>（5）参数</strong></p>
-<p>①含义：方法定义者需要调用者传递的信息</p>
+<h3><span id="5-参数">5、参数</span></h3><p>①含义：方法定义者需要调用者传递的信息</p>
 <p>②实参：<strong>定义</strong>方法时用的形式参数</p>
 <p>③形参：<strong>调用</strong>方法时用的实际参数</p>
 <p>实参与形参必须一一对应（数量、类型、顺序）</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    X2(<span class="number">100</span>,<span class="string">&quot;200&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">X2</span>(<span class="params"><span class="keyword">int</span> a,<span class="keyword">string</span> b</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出100</span></span><br></pre></td></tr></table></figure>
 
+<h2><span id="三方法重载">（三）方法重载</span></h2><h3><span id="1-定义">1、定义</span></h3><p>方法名称相同，参数列表不同。</p>
+<h3><span id="2-作用">2、作用</span></h3><p>不同条件下，解决同一类问题。减少调用者学习成本。</p>
+<h3><span id="3-案例">3、案例</span></h3><p>输入分钟数，计算总秒数。</p>
+<p>输入小时数、分钟数，计算总秒数。</p>
+<p>输入天数、小时数、分钟数，计算总秒数。</p>
+<p><strong>初次尝试</strong></p>
+<p>缺点：仅有分钟时也要进行天、小时的传参</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;请输入天数：&quot;</span>);</span><br><span class="line">    <span class="keyword">int</span> day = <span class="keyword">int</span>.Parse(Console.ReadLine());</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;请输入小时数：&quot;</span>);</span><br><span class="line">    <span class="keyword">int</span> hour = <span class="keyword">int</span>.Parse(Console.ReadLine());</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;请输入分钟数：&quot;</span>);</span><br><span class="line">    <span class="keyword">int</span> minute = <span class="keyword">int</span>.Parse(Console.ReadLine());</span><br><span class="line">    <span class="keyword">int</span> second = GetSecondByMinute(minute,hour,day);</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;共&#123;0&#125;秒&quot;</span>,second);</span><br><span class="line">    Console.ReadLine();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetSecondByMinute</span>(<span class="params"><span class="keyword">int</span> minute,<span class="keyword">int</span> hour,<span class="keyword">int</span> day</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    minute += GetMinuteByHour(hour,day);</span><br><span class="line">    <span class="keyword">return</span>(minute*<span class="number">60</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetMinuteByHour</span>(<span class="params"><span class="keyword">int</span> hour,<span class="keyword">int</span> day</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    hour += GetHourByDay(day);</span><br><span class="line">    <span class="keyword">return</span>(hour*<span class="number">60</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetHourByDay</span>(<span class="params"><span class="keyword">int</span> day</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span>(day*<span class="number">24</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><strong>调整</strong></p>
+<p>拆分成可独立使用的三个办法，调整逻辑顺序。</p>
+<p>缺点：调用者需要记忆3种方法</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetTotalSecondByMinute</span>(<span class="params"><span class="keyword">int</span> minute</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> minute * <span class="number">60</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetTotalSecondByMinuteHour</span>(<span class="params"><span class="keyword">int</span> minute,<span class="keyword">int</span> hour</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> GetTotalSecondByMinute(minute + hour * <span class="number">60</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetTotalSecondByMinueHourDay</span>(<span class="params"><span class="keyword">int</span> minute,<span class="keyword">int</span> hour,<span class="keyword">int</span> day</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> GetTotalSecondByMinuteHour(minute, hour + <span class="number">24</span> * day);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1><span id="综合练习制作年历"><strong>综合练习：制作年历</strong></span></h1><p>（见<a target="_blank" rel="noopener" href="https://izumiarashi.github.io/2021/04/25/practice-C-Calendar">C#练习（一）——制作年历</a>）</p>
+<p><strong>标准答案</strong></p>
+<p>方法重载，将三个方法命名为同一个名称</p>
+<h3><span id="4-补充">4、补充</span></h3><p>仅仅out和ref的区别不可以构成重载</p>
+<h2><span id="综合练习制作年历"><strong>综合练习：制作年历</strong></span></h2><p>（见<a target="_blank" rel="noopener" href="https://izumiarashi.github.io/2021/04/25/practice-C-Calendar">C#练习（一）——制作年历</a>）</p>
+<h1><span id="二-递归">二、递归</span></h1><h2><span id="一含义">（一）含义</span></h2><p>方法内部又调用自身的过程</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//阶乘</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="title">GetFactorial</span>(<span class="params"><span class="keyword">int</span> num</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(num == <span class="number">1</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> num * GetFactorial(num - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="二核心思想">（二）核心思想</span></h2><p><strong>将问题转移给范围缩小的子问题</strong></p>
+<h2><span id="三特点">（三）特点</span></h2><h3><span id="1-优点">1、优点</span></h3><p>复杂问题简单化</p>
+<h3><span id="2-缺点">2、缺点</span></h3><p>性能比循环差</p>
+<h3><span id="3-适用场景">3、适用场景</span></h3><p>在解决问题过程时遇到相同问题时</p>
 
             </div>
             <hr/>
