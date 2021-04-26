@@ -6,7 +6,7 @@ coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VX
 date: 2021-04-25 15:52:11
 category: 编程练习
 tags: C#
-summary: 
+summary: 方法的应用
 ---
 
 <!--more-->
@@ -261,3 +261,9 @@ private static bool isLeapYear(int year)
 	return(year%4 == 0 && year !=100 || year % 400 == 0);
 }
 ```
+
+
+
+**输出结果：**
+
+![image-20210425172138833](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210425172138833.png)

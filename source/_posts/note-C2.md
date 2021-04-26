@@ -13,15 +13,19 @@ summary:  方法
 
 # 一、方法
 
-## 1、什么是方法
+## （一）什么是方法
 
-**（1）含义：**对一系列语句的命名，表示**一个**功能和行为。有的语言称其为函数、过程。
+### 1、含义
 
-**（2）目的：**提高代码的可复用性和可维护性，代码层次结构更清晰。
+对一系列语句的命名，表示**一个**功能和行为。有的语言称其为函数、过程。
 
-## 2、语法
+### 2、目的
 
-**（1）定义方法**
+提高代码的可复用性和可维护性，代码层次结构更清晰。
+
+## （二）语法
+
+### 1、定义方法
 
 ```c#
 [访问修饰符][可选修饰符]返回类型 方法名称(参数列表)
@@ -40,7 +44,7 @@ private static void test1()
 }
 ```
 
-**（2）调用方法**
+### 2、调用方法
 
 ```c#
 方法名称(参数);
@@ -48,7 +52,7 @@ private static void test1()
 
 C#编译器自动调用Main方法（主方法）
 
-**（3）返回类型**
+### 3、返回类型
 
 ①返回值：功能的结果
 
@@ -74,7 +78,7 @@ private static void X2()
 
 ![image-20210421222045105](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210421222045105.png)
 
-<span id="jump1">**（4）return关键字**</span>
+### <span id="jump1">4、return关键字</span>
 
 return后的语句不在执行
 
@@ -93,7 +97,7 @@ private static float X1()
 //输出“执行X1”、“返回20”
 ```
 
-**（5）参数**
+### 5、参数
 
 ①含义：方法定义者需要调用者传递的信息
 
@@ -116,9 +120,123 @@ private static void X2(int a,string b)
 //输出100
 ```
 
+## （三）方法重载
+
+### 1、定义
+
+方法名称相同，参数列表不同。
+
+### 2、作用
+
+不同条件下，解决同一类问题。减少调用者学习成本。
+
+### 3、案例
+
+输入分钟数，计算总秒数。
+
+输入小时数、分钟数，计算总秒数。
+
+输入天数、小时数、分钟数，计算总秒数。
+
+**初次尝试**
+
+缺点：仅有分钟时也要进行天、小时的传参
+
+```c#
+static void Main()
+{
+	Console.WriteLine("请输入天数：");
+	int day = int.Parse(Console.ReadLine());
+	Console.WriteLine("请输入小时数：");
+	int hour = int.Parse(Console.ReadLine());
+	Console.WriteLine("请输入分钟数：");
+	int minute = int.Parse(Console.ReadLine());
+	int second = GetSecondByMinute(minute,hour,day);
+	Console.WriteLine("共{0}秒",second);
+	Console.ReadLine();
+}
+private static int GetSecondByMinute(int minute,int hour,int day)
+{
+	minute += GetMinuteByHour(hour,day);
+	return(minute*60);
+}
+private static int GetMinuteByHour(int hour,int day)
+{
+	hour += GetHourByDay(day);
+	return(hour*60);
+}
+private static int GetHourByDay(int day)
+{
+	return(day*24);
+}
+```
+
+**调整**
+
+拆分成可独立使用的三个办法，调整逻辑顺序。
+
+缺点：调用者需要记忆3种方法
+
+```c#
+private static int GetTotalSecondByMinute(int minute)
+{
+	return minute * 60;
+}
+private static int GetTotalSecondByMinuteHour(int minute,int hour)
+{
+    return GetTotalSecondByMinute(minute + hour * 60);
+}
+private static int GetTotalSecondByMinueHourDay(int minute,int hour,int day)
+{
+    return GetTotalSecondByMinuteHour(minute, hour + 24 * day);
+}
+```
+
+**标准答案**
+
+方法重载，将三个方法命名为同一个名称
+
+### 4、补充
+
+仅仅out和ref的区别不可以构成重载
 
 
-# **综合练习：制作年历**
+
+## **综合练习：制作年历**
 
 （见[C#练习（一）——制作年历](https://izumiarashi.github.io/2021/04/25/practice-C-Calendar)）
 
+
+
+# 二、递归
+
+## （一）含义
+
+方法内部又调用自身的过程
+
+```c#
+//阶乘
+private static GetFactorial(int num)
+{
+    if(num == 1)return 1;
+    return num * GetFactorial(num - 1);
+}
+```
+
+## （二）核心思想
+
+**将问题转移给范围缩小的子问题**
+
+## （三）特点
+
+### 1、优点
+
+复杂问题简单化
+
+### 2、缺点
+
+性能比循环差
+
+### 3、适用场景
+
+在解决问题过程时遇到相同问题时
