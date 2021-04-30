@@ -399,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-26
+                    2021-04-30
                 </div>
                 
 
@@ -420,7 +420,7 @@
 <h2><span id="二语法">（二）语法</span></h2><h3><span id="1-定义方法">1、定义方法</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">访问修饰符</span>][可选修饰符]返回类型 方法名称(参数列表)</span><br><span class="line">&#123;</span><br><span class="line">    方法体</span><br><span class="line">    <span class="keyword">return</span> 结果;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>例</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Test1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3><span id="2-调用方法">2、调用方法</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方法名称(参数);</span><br></pre></td></tr></table></figure>
 
@@ -467,6 +467,53 @@
 <h2><span id="三特点">（三）特点</span></h2><h3><span id="1-优点">1、优点</span></h3><p>复杂问题简单化</p>
 <h3><span id="2-缺点">2、缺点</span></h3><p>性能比循环差</p>
 <h3><span id="3-适用场景">3、适用场景</span></h3><p>在解决问题过程时遇到相同问题时</p>
+<h3><span id="练习"><strong>练习</strong></span></h3><p>按以下规律的数列，当参数为8时结果为多少？</p>
+<p>1-2+3-4+5-6……</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetValue</span>(<span class="params"><span class="keyword">int</span> num</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(num &gt;= i)</span><br><span class="line">    &#123;</span><br><span class="line">        i++;</span><br><span class="line">        <span class="keyword">return</span> i + GetValue(i); <span class="comment">//堆栈溢出，以为上面将i初始化了</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4><span id="拓展堆栈溢出"><strong>拓展：堆栈溢出</strong></span></h4><p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210429101213367.png"></p>
+<p>无限次的递归，没有对边界进行约束</p>
+<p><strong>分析原因：</strong>递归应该是从大到小拆分问题，而不是从1开始</p>
+<p><strong>修改：</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;请输入一个大于0的数&quot;</span>);</span><br><span class="line">    <span class="keyword">int</span> num = <span class="keyword">int</span>.Parse(Console.ReadLine());</span><br><span class="line">    <span class="keyword">int</span> sum = GetValue(num);</span><br><span class="line">    <span class="keyword">if</span>(sum == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请正确输入大于0的数。&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;按规律求和的结果为&#123;0&#125;&quot;</span>,sum);</span><br><span class="line">    &#125;</span><br><span class="line">    Console.ReadLine();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetValue</span>(<span class="params"><span class="keyword">int</span> num</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(num == <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(num &gt; <span class="number">1</span> &amp;&amp; num % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>*num + GetValue(num - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(num &gt; <span class="number">1</span> &amp;&amp; num % <span class="number">2</span> != <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> num + GetValue(num - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>优化：</strong>将数字是否合规的判断提前</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;请输入一个大于0的数&quot;</span>);</span><br><span class="line">    <span class="keyword">int</span> num = <span class="keyword">int</span>.Parse(Console.ReadLine());</span><br><span class="line">    <span class="keyword">if</span>(num &lt;= <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请正确输入大于0的数。&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = GetValue(num);</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;按规律求和的结果为&#123;0&#125;&quot;</span>,sum);</span><br><span class="line">    &#125;</span><br><span class="line">    Console.ReadLine();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetValue</span>(<span class="params"><span class="keyword">int</span> num</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(num == <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(num % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> -num + GetValue(num - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> num + GetValue(num - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1><span id="三-数组">三、数组</span></h1><h2><span id="一含义">（一）含义</span></h2><p>从Array派生的，一组<strong>数据类型相同</strong>的<strong>变量组合</strong>，是一种<strong>空间连续</strong>的<strong>数据结构</strong></p>
+<p>元素通过索引（位置的序号）进行操作</p>
+<p><strong>例</strong></p>
+<table>
+<thead>
+<tr>
+<th>数组</th>
+<th>5</th>
+<th>1</th>
+<th>4</th>
+<th>0</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>空一格</td>
+<td></td>
+</tr>
+<tr>
+<td>索引</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+</tbody></table>
+<p>存储默认值（0、0.0、false）表示空一格</p>
+<h2><span id="二使用">（二）使用</span></h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明 不用写赋值号&quot;=&quot;</span></span><br><span class="line"><span class="keyword">int</span>[] a;</span><br><span class="line"><span class="comment">//初始化 new 数据类型[容量]</span></span><br><span class="line">a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line"><span class="comment">//通过索引读写元素</span></span><br><span class="line">a[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">a[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">a[<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//for(int i = 0; i &lt; 3; i++) </span></span><br><span class="line"><span class="comment">//如果数组长度变化则需要重新修改i的范围，将常数范围改为&quot;数组名.Length&quot;</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
             </div>
             <hr/>
