@@ -6,7 +6,7 @@ coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VX
 date: 2021-03-01 21:40:39
 category: 笔记
 tags: C#
-summary:  方法
+summary:  方法、递归、数组
 ---
 
 <!--more-->
@@ -38,7 +38,7 @@ summary:  方法
 例
 
 ```c#
-private static void test1()
+private static void Test1()
 {
     Console.WriteLine("hello");
 }
@@ -240,3 +240,129 @@ private static GetFactorial(int num)
 ### 3、适用场景
 
 在解决问题过程时遇到相同问题时
+
+### **练习**
+
+按以下规律的数列，当参数为8时结果为多少？
+
+1-2+3-4+5-6……
+
+```c#
+private static int GetValue(int num)
+{
+	int i = 0;
+	if(num >= i)
+	{
+		i++;
+		return i + GetValue(i); //堆栈溢出，以为上面将i初始化了
+	}
+	else
+		return 0;
+}
+```
+
+#### **拓展：堆栈溢出**
+
+![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210429101213367.png)
+
+无限次的递归，没有对边界进行约束
+
+**分析原因：**递归应该是从大到小拆分问题，而不是从1开始
+
+**修改：**
+
+```c#
+static void Main()
+{
+	Console.WriteLine("请输入一个大于0的数");
+	int num = int.Parse(Console.ReadLine());
+	int sum = GetValue(num);
+	if(sum == 0)
+	{
+		Console.WriteLine("请正确输入大于0的数。");
+	}
+	else
+	{
+		Console.WriteLine("按规律求和的结果为{0}",sum);
+	}
+	Console.ReadLine();
+}
+private static int GetValue(int num)
+{
+	if(num == 1)
+		return 1;
+	if(num > 1 && num % 2 == 0)
+		return -1*num + GetValue(num - 1);
+	else if(num > 1 && num % 2 != 0)
+		return num + GetValue(num - 1);
+	else
+    	return 0;
+}
+```
+
+**优化：**将数字是否合规的判断提前
+
+```c#
+static void Main()
+{
+	Console.WriteLine("请输入一个大于0的数");
+	int num = int.Parse(Console.ReadLine());
+	if(num <= 0)
+	{
+		Console.WriteLine("请正确输入大于0的数。");
+	}
+	else
+	{
+		int sum = GetValue(num);
+		Console.WriteLine("按规律求和的结果为{0}",sum);
+	}
+	Console.ReadLine();
+}
+private static int GetValue(int num)
+{
+	if(num == 1)
+		return 1;
+	if(num % 2 == 0)
+		return -num + GetValue(num - 1);
+	else
+		return num + GetValue(num - 1);
+}
+```
+
+# 三、数组
+
+## （一）含义
+
+从Array派生的，一组**数据类型相同**的**变量组合**，是一种**空间连续**的**数据结构**
+
+元素通过索引（位置的序号）进行操作
+
+**例**
+
+| 数组 | 5    | 1    | 4    | 0      | 7    |
+| ---- | ---- | ---- | ---- | ------ | ---- |
+|      |      |      |      | 空一格 |      |
+| 索引 | 0    | 1    | 2    | 3      | 4    |
+
+存储默认值（0、0.0、false）表示空一格
+
+## （二）使用
+
+```c#
+//声明 不用写赋值号"="
+int[] a;
+//初始化 new 数据类型[容量]
+a = new int[3];
+//通过索引读写元素
+a[0] = 1;
+a[1] = 2;
+a[2] = 3;
+
+//for(int i = 0; i < 3; i++) 
+//如果数组长度变化则需要重新修改i的范围，将常数范围改为"数组名.Length"
+for(int i = 0; i < a.Length; i++)
+{
+    Console.WriteLine(a[i]);
+}
+```
+
