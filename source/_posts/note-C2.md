@@ -344,25 +344,120 @@ private static int GetValue(int num)
 |      |      |      |      | 空一格 |      |
 | 索引 | 0    | 1    | 2    | 3      | 4    |
 
-存储默认值（0、0.0、false）表示空一格
+存储默认值（int-0、float-0.0、char-\0、bool-false、string-null）表示空一格
 
 ## （二）使用
+
+1、数组的写法
 
 ```c#
 //声明 不用写赋值号"="
 int[] a;
 //初始化 new 数据类型[容量]
 a = new int[3];
-//通过索引读写元素
+//赋值 通过索引读写元素
 a[0] = 1;
 a[1] = 2;
 a[2] = 3;
 
+//初始化 + 赋值
+string[] array01 = new string[2]{"a","b"};//可以不用写明容量
+//声明 +初始化 + 赋值
+bool[] array 02 = {true,true,false};
+```
+
+```c#
 //for(int i = 0; i < 3; i++) 
-//如果数组长度变化则需要重新修改i的范围，将常数范围改为"数组名.Length"
+//如果数组长度变化则需要重新修改i的范围，将常数范围改为"数组名.Length"可以避免这个问题
 for(int i = 0; i < a.Length; i++)
 {
     Console.WriteLine(a[i]);
+}
+```
+
+
+
+### 练习
+
+录入学生总数、学生成绩
+
+```c#
+private static float[] CountStudentResult()
+{
+	Console.WriteLine("请输入学生人数：");
+	int count = int.Parse(Console.ReadLine());
+	float[] resultArray;
+	resultArray = new float[count];
+	for(int i = 0; i < count;) //记得加分号
+	{
+		Console.WriteLine("请输入{0}号学生成绩",i+1); 
+		float score = float.Parse(Console.ReadLine());
+		if(score > 100 || score < 0)
+			Console.WriteLine("请输入正确的成绩（0-100）");
+		else
+			resultArray[i++] = score;
+        	//如果先前声明的是i=1，那么此处应填i-1，否则读不到数组第一位
+	}
+	return resultArray;//返回数组时不用加[]
+}
+```
+
+计算最大值
+
+```c#
+static void Main()
+{
+	Console.WriteLine("请输入第一个数");
+	float a = float.Parse(Console.ReadLine());
+	Console.WriteLine("请输入第二个数");
+	float b = float.Parse(Console.ReadLine());
+	Console.WriteLine("请输入第三个数");
+	float c = float.Parse(Console.ReadLine());
+	float max = GetMaximum(new float[]{a,b,c});//【简略写法】
+	Console.WriteLine("最大值为{0}",max);
+	Console.ReadLine();
+}
+private static float GetMaximumZ(float[] array)
+{
+	int i = 0;
+	float maxNum = array[i];
+	for(;i < array.Length;i++)
+	{
+	if(maxNum < array[i])
+		maxNum = array[i];
+	}
+	return maxNum;
+}
+```
+
+计算某月某日是当年的第几天
+
+```c#
+static void Main()
+{
+	Console.WriteLine("请输入年：");
+	int year = int.Parse(Console.ReadLine());
+	Console.WriteLine("请输入月：");
+	int month = int.Parse(Console.ReadLine());
+	Console.WriteLine("请输入日：");
+	int day = int.Parse(Console.ReadLine());
+	int count = GetDayCount(year, month, day);
+	Console.WriteLine("天数为{0}",count);
+	Console.ReadLine();
+}
+private static int GetDayCount(int year,int month,int day)
+{
+	int	daysOfFeb = isLeapYear(year)? 29:28;
+	int[] days = {31,daysOfFeb,31,30,31,30,31,31,30,31,30,31};
+    //或者用if语句直接替换数组内容
+    //if(isLeapYear(year))days[1] = 29;
+	int count = 0;
+	for(int i = 0;i+1 < month;i++)
+	{
+		count += days[i];
+	}
+	count += day;
+	return count;
 }
 ```
 

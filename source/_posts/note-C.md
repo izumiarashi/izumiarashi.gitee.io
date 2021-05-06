@@ -626,14 +626,14 @@ for (int i = 0;i<5;i++)//for (初始化;循环条件;增减变量)
 int i = 0;
 //将初始化提前，变量的作用域不同
 //写在for语句内，作用域只在{ }之间
-for (i<5;i++)
+for (；i<5;i++) //提前声明后，仍需要保留分号
 {
 	Console.WriteLine("11");
 }
 Console.WriteLine(i);
 //将初始化提前了，所以此处可以输出i，否则会找不到i的定义
 
-for (int i = 0;i<5)
+for (int i = 0;i<5;) //保留分号
 {
 	Console.WriteLine("11");
     i++; //将增减变量放到循环体内，作用等效
