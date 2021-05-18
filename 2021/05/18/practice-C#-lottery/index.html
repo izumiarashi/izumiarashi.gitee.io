@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="《原神》多人玩法设计案（未完）, 窝">
+    <meta name="keywords" content="C#练习（二）—— 彩票生成, 窝">
     <meta name="description" content="随便写写">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>《原神》多人玩法设计案（未完） | 窝</title>
+    <title>C#练习（二）—— 彩票生成 | 窝</title>
     <link rel="icon" type="image/png" href="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/45px-Icon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/微信图片_20210424230557.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">《原神》多人玩法设计案（未完）</h1>
+                    <h1 class="description center-align post-title">C#练习（二）—— 彩票生成</h1>
                 </div>
             </div>
         </div>
@@ -367,12 +367,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A1%88/">
-                                <span class="chip bg-color">设计案</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%8E%9F%E7%A5%9E/">
-                                <span class="chip bg-color">原神</span>
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C#</span>
                             </a>
                         
                     </div>
@@ -383,8 +379,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/" class="post-category">
-                                游戏策划
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/" class="post-category">
+                                编程练习
                             </a>
                         
                     </div>
@@ -396,14 +392,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-11
+                    2021-05-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-16
+                    2021-05-18
                 </div>
                 
 
@@ -419,77 +415,15 @@
             <div id="articleContent">
                 <a id="more"></a>
 
-<p>*******<em>练手作品，所以将美术、程序等设计规则整合到了一起。</em>*******</p>
-<h1><span id="一-修改列表">一、修改列表</span></h1><table>
-<thead>
-<tr>
-<th>修改日期</th>
-<th>修改内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2021/03/05</td>
-<td>创建文档</td>
-</tr>
-<tr>
-<td>2021/03/10</td>
-<td>分析活动定位、用户体验预期，拆分需求</td>
-</tr>
-<tr>
-<td>2021/03/14</td>
-<td>细化游戏流程及规则</td>
-</tr>
-</tbody></table>
-<h1><span id="二-设计概述">二、设计概述</span></h1><h2><span id="一设计目的">（一）设计目的</span></h2><p>1、丰富多人联机可玩内容，强化社交元素</p>
-<p>2、通过PVP内容，延长玩法的生命周期，提高玩法复用率</p>
-<p>3、增加材料投放，加快低等级玩家养成进度</p>
-<h2><span id="二活动定位">（二）活动定位</span></h2><p>1、限时开放活动中活动代币的主要来源</p>
-<p>2、多人联机非战斗趣味玩法</p>
-<p>3、1-2分钟短时间小游戏</p>
-<h2><span id="三设计思路">（三）设计思路</span></h2><p>1、直线型竞速关卡，最先到达终点的获胜。</p>
-<p>2、段位设计，使玩家能够匹配到实力相近的对手，维持心流体验。</p>
-<p>3、兼顾沉浸感，活动的奖励发放及积分计算都通过配置的NPC来进行。</p>
-<h2><span id="四用户体验">（四）用户体验</span></h2><p>1、短平快的玩法不占用用户太多时间，及时得到反馈</p>
-<p>2、大部分玩家能花费较少时间完成活动玩法并兑换大部分奖励，少数玩家能追求更多累计积分来获得全部奖励。</p>
-<p>3、每天参与活动的玩家可以通过每日额外奖励的代币兑换完大部分奖励，没有参与活动全程的玩家可以通过在某几天集中花费大量时间得到兑换完大部分奖励。</p>
-<p>4、玩家所能兑换的奖励根据活动已举办时间进行逐步解锁，引导玩家游玩时间。</p>
-<h1><span id="三-玩法简述">三、玩法简述</span></h1><p>​        玩法场景为直线型跑道，两端分别为起点和终点。4名玩家从起点出发，最先到终点的玩家获得胜利。终点处有一个大型兔兔伯爵，每隔一段时间转身，玩家在其面向自己时需要停止动作，否则会被标记。多次标记或自己血量降为0时被淘汰。</p>
-<h1><span id="四-详细设定">四、详细设定</span></h1><h2><span id="一开放时间">（一）开放时间</span></h2><h2><span id="二背景设定">（二）背景设定</span></h2><h2><span id="三玩法流程">（三）玩法流程</span></h2><h3><span id="1-功能入口">1、功能入口</span></h3><h4><span id="1入口位置">（1）入口位置</span></h4><p>活动一览</p>
-<h4><span id="2准入规则">（2）准入规则</span></h4><p>世界等级16级以上玩家才可进入</p>
-<p>仅在活动开始时间内开放入口</p>
-<h3><span id="2-流程说明">2、流程说明</span></h3><p>​        玩法场景为直线型跑道，两端分别为起点和终点。4名玩家从起点出发，最先到终点的玩家获得胜利。终点处有一个大型兔兔伯爵，每隔一段时间转身180°，检测其面向180°，半径等于赛道长度的半圆范围内玩家状态，并标记状态不为待机的玩家，每次转身时每名玩家最多被标记1次。被标记3次的玩家会被淘汰。赛道上分为危险区和安全区，危险区内设置各类机关，玩家角色血量为0时被淘汰。</p>
-<p>淘汰且本局游戏尚未结束时，玩家可选择继续观战或是退出。退出后将会在该局游戏结束时结算相应的排名及奖励。</p>
-<h3><span id="3-匹配规则">3、匹配规则</span></h3><h4><span id="1匹配条件">（1）匹配条件</span></h4><p>​    ①根据玩家当前胜率</p>
-<p>​    玩家胜率低于40%时，为其匹配机器人。机器人水平。</p>
-<p>​    ②根据玩家当前段位</p>
-<p>​    只会匹配段位相差2段以内的玩家。</p>
-<h4><span id="2匹配过程">（2）匹配过程</span></h4><p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210314233344838.png"></p>
-<h3><span id="4-游戏结束规则">4、游戏结束规则</span></h3><h4><span id="1玩家胜利">（1）玩家胜利</span></h4><p>有玩家到达终点，或所有玩家都被淘汰后本局游戏结束。</p>
-<h4><span id="2玩家淘汰">（2）玩家淘汰</span></h4><p>4名玩家全部被淘汰后游戏结束。</p>
-<h3><span id="5-计分规则">5、计分规则</span></h3><h4><span id="1积分">（1）积分</span></h4><h4><span id="2段位分">（2）段位分</span></h4><h2><span id="四玩法商店">（四）玩法商店</span></h2><p>1、开启时间</p>
-<p>2、奖励内容</p>
-<h2><span id="五活动任务">（五）活动任务</span></h2><p>​        活动任务从活动开启日期每天解锁一部分，</p>
-<p>​        任务奖励积分</p>
-<h1><span id="六-需求整理">六、需求整理</span></h1><h2><span id="一美术需求">（一）美术需求</span></h2><p>1、活动场景编辑</p>
-<p>2、开始倒计时数字的美术表现</p>
-<p>3、运营图片</p>
-<h2><span id="二程序需求">（二）程序需求</span></h2><p>1、匹配机制实现</p>
-<p>2、段位机制实现</p>
-<p>3、游戏结束机制实现</p>
-<h2><span id="三运营需求">（三）运营需求</span></h2><h3><span id="1-数据统计">1、数据统计</span></h3><p>（1）每日活跃玩家活动平均参与率、胜率、获得积分情况</p>
-<p>（2）积分商店各道具兑换情况</p>
-<p>（3）关卡内风信子商店兑换情况</p>
-<p>（4）每日任务及本期活动任务完成比例</p>
-<p>（5）每局游戏结束的原因及比例</p>
-<h3><span id="2-预热推广文案">2、预热推广文案</span></h3><h3><span id="3-排行榜计分">3、排行榜计分</span></h3><h2><span id="四策划需求">（四）策划需求</span></h2><p>1、奖励投放数值计算</p>
-<hr>
-<p><strong><em>优化方向</em></strong></p>
-<p>该玩法没有对元素反应的利用，玩家间交互极少。可以增加一个道具“元素瓶”，可以收集当前玩家身上的元素状态，并可主动释放。发生不同的元素反应可以为自己或对手提供增益或减益。（超载——加速一段时间，随后对自身及周围玩家造成击飞效果）</p>
-<p><strong><em>废案</em></strong></p>
-<p>玩法场景内可划分为三个相连的区域。区域一为起始区域有4条赛道，匹配成功后四名玩家分别位于4条赛道起点处；区域二4条赛道两两合并为2条赛道；区域三2条赛道合并为1条赛道。玩家可以收集散落在赛道上的风信子增加自己的移动速度；也可以在赛道中的指定位置消耗风信子兑换道具，增幅自身或削弱对手。赛道中有各种地形、可交互物品和怪物，最先到达终点的玩家获得比赛胜利。</p>
-<p><em>废除原因：个人能力不足，不能在短时间内完成较为完整的关卡构想。对PVP的平衡难以把控（不同属性间、不同武器间）。</em></p>
-<p><strong><em>随便说点</em></strong></p>
-<p>​        在构思过程中再一次的感叹《原神》这块璞玉的潜力巨大，多样的移动和交互手段可以实现很多有趣的玩法。不过也尚有不足：《原神》之于市面上其他开放世界游戏，其最大的优势就在于它是一款线上游戏，并拥有广大用户的基础，但其多人游戏功能却依然如《崩坏3》一般鸡肋。如何利用并扩大这一优势，应当也是《原神》日后空余之时需要思考的方向之一。</p>
+<h2><span id="题目">题目</span></h2><p>制作一个彩票生成器</p>
+<p>红球：1-33，抽取6个，不能重复</p>
+<p>蓝球：1-16，抽取1个</p>
+<h2><span id="需求拆分">需求拆分</span></h2><p>（1）购买彩票：</p>
+<p>依次输入号码，超出可选范围时提示。</p>
+<p>输入重复号码时提示。</p>
+<p>记录7个数字</p>
+<p>（2）抽取彩票</p>
+<p>随机产生7个</p>
 
             </div>
             <hr/>
@@ -515,7 +449,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/izumiarashi/izumiarashi.github.io/2021/03/11/genshen-Event/">https://github.com/izumiarashi/izumiarashi.github.io/2021/03/11/genshen-Event/</a>
+                    <a href="https://github.com/izumiarashi/izumiarashi.github.io/2021/05/18/practice-C#-lottery/">https://github.com/izumiarashi/izumiarashi.github.io/2021/05/18/practice-C#-lottery/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -553,12 +487,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A1%88/">
-                                    <span class="chip bg-color">设计案</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%8E%9F%E7%A5%9E/">
-                                    <span class="chip bg-color">原神</span>
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C#</span>
                                 </a>
                             
                         </div>
@@ -600,28 +530,40 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/25/practice-C#-Calendar/">
+                <a href="/2021/05/18/practice-C#-lottery/">
                     <div class="card-image">
                         
-                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20210424230602.jpg" class="responsive-img" alt="C#练习（一）——制作年历">
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/微信图片_20210424230557.jpg" class="responsive-img" alt="C#练习（二）—— 彩票生成">
                         
-                        <span class="card-title">C#练习（一）——制作年历</span>
+                        <span class="card-title">C#练习（二）—— 彩票生成</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            方法的应用
+                            
+
+题目制作一个彩票生成器
+红球：1-33，抽取6个，不能重复
+蓝球：1-16，抽取1个
+需求拆分（1）购买彩票：
+依次输入号码，超出可选范围时提示。
+输入重复号码时提示。
+记录7个数字
+（2）抽取彩票
+随机产生7个
+
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -634,6 +576,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -652,30 +595,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/09/genshin-SystemLoop/">
+                <a href="/2021/04/25/practice-C#-Calendar/">
                     <div class="card-image">
                         
-                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/paimon.jpg" class="responsive-img" alt="《原神》系统拆解及经济循环分析">
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20210424230602.jpg" class="responsive-img" alt="C#练习（一）——制作年历">
                         
-                        <span class="card-title">《原神》系统拆解及经济循环分析</span>
+                        <span class="card-title">C#练习（一）——制作年历</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            没有找到比较全面的经验表，且个人水平有限，暂不分析数值投放。
+                            方法的应用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/" class="post-category">
-                                    游戏策划
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/" class="post-category">
+                                    编程练习
                                 </a>
                             
                             
@@ -685,12 +628,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/">
-                        <span class="chip bg-color">游戏拆解</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8E%9F%E7%A5%9E/">
-                        <span class="chip bg-color">原神</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C#</span>
                     </a>
                     
                 </div>
