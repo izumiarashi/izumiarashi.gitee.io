@@ -4,7 +4,7 @@ date: 2020-07-21 10:25:33
 categories: 笔记
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/-66193fc3dffc4da4.png'
 tags: 
-- 数值策划
+- 游戏策划
 cover: false
 summary: 数值入门
 ---

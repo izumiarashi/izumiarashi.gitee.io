@@ -148,6 +148,24 @@ Ctrl+K+U 取消注释
 
 **布尔类型bool：**1字节，true、false
 
+### 5、推断类型：var
+
+（1）含义
+
+​	根据所赋数据，推断数据类型
+
+（2）应用场景
+
+​	数据类型名称较长时
+
+（3）局限性
+
+​	可读性差
+
+### 6、object
+
+声明Object可以赋值任意类型
+
 # 三、语法
 
 ## （一）声明
@@ -201,6 +219,16 @@ Ctrl+K+U 取消注释
 在可能出错的语句增加断点
 
 *拓展：[VS Code 调试完全攻略（2）：步进逐行调试](http://blog.yidengxuetang.com/post/202005/27/)”*
+
+*拓展：[【原创】VS CODE 编写控制台测试程序时无法正确读取Console.ReadLine()](https://blog.csdn.net/qq_29503199/article/details/88351498)*
+
+"要在调试时读取输入，可以在launch.json中使用配置中的console属性
+
+使用integratedTerminal设置，终端在VSCode本身内部进行检测。
+
+使用externalTerminal设置，终端生成一个控制台来使用。
+
+使用internalConsole设置，则不产生输入交互。"
 
 ## 练习：
 
@@ -702,6 +730,10 @@ while(true) //死循环
     }
 }
 ```
+
+**（3）foreach**
+
+见[《笔记（二）》](https://izumiarashi.github.io/2021/03/01/note-C2/#jump2)
 
 ### 3、短路语句
 

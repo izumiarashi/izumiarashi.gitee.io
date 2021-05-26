@@ -348,7 +348,7 @@ private static int GetValue(int num)
 
 ## （二）使用
 
-1、数组的写法
+### 1、数组的写法
 
 ```c#
 //声明 不用写赋值号"="
@@ -363,7 +363,7 @@ a[2] = 3;
 //初始化 + 赋值
 string[] array01 = new string[2]{"a","b"};//可以不用写明容量
 //声明 +初始化 + 赋值
-bool[] array 02 = {true,true,false};
+bool[] array02 = {true,true,false};
 ```
 
 ```c#
@@ -460,4 +460,89 @@ private static int GetDayCount(int year,int month,int day)
 	return count;
 }
 ```
+
+### <span id="jump2">2、foreach</span>
+
+从头到尾依次读取数组元素
+
+```c#
+//foreach(元素类型 变量名 in 数组名称)
+int[] array = {1,2,3,4};
+foreach(int ii in array)
+{
+    Console.WriteLine(ii);
+}
+//输出
+//1
+//2
+//3
+//4
+```
+
+（1）优点：简单方便
+
+（2）缺点：
+
+​	①不能读取局部元素
+
+​	②不能修改元素
+
+​	③只能遍历实现enumerable接口的集合对象
+
+### 3、扩展：父子类型
+
+声明父类类型，赋值子类对象
+
+```c#
+Array arr01 = new int[2];
+Array arr02 = new string["1"];
+```
+
+定义方法时使用，方便传参
+
+```c#
+private static void Father(Array arr01)
+{
+    ……
+}
+```
+
+### 4、常用方法及属性
+
+【索引】Array.IndexOf()
+
+找第一个匹配项的索引
+
+```c#
+int[] arr01 = new int[]{222,333,444,555};
+int index = Array.IndexOf(arr01,444)；
+    //返回2
+int index = Array.IndexOf(arr01,333)；
+    //返回-1
+```
+
+【数组长度】数组名.Length
+
+【清除元素值】Array.Clear
+
+【复制元素】Array.copy、数组名.CopyTo
+
+【克隆】数组名.Clone
+
+```c#
+Array arr01 = new int[2];
+int[] obj01= (int[])arr.Clone();//arr.Clone返回值为object，需要显式转换
+```
+
+【查找元素】Array.IndexOf、Array.LastIndexOf
+
+【排序】Array.Sort(数组名)
+
+​	从小到大排序
+
+Array.Sort(数组名, 起始索引, 长度)
+
+​	从起始索引开始数一定长度，然后对这部分的数组排序
+
+【反转】Array.Reverse
 

@@ -1,12 +1,14 @@
 ---
-title: 【关卡笔记】Blockmesh技巧
+title: 【GDC笔记】Blockmesh
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/5a6e6c21cacd351.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2020-10-01 21:14:07
 category: 笔记
 tags: 
+- Blockmesh
 - 关卡策划
+- GDC笔记
 summary: 白盒设计技巧
 ---
 

@@ -1,10 +1,13 @@
 ---
-title: 【设计笔记】新手引导
+title: 【GDC笔记】新手引导
 date: 2020-10-12 11:45:35
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/-5d0dcba37b9eb496.jpg'
 cover: false
 category: 笔记
-tags: 新手引导
+tags: 
+- 引导
+- 游戏策划
+- GDC笔记
 summary: 教程应该怎么做？不应该怎么做？
 ---
 
