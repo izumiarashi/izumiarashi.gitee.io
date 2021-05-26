@@ -399,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-18
+                    2021-05-26
                 </div>
                 
 
@@ -493,6 +493,11 @@
 <p><em>拓展（C++）：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Marshalldong/article/details/88049034">声明、定义、初始化与赋值</a></em></p>
 <h2><span id="三调试">（三）调试</span></h2><p>在可能出错的语句增加断点</p>
 <p><em>拓展：<a target="_blank" rel="noopener" href="http://blog.yidengxuetang.com/post/202005/27/">VS Code 调试完全攻略（2）：步进逐行调试</a>”</em></p>
+<p><em>拓展：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29503199/article/details/88351498">【原创】VS CODE 编写控制台测试程序时无法正确读取Console.ReadLine()</a></em></p>
+<p>“要在调试时读取输入，可以在launch.json中使用配置中的console属性</p>
+<p>使用integratedTerminal设置，终端在VSCode本身内部进行检测。</p>
+<p>使用externalTerminal设置，终端生成一个控制台来使用。</p>
+<p>使用internalConsole设置，则不产生输入交互。”</p>
 <h2><span id="练习">练习：</span></h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">First</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">gun</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请输入枪的名称：&quot;</span>);</span><br><span class="line">            <span class="keyword">string</span> gunName = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请输入枪的弹匣容量：&quot;</span>);</span><br><span class="line">            String gunVolume = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请输入枪的伤害：&quot;</span>);</span><br><span class="line">            <span class="keyword">string</span> gunDmg = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(gunName + <span class="string">&quot;的弹匣容量为&quot;</span> + gunVolume + <span class="string">&quot;，伤害为&quot;</span> + gunDmg);</span><br><span class="line">            <span class="comment">//拼接容易影响代码可读性</span></span><br><span class="line">            Console.Read();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3><span id="四占位符">（四）占位符</span></h3><p>{位置编号}</p>
