@@ -4,7 +4,7 @@ img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/v2-dd5961912671a8b7c99
 cover: true
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/src=http___attach.bbs.miui.com_forum_201804_18_172344g6tsuasyytq2dd7a.png&refer=http___attach.bbs.miui.jpg'
 date: 2021-02-22 19:40:49
-category: 笔记
+category: 编程笔记
 tags: C#
 summary: 基础概念、变量、运算、数据类型转换
 ---

@@ -2,7 +2,7 @@
 title: '《剑网3》列星虚境模式体验报告'
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/JX3.jpg'
 date: 2020-05-28 21:42:52
-category: 游戏策划
+category: 游戏拆解
 tags: 
 - 体验报告
 - 剑网三

@@ -4,7 +4,7 @@ img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/v2-dd5961912671a8b7c99
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2021-03-01 21:40:39
-category: 笔记
+category: 编程笔记
 tags: C#
 summary:  方法、递归、数组
 ---

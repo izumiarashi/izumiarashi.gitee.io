@@ -4,7 +4,7 @@ img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2021-03-11 00:11:55
-category: 游戏策划
+category: 游戏设计
 tags: 
 - 设计案
 - 原神

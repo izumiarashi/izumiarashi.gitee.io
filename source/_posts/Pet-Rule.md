@@ -1,9 +1,9 @@
 ---
 title: 宠物系统玩法及规则设计
 date: 2020-09-28 22:28:43
-category: 游戏策划
+category: 游戏设计
 tags:
-  - 系统设计
+  - 系统策划
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/7a226b880a482afd.jpg'
 cover: false
 summary: 手游宠物系统的产出规则及玩法设计

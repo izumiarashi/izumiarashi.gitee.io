@@ -2,7 +2,7 @@
 title: 《碧蓝幻想》系统拆解 （2020.10.13更新）
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/2040375000.png'
 date: 2020-09-19 22:20:54
-category: 游戏策划
+category: 游戏拆解
 tags: 
 - 游戏拆解
 - 碧蓝幻想

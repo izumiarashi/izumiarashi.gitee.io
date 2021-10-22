@@ -4,11 +4,11 @@ img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/4722eeef58107f82.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2020-10-08 21:56:14
-category: 笔记
+category: 策划笔记
 tags: 
 - ACT
 - 游戏策划
-- GDC笔记
+- GDC
 summary: 动作游戏是什么？有哪些要素？
 ---
 

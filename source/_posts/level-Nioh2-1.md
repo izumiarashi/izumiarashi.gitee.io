@@ -4,10 +4,11 @@ img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2021-05-19 17:52:05
-category: 关卡
+category: 游戏拆解
 tags: 
 - 关卡策划
 - 战斗策划
+- 仁王
 summary: 对关卡敌人配置、今川义元Boss技能配置进行记录分析
 ---
 
@@ -35,6 +36,8 @@ Boss有薙刀和双刀两种攻击模式。
 
 #### 薙刀
 
+1、薙刀柄
+
 1、刀柄扫地二连
 
 当玩家在攻击范围内时
@@ -53,7 +56,7 @@ Boss有薙刀和双刀两种攻击模式。
 
 1、【红技】召唤守护灵
 
-![守护灵](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/守护灵.gif)
+
 
 远程攻击手段1，以玩家为中心
 

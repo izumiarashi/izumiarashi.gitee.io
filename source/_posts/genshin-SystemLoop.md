@@ -4,9 +4,9 @@ img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/paimon.jpg'
 cover: true
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/7873d29833c490a00214010afcc7fed5.png'
 date: 2021-03-09 11:43:12
-category: 游戏策划
+category: 游戏拆解
 tags: 
-- 游戏拆解
+- 游戏策划
 - 原神
 summary: 没有找到比较全面的经验表，且个人水平有限，暂不分析数值投放。
 ---

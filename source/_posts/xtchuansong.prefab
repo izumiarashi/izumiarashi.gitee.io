@@ -1,0 +1,38 @@
+{
+ prefab: {
+  res_type: "MRT_Prefab",
+  component: [
+   {
+    res_type: "MRT_Are",
+    path: "fx/setting/hnpc3657.are",
+    name: "hnpc3657/all"
+   },
+   {
+    res_type: "MRT_Are",
+    path: "fx/setting/hnpc3831.are",
+    name: "hnpc3831/all"
+   },
+   {
+    res_type: "MRT_Prefab",
+    path: "prefab\\cehua\\character\\daoju\\hnpc3970.prefab",
+    translation: {
+     x: 0.0,
+     y: 0.0,
+     z: 0.0
+    },
+    rotation: {
+     x: 0.0,
+     y: 0.0,
+     z: 0.0,
+     w: 1.0
+    },
+    scale: {
+     x: 1.0,
+     y: 1.0,
+     z: 1.0
+    }
+   }
+  ],
+  scale: 0.5
+ }
+}

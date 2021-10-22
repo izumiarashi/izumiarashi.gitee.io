@@ -4,7 +4,7 @@ img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2020-10-05 12:01:05
-category: 笔记
+category: 编程笔记
 tags: Unity
 summary: 转载
 ---

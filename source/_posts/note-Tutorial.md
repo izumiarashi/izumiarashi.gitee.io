@@ -3,7 +3,7 @@ title: 【GDC笔记】新手引导
 date: 2020-10-12 11:45:35
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/-5d0dcba37b9eb496.jpg'
 cover: false
-category: 笔记
+category: 策划笔记
 tags: 
 - 引导
 - 游戏策划
