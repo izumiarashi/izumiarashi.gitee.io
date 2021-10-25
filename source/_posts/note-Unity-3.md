@@ -3,7 +3,7 @@ title: Unity笔记（3）
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/unity.jpg'
 date: 2020-10-02 18:02:09
 cover: false
-category: 笔记
+category: 编程笔记
 tags: Unity
 summary: 摄像机跟随
 ---

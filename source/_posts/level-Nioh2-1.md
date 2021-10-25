@@ -1,5 +1,5 @@
 ---
-title: 从《仁王2》支线“今川忠义者”来分析关卡与技能设计
+title: 【施工中】从《仁王2》支线“今川忠义者”来分析关卡与技能设计
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'

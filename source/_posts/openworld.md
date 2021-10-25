@@ -1,5 +1,5 @@
 ---
-title: 浅谈开放世界（未完
+title:////少空格////【待施工】浅谈开放世界
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/微信图片_20210303171204.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'

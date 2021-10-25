@@ -3,7 +3,7 @@ title: Unity笔记（2）
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/unity.jpg'
 date: 2020-09-14 21:35:24
 cover: false
-category: 笔记
+category: 编程笔记
 tags: Unity
 summary: 角色行为及动画
 ---

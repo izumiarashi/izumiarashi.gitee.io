@@ -3,7 +3,7 @@ title: Unity笔记（1）
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/unity.jpg'
 date: 2020-08-01 23:02:09
 cover: false
-category: 笔记
+category: 编程笔记
 tags: Unity
 summary: 基础
 ---

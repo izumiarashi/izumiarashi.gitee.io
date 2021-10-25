@@ -1,5 +1,5 @@
 ---
-title: 视听语言笔记
+title: 视听语言笔记01
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/5a6e6c21cacd351.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'

@@ -4,7 +4,7 @@ img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-2021012716252513
 cover: true
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127163046019.png'
 date: 2021-01-20 19:30:07
-category: 笔记
+category: 编程笔记
 tags: 
 - python
 summary: 了解计算机原理

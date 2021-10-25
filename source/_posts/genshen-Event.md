@@ -1,9 +1,9 @@
 ---
-title: 《原神》多人玩法设计案（未完）
+title:////少空格////【待施工】《原神》多人玩法设计案
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
-date: 2021-03-11 00:11:55
+date: 2021-03-11 23:11:55
 category: 游戏设计
 tags: 
 - 设计案
@@ -13,7 +13,7 @@ summary: 具体设计细节还需要仔细打磨
 
 <!--more-->
 
-\*\*\*\*\*\*\**练手作品，所以将美术、程序等设计规则整合到了一起。*\*\*\*\*\*\*\*
+*纯瞎想、练手*
 
 # 一、修改列表
 

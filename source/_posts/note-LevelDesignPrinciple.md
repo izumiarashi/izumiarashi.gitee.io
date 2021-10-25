@@ -3,7 +3,7 @@ title: 【GDC笔记】优秀关卡设计的10个原则
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20211022154250356.png'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
-date: 2021-10-22 15:32:30
+date: 2021-10-13 15:32:30
 category: 策划笔记
 tags: 
 - 关卡设计
