@@ -382,7 +382,7 @@ bool[] array02 = {true,true,false};
 
 ```c#
 //for(int i = 0; i < 3; i++) 
-//如果数组长度变化则需要重新修改i的范围，将常数范围改为"数组名.Length"可以避免这个问题
+//如果对数组长度的定义有变，则需要在循环里重新修改i的范围。将常数范围改为"数组名.Length"可以避免这个问题
 for(int i = 0; i < a.Length; i++)
 {
     Console.WriteLine(a[i]);
