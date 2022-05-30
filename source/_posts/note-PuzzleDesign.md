@@ -1,13 +1,13 @@
 ---
 title: 【GDC笔记】关卡解谜
-img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20211022154250356.png'
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/54b82977c7d8c9d859aa96cff363b794.png'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
-date: 2021-10-13 15:32:30
+date: 2022-04-05 15:32:30
 category: 策划笔记
 tags: 
 - 关卡设计
-- GDC1
+- GDC
 summary:
 ---
 <!--more-->
@@ -68,7 +68,7 @@ https://www.bilibili.com/video/BV1gY411b79A
 
 （5）熟练后运用技巧去识别噪音
 
-## 四、《LineLight》启示
+## 五、《LineLight》启示
 
 （一）**简化**——减少噪声，创造清晰、联系紧密的谜题
 
@@ -126,7 +126,7 @@ https://www.bilibili.com/video/BV1gY411b79A
 
 对设计师有趣≠对玩家有趣
 
-## 四、如何设计谜题
+## 六、如何设计谜题
 
 **（一）如何设计关卡**——关卡不是想出来的，是由**机制**衍生的
 
@@ -162,10 +162,7 @@ https://www.bilibili.com/video/BV1gY411b79A
 
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20220409210603.png)
 
-
-
 如何判断关卡好坏？
-
 
 推荐阅读
 

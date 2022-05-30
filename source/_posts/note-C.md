@@ -165,7 +165,6 @@ Ctrl+K+U 取消注释
 
 声明Object可以赋值任意类型
 
-
 # 三、语法
 
 ## （一）声明
@@ -691,7 +690,7 @@ Console.WriteLine("第{0}次弹起高度为{1},累计弹起路程为{2}",count,h
 
 应用场景：做不确定次数的循环。
 
-**`<span id="jump2"><font color=#FF0000 >`练习：do-while语句`</font>`**
+**`<span id="jump2"><font color=#FF0000 >`练习：do-while语句 `</font></span>`**
 
 ```c#
 //猜1-10内的随机数字，猜对为止
@@ -763,7 +762,7 @@ Console.WriteLine(n2);
 
 **（4）Continue**
 
-`<span id="jump1">`在循环体中使用，当满足条件时，跳过后续代码，并进行下一次循环。
+`<span id="jump1">`在循环体中使用，当满足条件时，跳过后续代码，并进行下一次循环。`</span>`
 
 ```c#
 //求1-100内能被3整除的数字之和
