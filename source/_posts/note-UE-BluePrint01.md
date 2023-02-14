@@ -14,7 +14,7 @@ summary: 碰撞、触发盒、调用函数、蓝图通信
 
 https://www.bilibili.com/video/BV164411Y732 基于此教程
 
-一、P27 01 开关门
+# 一、P27 01 开关门
 
 1、门需要设置为可移动的
 
@@ -52,9 +52,19 @@ Dierection 时间轴结束后触发
 
 Direction 当前时间轴是正向还是反向
 
-轨迹 输出轨迹
+轨迹 输出轨迹、
 
-二、P28 02-1 蓝图类实现开关门
+4、拓展
+
+SwitchOnETimeLineDirection
+
+![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221206154633.png)
+
+时间轴向前时
+
+时间轴向后时
+
+# 二、P28 02-1 蓝图类实现开关门
 
 1、蓝图类中，添加指定模型
 
@@ -98,17 +108,17 @@ GetPlayerController → Enable Input →Keyborad "按键"
 
 → 回到蓝图类 → Set Show Mouse Curser 显示鼠标
 
-二、P31 03-2 升降电梯
+# 三、P31 03-2 升降电梯
 
 1、按住Alt键移动选中物体，即可复制
 
 2、蓝图中，按住Ctrl再拖动连线可以更换接口，按住Alt点击连线可以将它删除
 
+# 四、P32 03-3 双开自动门
+
 3、GetRelativeLocation 获取当前数值，作为初始值赋值给Lerp
 
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105164539.png)
-
-三、P32 03-3 双开自动门
 
 1、运行一次后，当前位置也会改变，因此要在进入流程前记录下当前值作为变量，再在Lerp处引用
 
@@ -132,7 +142,7 @@ GetPlayerController → Enable Input →Keyborad "按键"
 
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105173745.png)
 
-四、P35 04 拾取钥匙开门
+# 五、P35 04 拾取钥匙开门
 
 1、门的蓝图类里添加bool变量，通过分支判断，变量为true时才能开门。**变量默认值设为false**
 
@@ -152,7 +162,7 @@ GetPlayerController → Enable Input →Keyborad "按键"
 
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109112847.png)
 
-五、P37 05-2 类型转换
+# 六、P37 05-2 类型转换
 
 1、Cast To ThirdPersonCharacter 针对指定目标触发
 
@@ -162,17 +172,17 @@ As Third Person Character 作为目标输出，获得目标类里的变量、事
 
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109203138.png)
 
-六、P38 05-3 创建自定义事件
+# 七、P38 05-3 创建自定义事件
 
 1、新建事件图表，便于管理不同的功能
 
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109204905.png)
 
-2、CharacterMovement：移动参数设置，单位厘米
+2、CharacterMovement：查看移动参数设置，单位厘米
 
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109210919.png)
 
-3、在加速图表中设置（Set）最大移动速度，且**不指定变量的值**
+3、创建自定义事件（custom event）在加速图表中设置（Set）最大移动速度，且**不指定变量的值**
 
 ![img](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109211433.png)
 
