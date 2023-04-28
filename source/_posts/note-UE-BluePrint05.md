@@ -1,9 +1,9 @@
 ---
-title: 【UE4笔记】蓝图-4
+title: 【UE4笔记】蓝图-5
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
-date: 2022-11-24 18:12:37
+date: 2023-2-1 18:12:37
 category: UE4笔记
 tags: 
 - UE4
@@ -30,7 +30,6 @@ P50
 
 组合多个命令，使对话框选项更易于访问。
 
-
 ## 宏和函数的区别
 
 函数可以在别的蓝图类中全局调用；而宏只能在当前蓝图中调用（蓝图宏库可被全局调用）。
@@ -52,7 +51,6 @@ P50
 事件可以用来发送网络消息，函数不行
 
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20230214231250.png)
-
 
 # 面向对象的思想（封装、继承、多态）
 
@@ -76,7 +74,6 @@ P50
 
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20230214232149.png)
 
-
 # 类、Object、Actor、Pawn、Character、Component
 
 类是抽象的，用于定义Object中方法和变量的模板，不占用内存。Object是实例化的类，占用存储空间。
@@ -88,3 +85,14 @@ Actor是可以拥有功能，拥有组件的Objec。关卡蓝图也是一种Acto
 Pawn默认支持玩家输入，拥有控制权。
 
 Character是特殊的Pawn，拥有常见的游戏角色所需要的组件，包括碰撞、重力、移动逻辑（CharacterMovement）。
+
+
+# 蓝图接口
+
+![img](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20230223153812.png)
+
+![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20230223153923.png)
+
+左侧面板调用函数
+
+右键手动输入搜索，引用事件
