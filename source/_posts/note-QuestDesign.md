@@ -1,11 +1,13 @@
 ---
-title: 【策划笔记】
-img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg'
+title: 【策划笔记】地平线：西之绝境关卡设计
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bcd103cd5348536799144537ed29a9a6.jpeg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2023-04-28 18:39:32
 category: 策划笔记
-tags: -任务策划
+tags: 
+- 关卡策划
+- 任务策划
 summary:
 ---
 <!--more-->
@@ -13,7 +15,6 @@ summary:
 https://www.youtube.com/watch?v=KxcXUYx3eLQ
 
 https://www.bilibili.com/video/BV15Z4y1Y7tT
-
 
 # 工作流程
 
