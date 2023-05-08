@@ -32,7 +32,7 @@ https://www.bilibili.com/video/BV15Z4y1Y7tT
 
 6、优化润色
 
-# 一、
+# 一、整体流程
 
 1、节奏文档：确认设计节奏，明确玩法
 
