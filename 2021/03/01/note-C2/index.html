@@ -1,0 +1,1060 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="C#笔记(二), 窝">
+    <meta name="description" content="随便写写">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>C#笔记(二) | 窝</title>
+    <link rel="icon" type="image/png" href="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/45px-Icon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">窝</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">窝</div>
+        <div class="logo-desc">
+            
+            随便写写
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/v2-dd5961912671a8b7c9901bf645a3fbf2_720w.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">C#笔记(二)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C#</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
+                                编程笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-01
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-06-01
+                </div>
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <span id="more"></span>
+
+<h1><span id="一-方法">一、方法</span></h1><h2><span id="一什么是方法">（一）什么是方法</span></h2><h3><span id="1-含义">1、含义</span></h3><p>对一系列语句的命名，表示<strong>一个</strong>功能和行为。有的语言称其为函数、过程。</p>
+<h3><span id="2-目的">2、目的</span></h3><p>提高代码的可复用性和可维护性，代码层次结构更清晰。</p>
+<h2><span id="二语法">（二）语法</span></h2><h3><span id="1-定义方法">1、定义方法</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[访问修饰符][可选修饰符]返回类型 方法名称(参数列表)</span><br><span class="line">&#123;</span><br><span class="line">    方法体</span><br><span class="line">    <span class="keyword">return</span> 结果;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Test1</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="2-调用方法">2、调用方法</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方法名称(参数);</span><br></pre></td></tr></table></figure>
+
+<p>C#编译器自动调用Main方法（主方法）</p>
+<h3><span id="3-返回类型">3、返回类型</span></h3><p>①返回值：功能的结果</p>
+<p>②类型：</p>
+<p>数据类型（int、string、double、float……）：有返回值，方法体内<strong>必须有</strong>return关键字，且返回数据必须与返回类型兼容。</p>
+<p>空（void）：无返回值，方法体内<strong>可以有</strong>return关键字，表示退出方法体。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">float</span> <span class="title">X1</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2.0f</span>;<span class="comment">//返回值要与返回类型可兼容（显/隐式转换）</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">X2</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span>;<span class="comment">//void类型也可以写return关键字，不能有返回值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>方法的返回值类型显示在描述开头</em></p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210421222045105.png" alt="image-20210421222045105"></p>
+<h3><span id="ltspan-idquotjump1quotgt4-return关键字ltspangt"><code>&lt;span id=&quot;jump1&quot;&gt;</code>4、return关键字)<code>&lt;/span&gt;</code></span></h3><p>return后的语句不在执行</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">float</span> a = X1(); <span class="comment">//*记得加上(参数)</span></span><br><span class="line">	Console.WriteLine(<span class="string">&quot;返回&#123;0&#125;&quot;</span>,a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">float</span> <span class="title">X1</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;执行X1&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">20</span>;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;重复执行X1&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出“执行X1”、“返回20”</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="5-参数">5、参数</span></h3><p>①含义：方法定义者需要调用者传递的信息</p>
+<p>②实参：<strong>定义</strong>方法时用的形式参数</p>
+<p>③形参：<strong>调用</strong>方法时用的实际参数</p>
+<p>实参与形参必须一一对应（数量、类型、顺序）</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	X2(<span class="number">100</span>,<span class="string">&quot;200&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">X2</span>(<span class="params"><span class="built_in">int</span> a,<span class="built_in">string</span> b</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出100</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="三方法重载">（三）方法重载</span></h2><h3><span id="1-定义">1、定义</span></h3><p>方法名称相同，参数列表不同。</p>
+<h3><span id="2-作用">2、作用</span></h3><p>不同条件下，解决同一类问题。减少调用者学习成本。</p>
+<h3><span id="3-案例">3、案例</span></h3><p>输入分钟数，计算总秒数。</p>
+<p>输入小时数、分钟数，计算总秒数。</p>
+<p>输入天数、小时数、分钟数，计算总秒数。</p>
+<p><strong>初次尝试</strong></p>
+<p>缺点：仅有分钟时也要进行天、小时的传参</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入天数：&quot;</span>);</span><br><span class="line">	<span class="built_in">int</span> day = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入小时数：&quot;</span>);</span><br><span class="line">	<span class="built_in">int</span> hour = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入分钟数：&quot;</span>);</span><br><span class="line">	<span class="built_in">int</span> minute = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">	<span class="built_in">int</span> second = GetSecondByMinute(minute,hour,day);</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;共&#123;0&#125;秒&quot;</span>,second);</span><br><span class="line">	Console.ReadLine();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetSecondByMinute</span>(<span class="params"><span class="built_in">int</span> minute,<span class="built_in">int</span> hour,<span class="built_in">int</span> day</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	minute += GetMinuteByHour(hour,day);</span><br><span class="line">	<span class="keyword">return</span>(minute*<span class="number">60</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetMinuteByHour</span>(<span class="params"><span class="built_in">int</span> hour,<span class="built_in">int</span> day</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	hour += GetHourByDay(day);</span><br><span class="line">	<span class="keyword">return</span>(hour*<span class="number">60</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetHourByDay</span>(<span class="params"><span class="built_in">int</span> day</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span>(day*<span class="number">24</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>调整</strong></p>
+<p>拆分成可独立使用的三个办法，调整逻辑顺序。</p>
+<p>缺点：调用者需要记忆3种方法</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetTotalSecondByMinute</span>(<span class="params"><span class="built_in">int</span> minute</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> minute * <span class="number">60</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetTotalSecondByMinuteHour</span>(<span class="params"><span class="built_in">int</span> minute,<span class="built_in">int</span> hour</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> GetTotalSecondByMinute(minute + hour * <span class="number">60</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetTotalSecondByMinueHourDay</span>(<span class="params"><span class="built_in">int</span> minute,<span class="built_in">int</span> hour,<span class="built_in">int</span> day</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> GetTotalSecondByMinuteHour(minute, hour + <span class="number">24</span> * day);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>标准答案</strong></p>
+<p>方法重载，将三个方法命名为同一个名称。使能在不同条件下，用单一方法解决同一类问题。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetTotalSecond</span>(<span class="params"><span class="built_in">int</span> minute</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> minute * <span class="number">60</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetTotalSecond</span>(<span class="params"><span class="built_in">int</span> minute,<span class="built_in">int</span> hour</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> GetTotalSecond(minute + hour * <span class="number">60</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetTotalSecond</span>(<span class="params"><span class="built_in">int</span> minute,<span class="built_in">int</span> hour,<span class="built_in">int</span> day</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> GetTotalSecond(minute, hour + <span class="number">24</span> * day);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="4-补充">4、补充</span></h3><p>返回值不同，但参数相同，不可构成重载</p>
+<p>仅仅out和ref的区别不可以构成重载（见后文）</p>
+<h2><span id="综合练习制作年历"><strong>综合练习：制作年历</strong></span></h2><p>（见<a target="_blank" rel="noopener" href="https://izumiarashi.github.io/2021/04/25/practice-C-Calendar">C#练习（一）——制作年历</a>）</p>
+<h1><span id="二-递归">二、递归</span></h1><h2><span id="一含义">（一）含义</span></h2><p>方法内部又调用自身的过程</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//阶乘</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="title">GetFactorial</span>(<span class="params"><span class="built_in">int</span> num</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(num == <span class="number">1</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> num * GetFactorial(num - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="二核心思想">（二）核心思想</span></h2><p><strong>将问题转移给范围缩小的子问题</strong></p>
+<p>例：逐层检索每个文件夹中的文件，直到没有子文件夹</p>
+<h2><span id="三特点">（三）特点</span></h2><h3><span id="1-优点">1、优点</span></h3><p>复杂问题简单化</p>
+<h3><span id="2-缺点">2、缺点</span></h3><p>性能比循环差</p>
+<h3><span id="3-适用场景">3、适用场景</span></h3><p>在解决问题过程时遇到相同问题时</p>
+<h3><span id="练习"><strong>练习</strong></span></h3><p>按以下规律的数列，当参数为8时结果为多少？</p>
+<p>1-2+3-4+5-6……</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetValue</span>(<span class="params"><span class="built_in">int</span> num</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(num &gt;= i)</span><br><span class="line">	&#123;</span><br><span class="line">		i++;</span><br><span class="line">		<span class="keyword">return</span> i + GetValue(i); <span class="comment">//堆栈溢出，以为上面将i初始化了</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4><span id="拓展堆栈溢出"><strong>拓展：堆栈溢出</strong></span></h4><p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210429101213367.png"></p>
+<p>无限次的递归，没有对边界进行约束</p>
+<p><strong>分析原因：</strong>递归应该是从大到小拆分问题，而不是从1开始循环</p>
+<p><strong>修改：</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入一个大于0的数&quot;</span>);</span><br><span class="line">	<span class="built_in">int</span> num = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">	<span class="built_in">int</span> sum = GetValue(num);</span><br><span class="line">	<span class="keyword">if</span>(sum == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		Console.WriteLine(<span class="string">&quot;请正确输入大于0的数。&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		Console.WriteLine(<span class="string">&quot;按规律求和的结果为&#123;0&#125;&quot;</span>,sum);</span><br><span class="line">	&#125;</span><br><span class="line">	Console.ReadLine();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetValue</span>(<span class="params"><span class="built_in">int</span> num</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(num == <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(num &gt; <span class="number">1</span> &amp;&amp; num % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>*num + GetValue(num - <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(num &gt; <span class="number">1</span> &amp;&amp; num % <span class="number">2</span> != <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> num + GetValue(num - <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">    	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>优化：</strong>将数字是否合规的判断提前</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入一个大于0的数&quot;</span>);</span><br><span class="line">	<span class="built_in">int</span> num = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">	<span class="keyword">if</span>(num &lt;= <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		Console.WriteLine(<span class="string">&quot;请正确输入大于0的数。&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">int</span> sum = GetValue(num);</span><br><span class="line">		Console.WriteLine(<span class="string">&quot;按规律求和的结果为&#123;0&#125;&quot;</span>,sum);</span><br><span class="line">	&#125;</span><br><span class="line">	Console.ReadLine();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetValue</span>(<span class="params"><span class="built_in">int</span> num</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(num == <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(num % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> -num + GetValue(num - <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> num + GetValue(num - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1><span id="三-数组">三、数组</span></h1><h2><span id="一含义">（一）含义</span></h2><p>从Array派生的，一组<strong>数据类型相同</strong>的<strong>变量组合</strong>，是一种<strong>空间连续</strong>的<strong>数据结构</strong></p>
+<p>元素通过索引（位置的序号）进行操作</p>
+<p><strong>例</strong></p>
+<table>
+<thead>
+<tr>
+<th>数组</th>
+<th>5</th>
+<th>1</th>
+<th>4</th>
+<th>0</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>空一格</td>
+<td></td>
+</tr>
+<tr>
+<td>索引</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+</tbody></table>
+<p>存储默认值（int-0、float-0.0、char-\0、bool-false、string-null）表示空一格</p>
+<h2><span id="二使用">（二）使用</span></h2><h3><span id="1-数组的写法">1、数组的写法</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明 不用写赋值号&quot;=&quot;</span></span><br><span class="line"><span class="built_in">int</span>[] a;</span><br><span class="line"><span class="comment">//初始化 new 数据类型[容量]</span></span><br><span class="line">a = <span class="keyword">new</span> <span class="built_in">int</span>[<span class="number">3</span>];</span><br><span class="line"><span class="comment">//赋值 通过索引读写元素</span></span><br><span class="line">a[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">a[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">a[<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化 + 赋值</span></span><br><span class="line"><span class="built_in">string</span>[] array01 = <span class="keyword">new</span> <span class="built_in">string</span>[<span class="number">2</span>]&#123;<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>&#125;;<span class="comment">//可以不用写明容量</span></span><br><span class="line"><span class="comment">//声明 +初始化 + 赋值</span></span><br><span class="line"><span class="built_in">bool</span>[] array02 = &#123;<span class="literal">true</span>,<span class="literal">true</span>,<span class="literal">false</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//for(int i = 0; i &lt; 3; i++) </span></span><br><span class="line"><span class="comment">//如果对数组长度的定义有变，则需要在循环里重新修改i的范围。将常数范围改为&quot;数组名.Length&quot;可以避免这个问题</span></span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; a.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="练习">练习</span></h3><p>录入学生总数、学生成绩</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">float</span>[] <span class="title">CountStudentResult</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入学生人数：&quot;</span>);</span><br><span class="line">	<span class="built_in">int</span> count = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">	<span class="built_in">float</span>[] resultArray;</span><br><span class="line">	resultArray = <span class="keyword">new</span> <span class="built_in">float</span>[count];</span><br><span class="line">	<span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; count;) <span class="comment">//记得加分号</span></span><br><span class="line">	&#123;</span><br><span class="line">		Console.WriteLine(<span class="string">&quot;请输入&#123;0&#125;号学生成绩&quot;</span>,i+<span class="number">1</span>); </span><br><span class="line">		<span class="built_in">float</span> score = <span class="built_in">float</span>.Parse(Console.ReadLine());</span><br><span class="line">		<span class="keyword">if</span>(score &gt; <span class="number">100</span> || score &lt; <span class="number">0</span>)</span><br><span class="line">			Console.WriteLine(<span class="string">&quot;请输入正确的成绩（0-100）&quot;</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			resultArray[i++] = score;</span><br><span class="line">        	<span class="comment">//如果先前声明的是i=1，那么此处应填i-1，否则读不到数组第一位</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> resultArray;<span class="comment">//返回数组时不用加[]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>计算最大值</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入第一个数&quot;</span>);</span><br><span class="line">	<span class="built_in">float</span> a = <span class="built_in">float</span>.Parse(Console.ReadLine());</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入第二个数&quot;</span>);</span><br><span class="line">	<span class="built_in">float</span> b = <span class="built_in">float</span>.Parse(Console.ReadLine());</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入第三个数&quot;</span>);</span><br><span class="line">	<span class="built_in">float</span> c = <span class="built_in">float</span>.Parse(Console.ReadLine());</span><br><span class="line">	<span class="built_in">float</span> max = GetMaximum(<span class="keyword">new</span> <span class="built_in">float</span>[]&#123;a,b,c&#125;);<span class="comment">//【简略写法】</span></span><br><span class="line">	Console.WriteLine(<span class="string">&quot;最大值为&#123;0&#125;&quot;</span>,max);</span><br><span class="line">	Console.ReadLine();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">float</span> <span class="title">GetMaximumZ</span>(<span class="params"><span class="built_in">float</span>[] array</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">float</span> maxNum = array[i];</span><br><span class="line">	<span class="keyword">for</span>(;i &lt; array.Length;i++)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">if</span>(maxNum &lt; array[i])</span><br><span class="line">		maxNum = array[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> maxNum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>计算某月某日是当年的第几天</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入年：&quot;</span>);</span><br><span class="line">	<span class="built_in">int</span> year = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入月：&quot;</span>);</span><br><span class="line">	<span class="built_in">int</span> month = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;请输入日：&quot;</span>);</span><br><span class="line">	<span class="built_in">int</span> day = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">	<span class="built_in">int</span> count = GetDayCount(year, month, day);</span><br><span class="line">	Console.WriteLine(<span class="string">&quot;天数为&#123;0&#125;&quot;</span>,count);</span><br><span class="line">	Console.ReadLine();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">GetDayCount</span>(<span class="params"><span class="built_in">int</span> year,<span class="built_in">int</span> month,<span class="built_in">int</span> day</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">int</span>	daysOfFeb = isLeapYear(year)? <span class="number">29</span>:<span class="number">28</span>;</span><br><span class="line">	<span class="built_in">int</span>[] days = &#123;<span class="number">31</span>,daysOfFeb,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>&#125;;</span><br><span class="line">    <span class="comment">//或者用if语句直接替换数组内容</span></span><br><span class="line">    <span class="comment">//if(isLeapYear(year))days[1] = 29;</span></span><br><span class="line">	<span class="built_in">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>;i+<span class="number">1</span> &lt; month;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		count += days[i];</span><br><span class="line">	&#125;</span><br><span class="line">	count += day;</span><br><span class="line">	<span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="ltspan-idquotjump2quotgt2-foreach-ltspangt"><code>&lt;span id=&quot;jump2&quot;&gt;</code>2、foreach <code>&lt;/span&gt;</code></span></h3><p>从头到尾依次读取数组元素</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//foreach(元素类型 变量名 in 数组名称)</span></span><br><span class="line"><span class="built_in">int</span>[] array = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;</span><br><span class="line"><span class="keyword">foreach</span>(<span class="built_in">int</span> ii <span class="keyword">in</span> array)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(ii);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出</span></span><br><span class="line"><span class="comment">//1</span></span><br><span class="line"><span class="comment">//2</span></span><br><span class="line"><span class="comment">//3</span></span><br><span class="line"><span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+
+<p>（1）优点：简单方便</p>
+<p>（2）缺点：</p>
+<pre><code>①不能读取局部元素
+
+②不能修改元素
+
+③只能遍历实现enumerable接口的集合对象
+</code></pre>
+<h3><span id="3-扩展父子类型">3、扩展：父子类型</span></h3><p>声明父类类型，赋值子类对象</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Array arr01 = <span class="keyword">new</span> <span class="built_in">int</span>[<span class="number">2</span>];</span><br><span class="line">Array arr02 = <span class="keyword">new</span> <span class="built_in">string</span>[<span class="string">&quot;1&quot;</span>];</span><br></pre></td></tr></table></figure>
+
+<p>定义方法时使用，方便传参</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Father</span>(<span class="params">Array arr01</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="4-常用方法及属性">4、常用方法及属性</span></h3><p>【索引】Array.IndexOf()</p>
+<p>找第一个匹配项的索引</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>[] arr01 = <span class="keyword">new</span> <span class="built_in">int</span>[]&#123;<span class="number">222</span>,<span class="number">333</span>,<span class="number">444</span>,<span class="number">555</span>&#125;;</span><br><span class="line"><span class="built_in">int</span> index = Array.IndexOf(arr01,<span class="number">444</span>)；</span><br><span class="line">    <span class="comment">//返回2</span></span><br><span class="line"><span class="built_in">int</span> index = Array.IndexOf(arr01,<span class="number">333</span>)；</span><br><span class="line">    <span class="comment">//返回-1</span></span><br></pre></td></tr></table></figure>
+
+<p>【数组长度】数组名.Length</p>
+<p>【清除元素值】Array.Clear</p>
+<p>【复制元素】Array.copy、数组名.CopyTo</p>
+<p>【克隆】数组名.Clone</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Array arr01 = <span class="keyword">new</span> <span class="built_in">int</span>[<span class="number">2</span>];</span><br><span class="line"><span class="built_in">int</span>[] obj01= (<span class="built_in">int</span>[])arr.Clone();<span class="comment">//arr.Clone返回值为object，需要显式转换</span></span><br></pre></td></tr></table></figure>
+
+<p>【查找元素】Array.IndexOf、Array.LastIndexOf</p>
+<p>【排序】Array.Sort(数组名)</p>
+<pre><code>从小到大排序
+</code></pre>
+<p>Array.Sort(数组名, 起始索引, 长度)</p>
+<pre><code>从起始索引开始数一定长度，然后对这部分的数组排序
+</code></pre>
+<p>【反转】Array.Reverse</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">izumiarashi</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/izumiarashi/izumiarashi.github.io/2021/03/01/note-C2/">https://github.com/izumiarashi/izumiarashi.github.io/2021/03/01/note-C2/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">izumiarashi</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C#</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/09/genshin-SystemLoop/">
+                    <div class="card-image">
+                        
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/paimon.jpg" class="responsive-img" alt="《原神》系统拆解及经济循环分析">
+                        
+                        <span class="card-title">《原神》系统拆解及经济循环分析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            没有找到比较全面的经验表，且个人水平有限，暂不分析数值投放。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-09
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/" class="post-category">
+                                    游戏拆解
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/">
+                        <span class="chip bg-color">游戏策划</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8E%9F%E7%A5%9E/">
+                        <span class="chip bg-color">原神</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/22/nijigen/">
+                    <div class="card-image">
+                        
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20210127155254217.png" class="responsive-img" alt="二次元游戏及用户特征">
+                        
+                        <span class="card-title">二次元游戏及用户特征</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            浅析
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E8%BF%90%E8%90%A5/">
+                        <span class="chip bg-color">游戏运营</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/">
+                        <span class="chip bg-color">二次元</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="58088799"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">izumiarashi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+
+
+    <a href="mailto:suarashi@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮箱" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=804584939" class="tooltipped" target="_blank" data-tooltip="QQ: 804584939" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://steamcommunity.com/profiles/76561198161373777" class="tooltipped" target="_blank" data-tooltip="steam个人主页" data-position="top" data-delay="50">
+        <i class="fab fa-steam"></i>
+    </a>
+
+
+
+    <a href="https://pic.downk.cc/item/5f5e52b1160a154a67af38c4.jpg" class="tooltipped" target="_blank" data-tooltip="微信二维码" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

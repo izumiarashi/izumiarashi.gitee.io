@@ -1,0 +1,1148 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="《原神》PVE关卡设计, 窝">
+    <meta name="description" content="随便写写">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>《原神》PVE关卡设计 | 窝</title>
+    <link rel="icon" type="image/png" href="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/45px-Icon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">窝</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">窝</div>
+        <div class="logo-desc">
+            
+            随便写写
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/0bb47bfbfbedab645b1ddface036afc378311eae.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">《原神》PVE关卡设计</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%8E%9F%E7%A5%9E/">
+                                <span class="chip bg-color">原神</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1/">
+                                <span class="chip bg-color">关卡设计</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                游戏设计
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-09-18
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-06-01
+                </div>
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <span id="more"></span>
+
+<p>创建于2020年秋，当时尚未体验原神，可能会有部分与实际玩法不符之处，也因此限制了对关卡内容的拓展。</p>
+<h1><span id="sheet1-关卡概述">Sheet1  关卡概述</span></h1><h2><span id="一-关卡简介">一、关卡简介</span></h2><p><strong>（一）关卡背景：</strong>在破解了流传于大陆上有关宝藏的谜语后，你来到了谜底指示的地点。这是一片废弃了许久的遗迹，两侧的墙壁上灯照出微弱而稳定的光芒。盘踞于此的怪物发现了你。寡不敌众的你是否能够探索到最深层的奥秘，取得宝藏？</p>
+<p><strong>（二）关卡流程：</strong>线性探索。必须攻克当前房间才能进入下一区域，共有三个房间。</p>
+<p><strong>（三）关卡奖励：</strong></p>
+<p>1、探索奖励：进入到第二个房间后可获得。</p>
+<p>2、隐藏奖励：位于第一个房间的高处，可通过清理完第二个房间后发现密道获取。</p>
+<p>3、通关奖励：击败Boss后于场地中央获取。</p>
+<p><strong>（四）关卡地图</strong></p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012211139942.png" alt="地图配置"></p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012211204537.png" alt="关卡外观"></p>
+<p><strong>（五）角色选择</strong></p>
+<p>1、推荐攻略角色：火属性角色、双手剑角色、迪卢克、温迪</p>
+<p>2、不推荐角色：水、冰属性角色</p>
+<h2><span id="二-核心规则">二、核心规则</span></h2><p><strong>（一）规则名称：</strong>冰</p>
+<p><strong>（二）规则说明：</strong></p>
+<p>1、利用冰为固体的特性，可以将冰设置为障碍物。玩家可通过飞行或攀爬越过障碍，也可用其遮挡攻击。</p>
+<p>2、利用冰遇火即化的特性，玩家也可以通过生成火焰或是点燃地面提高温度从而弱化冰的强度。</p>
+<p>3、利用冰硬度不高的特点，可以让较脆弱，较薄的冰块能被重击、火焰所击破。</p>
+<p>4、利用冰可以反射一定程度的光的特点，可将其作为镜子。</p>
+<p><strong>（三）相关参数：</strong></p>
+<p>1、温度（计量单位：℃）</p>
+<p>（1）设计目的：实现玩家与环境的交互、空间校验、时间校验。</p>
+<p>（2）规则：</p>
+<p>①温度上限为30℃，下限为-60℃。</p>
+<p>②室内温度会随着时间的变化而降低，或是Boss、玩家角色使用特定冰属性技能，会使温度降低。玩家角色使用火属性技能时会使室内温度升高。</p>
+<p>③开启通风口时，温度会以10℃/的速度升温，最高回升到0℃。</p>
+<p>（3）UI表现：于画面左侧以温度计的形式显示。温度低于-25℃时显示“DEF↑”，下方放置史莱姆icon，示意怪物防御上升。</p>
+<p>2、冰封值</p>
+<p>（1）设计目的：对玩家的操作水平提出要求。</p>
+<p>（2）规则：</p>
+<p>①Boss的技能会对命中的玩家角色造成冰元素伤害的同时，使冰封值计数器+1.</p>
+<p>②玩家角色冰封值初始为0，上限为5.</p>
+<p>③当玩家角色身上的寒冷状态发生元素反应（超导、熔化、冻结）时，冰封值-1.</p>
+<p>（3）效果：当玩家冰封值达到5时，会在原地被施加状态[冰封]，同时冰封值归零。</p>
+<p>（4）UI表现：当冰封值≥1时，将一个冰块icon显示在玩家血条上方的状态栏中，同时在icon右上角显示具体冰封值数字。</p>
+<p>3、碎裂值、融化值</p>
+<p>（1）设计目的：实现特定角色的不同体验。</p>
+<p>（2）规则：</p>
+<p>①碎裂值：为物体添加实体，命名碎裂体。当重击/火属性攻击命中时，积累一定的碎裂值。累计碎裂值达到99的阈值后，物体碎裂。若此时融化值=0，则碎裂值归零。</p>
+<p>②为物体添加实体，命名融化体。当火属性攻击命中时，积累一定的融化值。累计融化值和碎裂值都达到阈值时，物体融化。阈值=1。</p>
+<p>③碎裂值和融化值不会随时间衰减</p>
+<p>（3）效果：</p>
+<p>①碎裂：对物体造成可修复的状态变化。</p>
+<p>②融化：对物体造成不可逆的状态变化。</p>
+<p>（4）UI表现：当物体可被碎裂/融化时，在其上方显示圆圈形积蓄槽，命名为“毁坏槽”，圆圈内为状态图标显示，初始为冰块上有裂纹的icon。碎裂值和融化值共同反映于毁坏槽。</p>
+<p>4、UI示例</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012211943834.png"></p>
+<h2><span id="三-名词解释">三、名词解释</span></h2><p><strong>冰封：</strong>不同于水加冰的元素反应“冻结”，而是直接将目标封入比人稍大的冰块之中。被冰封的角色无法主动挣脱，可更换角色。冰可被火属性攻击融化。</p>
+<p><strong>米（m）：</strong>游戏内比例尺单位，简写m，仅用于本文档中比较长短所用，并不代表游戏内实际设计。设主角的身高为1.5米。</p>
+<p><strong>障碍物：</strong>墙壁、冰岩、荒星一类有碰撞体积的场景实体。</p>
+<p><strong>引导：</strong>技能释放类型。在释放需要引导的技能时，会持续对目标释放该技能，引导时间结束后停止释放。部分技能会在引导结束时禅城特殊效果。</p>
+<p><strong>吟唱：</strong>技能释放类型。在释放需要吟唱的技能时需先蓄力，期间无法使用其他技能，吟唱结束后释放该技能。</p>
+<p><strong>完成时间：</strong>指一个技能从开始释放到完整释放，再到怪物恢复到初始状态一共需要的时间。单位为“秒”。</p>
+<p><strong>冷却时间：</strong>为了放缓战斗节奏，设定怪物在释放一次技能并恢复初始状态后，无论技能是否完整释放，下一个技能至少在X秒后才能释放。X即为冷却时间。</p>
+<p><strong>重击属性角色：</strong>即使用双手剑的角色，其使用蓄力攻击造成重击效果。</p>
+<h1><span id="sheet2-怪物设计">Sheet2  怪物设计</span></h1><h2><span id="一-小怪冰岩巨人">一、小怪：冰岩巨人</span></h2><p><strong>（一）特性：</strong></p>
+<p>1、免疫冰属性攻击，受到火属性攻击伤害翻倍。</p>
+<p>2、有实体碰撞体积，不可攀爬。</p>
+<p>3、各类技能均不会攻击到BOSS和其他怪物，仅对玩家生效。</p>
+<p>4、死亡后于原地掉落一颗冰岩，有实体碰撞体积，不可被玩家破坏，可攀爬。</p>
+<p>5、右腿在[践踏]后3秒内拥有毁坏槽，仅此时可导致右腿[碎裂]或[融化]。</p>
+<p><strong>（二）行动规则：</strong></p>
+<p>1、向玩家位置移动，当与玩家小于4米时，随机释放技能，冷却时间4秒。</p>
+<p>2、技能随机权重[101]：[102]：[103]=0.4:0.4:0.2。</p>
+<p><strong>（三）形象：</strong>与《塞尔达：荒野之息》的冰巨人类似，但没有其头上的弱点，且双腿和双臂同样粗壮。</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012212509104.png" alt="比例关系"></p>
+<p><strong>（四）技能</strong></p>
+<table>
+<thead>
+<tr>
+<th>技能ID</th>
+<th>技能名</th>
+<th align="center">完成时间</th>
+<th>技能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>101</td>
+<td>重拳</td>
+<td align="center">4</td>
+<td>向前方地面砸出重拳，对被直接命中的目标造成中等物理伤害。</td>
+</tr>
+<tr>
+<td>102</td>
+<td>左右冲拳</td>
+<td align="center">6</td>
+<td>左手朝前方从左至右打出一记摆拳，造成少量物理伤害；1秒后右拳向前方砸下，造成中等物理伤害并击退一小段距离。</td>
+</tr>
+<tr>
+<td>103</td>
+<td>践踏</td>
+<td align="center">4+3</td>
+<td>①蓄力2秒后用右脚向目标位置重重踩下并产生冲击波，冲击波会击退目标并造成少量物理伤害，直接踩中目标会对其造成大量冰元素伤害。②之后右脚上出现裂纹并蔓延至右腿上，导致自身僵直，3秒后修复裂纹。若此时受到一定的重击伤害会使其右腿[碎裂]，修复裂纹时间+5秒。③若此时受到一定的火焰伤害会使其右腿[融化]倒地，永久失去攻击和移动能力。</td>
+</tr>
+</tbody></table>
+<h2><span id="二-小怪冰镜">二、小怪：冰镜</span></h2><p><strong>（一）特性：</strong></p>
+<p>1、无法移动、无法攻击。</p>
+<p>2、会且仅会产生一个与之伴生的幻象，冰镜死亡时幻象死亡。</p>
+<p>3、有实体碰撞体积，不可攀爬。</p>
+<p>4、每次受到的伤害固定为1点。</p>
+<p><strong>（二）行动规则：</strong>半径为30米，角度为面前180°的视野范围内检测到玩家角色时，生成幻象。</p>
+<p><strong>（三）形象：</strong>3米宽、1米高。全部由冰制成，镜面是一面完整光滑的冰，镜框上有精致的雕花。</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012212957139.png"></p>
+<p><strong>（四）技能：</strong></p>
+<table>
+<thead>
+<tr>
+<th>技能ID</th>
+<th>技能名</th>
+<th>完成时间</th>
+<th>技能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>021</td>
+<td>召唤</td>
+<td>3</td>
+<td>召唤一个幻象，冰镜死亡时幻象死亡。该技能一个冰镜只能发动一次。</td>
+</tr>
+</tbody></table>
+<h2><span id="三-召唤物幻象">三、召唤物：幻象</span></h2><p><strong>（一）特性：</strong></p>
+<p>1、不会受到伤害。当产生该幻象的冰镜被摧毁时，幻象消失。</p>
+<p>2、继承Boss本体的60%的攻击力。</p>
+<p>3、各类技能均不会攻击到BOSS和其他怪物，仅对玩家生效。</p>
+<p><strong>（二）行动规则：</strong></p>
+<p>1、于生成位置（冰镜前）停留。使用技能后瞬移至外环内的随机位置。技能释放间隔5秒。</p>
+<p>2、当与玩家距离≤4米时，主动缩短距离至3米并释放技能[004:冰刃]。</p>
+<p>3、当与玩家距离＞4米时，释放技能[001:冰枪]。</p>
+<p><strong>（三）形象：</strong>模型与Boss一致，材质为淡蓝色。</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012213216321.png"></p>
+<p><strong>（四）技能：</strong></p>
+<table>
+<thead>
+<tr>
+<th>技能ID</th>
+<th>技能名</th>
+<th>完成时间</th>
+<th>技能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>001</td>
+<td>冰枪</td>
+<td>（详见“Boss房间”工作表——“三、基础技能”——“2、技能一览”）</td>
+<td></td>
+</tr>
+<tr>
+<td>004</td>
+<td>冰刃</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2><span id="四-小怪小型冰史莱姆原神原版怪物">四、小怪：小型冰史莱姆（《原神》原版怪物）</span></h2><p><strong>（一）特性：</strong></p>
+<p>1、自带冰元素效果</p>
+<p>2、技能不会影响到Boss和其他怪物，仅对玩家生效。</p>
+<p><strong>（二）行动规则：</strong>脱战状态蠕动滑行，进入战斗后利用跳跃向目标位置靠近。当目标进入到技能范围时，使用技能。</p>
+<p><strong>（三）形象：</strong>蓝色果冻状，头顶有淡蓝色角，头顶白色。</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012213528450.png"></p>
+<p><strong>（四）技能：</strong></p>
+<table>
+<thead>
+<tr>
+<th>技能ID</th>
+<th>技能名</th>
+<th>完成时间</th>
+<th>技能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>110</td>
+<td>冲撞_冰</td>
+<td>1</td>
+<td>对目标发起冲撞，造成少量冰元素伤害。</td>
+</tr>
+</tbody></table>
+<h2><span id="五-召唤物冰墙">五、召唤物：冰墙</span></h2><p><strong>（一）特性：</strong></p>
+<p>1、有碰撞体积，不可攀爬。</p>
+<p>2、冰墙拥有血量和毁坏槽，当血量=0或毁坏槽≥99时，冰墙被击破。</p>
+<p><strong>（二）行动规则：</strong>无</p>
+<p><strong>（三）形象：</strong>冰做的墙，长2米，宽0.2米，高2米。</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012213743851.png"></p>
+<p><strong>（四）技能：</strong>无</p>
+<h1><span id="sheet3-关卡流程">Sheet3  关卡流程</span></h1><h2><span id="一-房间一">一、房间一</span></h2><p><strong>（一）设计目的：</strong></p>
+<p>1、设置较低的初始温度和冰系怪物，使玩家了解温度值的效果。</p>
+<p>2、让玩家明白“冰岩巨人——冰岩”，“拉杆——通风口——温度——防御”之间的关系。</p>
+<p>3、通过设置可获取的宝箱，引导玩家行为；并设置暂时无法获取的宝箱，拉动玩家探索欲望。</p>
+<p><strong>（二）房间概述：</strong></p>
+<p>房间内有三扇打开的门，分别为南侧的入口（门1）、北侧的出口（门2）。东侧墙较高位置也有一扇（门3），该扇门前有一个突出的平台，玩家抬高视角能看到平台边缘的宝箱2。但平台被栏杆遮挡，仅能通过门3进入。</p>
+<p>中间位置横着一条0.1“米”深的凹槽，槽内有水，水面与地面相平，房间内没有怪物。初始温度-30℃。</p>
+<p>门2旁的墙壁上有一个拉杆，东侧墙壁上有未开启的通风口。拉杆旁有一个高台，上面放置一个宝箱，可以通过梯子登上高台。</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012214256951.png" alt="房间一地图"></p>
+<p><strong>（三）怪物配置：</strong></p>
+<p>小型冰史莱姆×4、冰岩巨人×1。</p>
+<p><strong>（四）关卡事件：</strong>玩家角色渡过水槽时房间所有门关闭，刷新小型冰史莱姆×4、冰岩巨人×1</p>
+<p><strong>（五）一般对策：</strong>玩家从门1进入房间——来到水槽前看到近处的拉杆和上方的宝箱1——渡过水槽身上[潮湿]—— 门1、2、3关闭——刷出冰史莱姆×4、冰岩巨人×1——温度降低造成伤害降低—— 击败冰史莱姆——门1、2、3开启——取得宝箱1——从门2离开房间一</p>
+<p><strong>（六）优化对策：</strong></p>
+<p>1、使用上升气流、冰冻等手段越过水槽，避免以“潮湿”状态与冰系怪物开战。</p>
+<p> 2、温度较低时攻击拉杆，使温度升高，伤害能力恢复，提高效率。</p>
+<h2><span id="二-房间二">二、房间二</span></h2><p><strong>（一）设计目的：</strong>让玩家提前熟悉Boss的核心技能[009:冰幻]。</p>
+<p><strong>（二）房间概况：</strong>房间内有三扇打开的门，分别为西侧的入口（门4）、北侧的出口（门5）、分支通道门（门6）。在门4能看到在房间二里一个火深渊法师背对玩家，面前有一块冰镜。房间初始温度30℃。</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012222253678.png" alt="房间二地图"></p>
+<p><strong>（三）怪物配置：</strong>冰深渊法师×1、冰镜×1</p>
+<p><strong>（四）关卡事件：</strong>玩家角色踏过门4进入房间二时，播放CG：“幻象从冰镜里走出，凝出冰枪秒杀火深渊法师，然后回到冰镜中。播放CG时游戏时间静止，删除房间内的火深渊法师。CG结束的同时关闭房间所有的门。</p>
+<p><strong>（五）一般对策：</strong>玩家从门4进入房间——观看CG——门1、2、3关闭——进入冰镜视野范围，生成幻象—— 尝试攻击幻象——无效——发现冰镜的血条——尝试攻击冰镜——击破冰镜，幻象死亡—— 从门5离开房间二</p>
+<p><strong>（六）优化对策：</strong>从门6进入通道回到房间一，拿到宝箱2。</p>
+<h2><span id="三-boss房间">三、Boss房间</span></h2><p>（详见“Boss房间”工作表）</p>
+<h1><span id="sheet3-boss房间">Sheet3  Boss房间</span></h1><p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/Boss%E6%88%BF1.png"></p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012215723140.png"></p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/boss%E6%88%BF3.png"></p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/Boss%E6%88%BF4.png"></p>
+<h1><span id="sheet4-规则数值设计">Sheet4  规则数值设计</span></h1><h2><span id="一-规则参数温度">一、规则参数：温度</span></h2><p><strong>（一）体验期望：</strong></p>
+<p>1、让没有火属性角色的玩家在Boss战中每过约1分钟便要拉动拉杆。</p>
+<p>2、用有一个火属性角色的玩家即可在Boss战中仅在冰域后需要拉动拉杆。</p>
+<p><strong>（二）具体设计：</strong></p>
+<p>1、设每秒温度下降0.5℃。</p>
+<p>2、已知Boss基础技能冷却时间为3秒，最短技能完成时间为2秒，则一分钟最多可释放12次技能。根据Boss技能权重选取[冰刃]、[冰刺]、[冰棱]作为降温手段。每次释放会使温度-5℃。</p>
+<p>3、计算火属性角色技能频率以迪卢克为准，单角色1分钟内最多可放6次元素战技、4次元素爆发。规定火属性元素战技+5℃，火属性元素爆发+10℃。</p>
+<p>4、冰属性角色释放冰属性元素战技-5℃，冰属性元素爆发-10℃。</p>
+<p>5、仅在技能释放时改变温度，多次造成火属性伤害的技能（如香菱的锅巴）不会造成多次升温。</p>
+<p>6、风属性技能遇火扩散时时，不会判定为使用火属性技能而升温。</p>
+<p>7、无论何时释放[冰域]都使温度降到下限，则释放[冰域]-90℃。</p>
+<h2><span id="二-规则参数碎裂值-融化值">二、规则参数：碎裂值、融化值</span></h2><p><strong>（一）体验期望：</strong></p>
+<p>1、重击属性角色蓄力攻击2次后达到阈值。</p>
+<p>2、火属性角色的玩家使用1次火属性伤害技能后达到阈值。</p>
+<p><strong>（二）具体设计：</strong></p>
+<p>1、每次蓄力攻击造成50点碎裂值</p>
+<p>2、每次火焰技能攻击造成100点碎裂值和1点融化值</p>
+<h1><span id="sheet5-附录设计思路">Sheet5  附录：设计思路</span></h1><p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/image-20201012222825683.png"></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">izumiarashi</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/izumiarashi/izumiarashi.github.io/2020/09/18/genshin-LevelDesign/">https://github.com/izumiarashi/izumiarashi.github.io/2020/09/18/genshin-LevelDesign/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">izumiarashi</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%8E%9F%E7%A5%9E/">
+                                    <span class="chip bg-color">原神</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1/">
+                                    <span class="chip bg-color">关卡设计</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/09/19/GBF-system/">
+                    <div class="card-image">
+                        
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/2040375000.png" class="responsive-img" alt="《碧蓝幻想》系统拆解 （2020.10.13更新）">
+                        
+                        <span class="card-title">《碧蓝幻想》系统拆解 （2020.10.13更新）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            对碧蓝幻想的核心资源产出和武器、武器盘进行拆解。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/" class="post-category">
+                                    游戏拆解
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A2%A7%E8%93%9D%E5%B9%BB%E6%83%B3/">
+                        <span class="chip bg-color">碧蓝幻想</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/">
+                        <span class="chip bg-color">游戏拆解</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/09/15/GBF-and-PCR/">
+                    <div class="card-image">
+                        
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg" class="responsive-img" alt="《碧蓝幻想》与《公主连接》公会系统对比">
+                        
+                        <span class="card-title">《碧蓝幻想》与《公主连接》公会系统对比</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            比较分析Cygames旗下两款游戏的设计思路
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/" class="post-category">
+                                    游戏拆解
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A2%A7%E8%93%9D%E5%B9%BB%E6%83%B3/">
+                        <span class="chip bg-color">碧蓝幻想</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%85%AC%E4%B8%BB%E8%BF%9E%E6%8E%A5/">
+                        <span class="chip bg-color">公主连接</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="58088799"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">izumiarashi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+
+
+    <a href="mailto:suarashi@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮箱" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=804584939" class="tooltipped" target="_blank" data-tooltip="QQ: 804584939" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://steamcommunity.com/profiles/76561198161373777" class="tooltipped" target="_blank" data-tooltip="steam个人主页" data-position="top" data-delay="50">
+        <i class="fab fa-steam"></i>
+    </a>
+
+
+
+    <a href="https://pic.downk.cc/item/5f5e52b1160a154a67af38c4.jpg" class="tooltipped" target="_blank" data-tooltip="微信二维码" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

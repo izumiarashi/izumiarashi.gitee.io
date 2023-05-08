@@ -1,0 +1,1011 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="【UE4笔记】蓝图-1, 窝">
+    <meta name="description" content="随便写写">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>【UE4笔记】蓝图-1 | 窝</title>
+    <link rel="icon" type="image/png" href="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/45px-Icon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">窝</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">窝</div>
+        <div class="logo-desc">
+            
+            随便写写
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">【UE4笔记】蓝图-1</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/UE4/">
+                                <span class="chip bg-color">UE4</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%93%9D%E5%9B%BE/">
+                                <span class="chip bg-color">蓝图</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/UE4%E7%AC%94%E8%AE%B0/" class="post-category">
+                                UE4笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-08-24
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-05-05
+                </div>
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <span id="more"></span>
+
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV164411Y732">https://www.bilibili.com/video/BV164411Y732</a> 基于此教程</p>
+<h1><span id="一-p27-01-开关门">一、P27 01 开关门</span></h1><p>1、门需要设置为可移动的</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105155137.png" alt="img"></p>
+<p>2、添加碰撞</p>
+<p>双击模型，添加碰撞</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105161717.png"></p>
+<p>3、TimeLine 时间轴</p>
+<p>右键关键帧，可以选择插值类型</p>
+<p>接口介绍</p>
+<p>Play 正向播放</p>
+<p>Play from Start 从起始帧开始正向播放</p>
+<p>Stop 停止</p>
+<p>Reverse 反向播放</p>
+<p>Reverse From End 从最后一帧开始反向播放</p>
+<p>Set New Time 从指定时间开始播放</p>
+<p>NewTime 指定时间</p>
+<p>Update 更新状态</p>
+<p>Dierection 时间轴结束后触发</p>
+<p>Direction 当前时间轴是正向还是反向</p>
+<p>轨迹 输出轨迹、</p>
+<p>4、拓展</p>
+<p>SwitchOnETimeLineDirection</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221206154633.png"></p>
+<p>时间轴向前时</p>
+<p>时间轴向后时</p>
+<h1><span id="二-p28-02-1-蓝图类实现开关门">二、P28 02-1 蓝图类实现开关门</span></h1><p>1、蓝图类中，添加指定模型</p>
+<p>添加组件→Static Mesh→细节中修改资源</p>
+<p>2、添加蓝图类时，门不能是触发盒的父级。因为开关门不应当影响触发盒位置</p>
+<p>3、世界坐标和相对坐标的节点</p>
+<p>SetActorRotation：目标Self（整个蓝图类）旋转</p>
+<p>SetWorldRotation：指定目标以世界坐标旋转</p>
+<p>SetRelativeRotation：指定目标以相对坐标旋转</p>
+<p>4、获取玩家输入</p>
+<p>GetPlayerController → Enable Input →Keyborad “按键”</p>
+<p>离开可操作范围时：Disable Input</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105134802.png"></p>
+<p>5、FlipFlop</p>
+<p>第一次触发时执行A，第二次执行B</p>
+<p>6、开启鼠标控制</p>
+<p>蓝图类里添加事件On Click → Player Controller</p>
+<p>→ 世界设置 →Game Mode → Player Controller</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105143342.png"></p>
+<p>→ （点加号）创建新蓝图 → 细节 → Mouse Interface</p>
+<p>→ （勾选 Enable Mouse Click （可选 Show Mouse Curser 一直显示鼠标）</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105143408.png"></p>
+<p>→ 回到蓝图类 → Set Show Mouse Curser 显示鼠标</p>
+<h1><span id="三-p31-03-2-升降电梯">三、P31 03-2 升降电梯</span></h1><p>1、按住Alt键移动选中物体，即可复制</p>
+<p>2、蓝图中，按住Ctrl再拖动连线可以更换接口，按住Alt点击连线可以将它删除</p>
+<h1><span id="四-p32-03-3-双开自动门">四、P32 03-3 双开自动门</span></h1><p>3、GetRelativeLocation 获取当前数值，作为初始值赋值给Lerp</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105164539.png"></p>
+<p>1、运行一次后，当前位置也会改变，因此要在进入流程前记录下当前值作为变量，再在Lerp处引用</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105165456.png"></p>
+<p>但赋值的过程不应当在流程中，可以新建一个“事件开始时”节点，单次运行记录初始值。</p>
+<p>2、开门的改变量，可以存为变量，然后使用“浮点+浮点”将初始位置与改变量相加，再赋给Lerp。</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105170441.png"></p>
+<p>3、反复触发开始/结束重叠导致门卡住</p>
+<p>是由于没有指定是“玩家与触发盒重叠时”才“开门”，导致：</p>
+<p>开门→门离开了触发盒→触发结束重叠时间→关门→门重新进入触发盒→开门</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105170321.png" alt="img"></p>
+<p>可参照 <a target="_blank" rel="noopener" href="https://blog.csdn.net/ChaoChao66666/article/details/126153957">https://blog.csdn.net/ChaoChao66666/article/details/126153957</a> 进行设置（下图）</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221105173745.png"></p>
+<h1><span id="五-p35-04-拾取钥匙开门">五、P35 04 拾取钥匙开门</span></h1><p>1、门的蓝图类里添加bool变量，通过分支判断，变量为true时才能开门。<strong>变量默认值设为false</strong></p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109110013.png" alt="img"></p>
+<p>2、新建钥匙Key的蓝图类，拾取（靠近按E）后获取门蓝图中的bool值并改为true，然后销毁对象。</p>
+<p>（1）获取类的所有actor，输出对象（OutActors）的数组</p>
+<p>（2）设置数组中指定对象对应的值</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109110754.png"></p>
+<p>（3）Destroy Acotr</p>
+<p>3、拓展：开了门之后，未满足另一条件前不允许关门</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109112847.png"></p>
+<h1><span id="六-p37-05-2-类型转换">六、P37 05-2 类型转换</span></h1><p>1、Cast To ThirdPersonCharacter 针对指定目标触发</p>
+<p>Cast Failed 非目标时触发</p>
+<p>As Third Person Character 作为目标输出，获得目标类里的变量、事件</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109203138.png"></p>
+<h1><span id="七-p38-05-3-创建自定义事件">七、P38 05-3 创建自定义事件</span></h1><p>1、新建事件图表，便于管理不同的功能</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109204905.png"></p>
+<p>2、CharacterMovement：查看移动参数设置，单位厘米</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109210919.png"></p>
+<p>3、创建自定义事件（custom event）在加速图表中设置（Set）最大移动速度，且<strong>不指定变量的值</strong></p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109211433.png" alt="img"></p>
+<p>4、想要触发事件时传参，则要把绿线连回自定义事件的节点中</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109211955.png"></p>
+<p>5、在加速盒子的蓝图类中新增函数调用</p>
+<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20221109212145.png"></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">izumiarashi</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/izumiarashi/izumiarashi.github.io/2022/08/24/note-UE-BluePrint01/">https://github.com/izumiarashi/izumiarashi.github.io/2022/08/24/note-UE-BluePrint01/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">izumiarashi</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/UE4/">
+                                    <span class="chip bg-color">UE4</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%93%9D%E5%9B%BE/">
+                                    <span class="chip bg-color">蓝图</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/09/28/note-sakuraisan/">
+                    <div class="card-image">
+                        
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg" class="responsive-img" alt="【策划笔记】樱井政博游戏开发小课堂">
+                        
+                        <span class="card-title">【策划笔记】樱井政博游戏开发小课堂</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+
+风险理论1、风险
+
+
+2、策略
+游戏性是控制风险并获得回报的乐趣
+而策略是控制风险并获得回报的方法
+控制并降低风险，从而更容易获得回报，即为策略
+风险控制
+控制游戏风险即是控制了游戏平衡
+（1）底层设计：
+1、自机宽度（被攻击的可能性）
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AD%96%E5%88%92%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    策划笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">-基础知识</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/25/PuzzleDesign/">
+                    <div class="card-image">
+                        
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/776da39fb2bb5cf753c419c795d63c6d.png" class="responsive-img" alt="解谜设计的30堂课">
+                        
+                        <span class="card-title">解谜设计的30堂课</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            应当从哪些方面去评价一个谜题？如何将传统谜题的思路应用到电子游戏设计中？
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AD%96%E5%88%92%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    策划笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%85%B3%E5%8D%A1%E7%AD%96%E5%88%92/">
+                        <span class="chip bg-color">关卡策划</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%A7%A3%E8%B0%9C%E8%AE%BE%E8%AE%A1/">
+                        <span class="chip bg-color">解谜设计</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="58088799"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">izumiarashi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+
+
+    <a href="mailto:suarashi@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮箱" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=804584939" class="tooltipped" target="_blank" data-tooltip="QQ: 804584939" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://steamcommunity.com/profiles/76561198161373777" class="tooltipped" target="_blank" data-tooltip="steam个人主页" data-position="top" data-delay="50">
+        <i class="fab fa-steam"></i>
+    </a>
+
+
+
+    <a href="https://pic.downk.cc/item/5f5e52b1160a154a67af38c4.jpg" class="tooltipped" target="_blank" data-tooltip="微信二维码" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
