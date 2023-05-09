@@ -1,6 +1,6 @@
 ---
 title: 【策划笔记】樱井政博游戏开发小课堂
-img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bg_32.jpg'
+img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/18b687db2e41247dc4a65bc9a44d0725.jpeg'
 cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2022-09-28 18:39:32
