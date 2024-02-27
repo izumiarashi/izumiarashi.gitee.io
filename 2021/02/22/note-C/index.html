@@ -355,7 +355,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-05-05
+                    2024-02-28
                 </div>
                 
 
@@ -377,8 +377,8 @@
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System; <span class="comment">//引入命名空间</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> 333 <span class="comment">//定义命名空间（类的住址，对类进行划分，避免重名）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span> <span class="comment">//定义类</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>() <span class="comment">//定义方法、程序的入口方法</span></span></span><br><span class="line">		&#123;</span><br><span class="line">    		Console.Title = <span class="string">&quot;222&quot;</span></span><br><span class="line">			Console.Writeline(<span class="string">&quot;111&quot;</span>); <span class="comment">//控制台.写一行：将文本写入控制台中</span></span><br><span class="line">			Console.Readline(); <span class="comment">//控制台.读一行：将输入到控制台中的文本读取到程序</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>Console 是一个“<strong>类</strong>”（工具、部门）</p>
-<p>Writeline、Readline 是“<strong>方法</strong>”（功能），需要加括号</p>
-<p>Title是“<strong>属性</strong>”</p>
+<p>Writeline、Readline 是“<strong>方法</strong>”（功能），需要加括号，可以看作类下面的“动词”</p>
+<p>Title是“<strong>属性</strong>”，可以看作类下面的“名词”</p>
 <p>代码写入“文本文件”.cs</p>
 <p><del>→生成.exe：在.csproj文件中添加：</del></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">RuntimeIdentifier</span>&gt;</span>win10-x64&lt;/RuntimeIdentifier</span><br></pre></td></tr></table></figure>
@@ -419,14 +419,10 @@
 <p>注意：</p>
 <p>（1）赋值需要后缀f、d、m，不加默认为d</p>
 <p>（2）浮点运算会有舍入误差：</p>
-<pre><code>1.0f - 0.9f !=0.1f
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.0f</span> - <span class="number">0.9f</span> !=<span class="number">0.1f</span></span><br><span class="line"></span><br><span class="line">加减时应对阶</span><br></pre></td></tr></table></figure>
 
-因为二进制无法精确表示1/10
-
-精度要求较高时应使用decimal
-
-加减时应对阶
-</code></pre>
+<p>因为二进制无法精确表示1/10</p>
+<p>精度要求较高时应使用decimal</p>
 <h3><span id="4-字符">4、字符</span></h3><p><strong>字符char：</strong>2字节，存储单个字符（ASCII码），使用<strong>单引号</strong> （单个汉字可为1字符）</p>
 <p><strong>字符串string：</strong>存储文本，使用<strong>双引号</strong> （a可以是字符或字符串，ab只能是字符串）</p>
 <p><strong>布尔类型bool：</strong>1字节，true、false</p>
@@ -457,6 +453,7 @@
 <p>（3）同一变量名不可重复声明，但可重复赋值</p>
 <p><em>拓展（C++）：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Marshalldong/article/details/88049034">声明、定义、初始化与赋值</a></em></p>
 <h2><span id="三调试">（三）调试</span></h2><p>在可能出错的语句增加断点</p>
+<p>F11 逐语句执行</p>
 <p><em>拓展：<a target="_blank" rel="noopener" href="http://blog.yidengxuetang.com/post/202005/27/">VS Code 调试完全攻略（2）：步进逐行调试</a>”</em></p>
 <p><em>拓展：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29503199/article/details/88351498">【原创】VS CODE 编写控制台测试程序时无法正确读取Console.ReadLine()</a></em></p>
 <p>“要在调试时读取输入，可以在launch.json中使用配置中的console属性</p>
@@ -467,7 +464,14 @@
 
 <h3><span id="四占位符">（四）占位符</span></h3><p>{位置编号}</p>
 <p>从0开始，编号不能大于参数列表长度</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str = <span class="built_in">string</span>.Format(<span class="string">&quot;&#123;0&#125;的弹匣容量为&#123;1&#125;，容量为&#123;2&#125;。&quot;</span>,gunName,gunVolume,gunDmg);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;枪的名称：&#123;0&#125;&quot;</span>,gunName); </span><br><span class="line"><span class="comment">//只有在控制台中能用，一般都用Format</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//标准数字字符串格式化：以某种格式显示占位符中数据</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;金额：&#123;0:c&#125;&quot;</span>,<span class="number">10</span>);</span><br><span class="line">	<span class="comment">//&quot;0：C&quot;为货币格式，输出￥10</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;金额：&#123;0:d2&#125;&quot;</span>,<span class="number">1</span>);</span><br><span class="line">	<span class="comment">//&quot;0:d2&quot;显示2位数，不足2位用0填充，输出01</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;&#123;0:f1&#125;&quot;</span>,<span class="number">1.25</span>);</span><br><span class="line">    <span class="comment">//&quot;0:f1&quot;根据指定精度，输出1.3</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;&#123;0:p0&#125;&quot;</span>,<span class="number">0.1</span>);</span><br><span class="line">	<span class="comment">//&quot;0:p0&quot;以百分数显示，输出10%</span></span><br><span class="line">	<span class="comment">//&quot;0:p1&quot;输出10.0%</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str = <span class="built_in">string</span>.Format(<span class="string">&quot;&#123;0&#125;的弹匣容量为&#123;1&#125;，容量为&#123;2&#125;。&quot;</span>,gunName,gunVolume,gunDmg);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;枪的名称：&#123;0&#125;&quot;</span>,gunName); </span><br><span class="line"><span class="comment">//这种格式只有在控制台中能用，常规情况还是要用Format</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>标准数字字符串格式化</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//标准数字字符串格式化：以某种格式显示占位符中数据</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;金额：&#123;0:c&#125;&quot;</span>,<span class="number">10</span>);</span><br><span class="line">	<span class="comment">//&quot;0：C&quot;为货币格式，输出￥10</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;金额：&#123;0:d2&#125;&quot;</span>,<span class="number">1</span>);</span><br><span class="line">	<span class="comment">//&quot;0:d2&quot;显示2位数，不足2位用0填充，输出01</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;&#123;0:f1&#125;&quot;</span>,<span class="number">1.25</span>);</span><br><span class="line">    <span class="comment">//&quot;0:f1&quot;根据指定精度，输出1.3</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;&#123;0:p0&#125;&quot;</span>,<span class="number">0.1</span>);</span><br><span class="line">	<span class="comment">//&quot;0:p0&quot;以百分数显示，输出10%</span></span><br><span class="line">	<span class="comment">//&quot;0:p1&quot;输出10.0%</span></span><br></pre></td></tr></table></figure>
+
+
 
 <h3><span id="五转义符">（五）转义符</span></h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;你好，\&quot;世界\&quot;&quot;</span>);</span><br><span class="line"><span class="comment">//转义引号 \&quot; \&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">char</span> a = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line"><span class="comment">//char类型空字符不能用&#x27;&#x27;，需要转义0</span></span><br><span class="line"><span class="comment">//string空字符串可以用&quot;&quot;表示</span></span><br><span class="line"></span><br><span class="line">Console.WriteLine(<span class="string">&quot;达拉崩吧\r\n巴拉巴拉&quot;</span>);</span><br><span class="line"><span class="comment">//新增行\n，回到行首\r</span></span><br></pre></td></tr></table></figure>
 
@@ -482,7 +486,7 @@
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> n1 = <span class="number">2</span>,n2 = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//利用逗号，同时声明并赋值多个变量</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>（2）算术运算符</strong></p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> x1 = <span class="number">5</span>,x2 = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">int</span> y = x1/x2; <span class="comment">//int型，对小数截断删除，输出2</span></span><br><span class="line"><span class="comment">//取模%用处</span></span><br><span class="line"><span class="comment">//（1）判断是否能被整除</span></span><br><span class="line"><span class="built_in">bool</span> y2 = x1/x2 == <span class="number">0</span></span><br><span class="line"><span class="comment">//（2）获取整数个位</span></span><br><span class="line"><span class="built_in">int</span> y3 = x1 % <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> x1 = <span class="number">5</span>,x2 = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">int</span> y = x1/x2; <span class="comment">//int型，对小数截断删除，5/2=2.5，截断小数后输出2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//取模%用处</span></span><br><span class="line"><span class="comment">//（1）判断是否能被整除，返回0则视为能整除</span></span><br><span class="line"><span class="built_in">bool</span> y2 = x1/x2 == <span class="number">0</span></span><br><span class="line"><span class="comment">//（2）获取整数的个位值</span></span><br><span class="line"><span class="built_in">int</span> x1 = <span class="number">19</span>;</span><br><span class="line"><span class="built_in">int</span> y3 = x1 % <span class="number">10</span>; <span class="comment">//返回个位数9</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>算数运算符中只有“+”可以用于字符串的拼接</p>
 <p>（3）比较运算符</p>
@@ -496,7 +500,7 @@
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n1 = n1 + <span class="number">3</span></span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line">n1 += <span class="number">3</span></span><br></pre></td></tr></table></figure>
 
 <h3><span id="3-三元运算符">3、三元运算符</span></h3><p>数据类型 变量名 = 条件? 满足条件结果 :不满足条件结果</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str01 = <span class="number">1</span>&gt;<span class="number">2</span>?<span class="string">&quot;ok&quot;</span>:<span class="string">&quot;no&quot;</span>;</span><br><span class="line"><span class="comment">//两个结果类型必须是兼容的</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str01 = <span class="number">1</span>&gt;<span class="number">2</span>?<span class="string">&quot;yes&quot;</span>:<span class="string">&quot;no&quot;</span>;</span><br><span class="line"><span class="comment">//两个结果类型必须是兼容的</span></span><br></pre></td></tr></table></figure>
 
 <h3><span id="4-优先级">4、优先级</span></h3><h2><span id="七数据类型转换">（七）数据类型转换</span></h2><h3><span id="1-parse">1、Parse</span></h3><p>string类型 转换 为其他数据类型</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> strNumber = <span class="string">&quot;19&quot;</span>;</span><br><span class="line"><span class="built_in">int</span> n1 = <span class="built_in">int</span>.Parse(strNumber); <span class="comment">//待转数据必须类似目标数据类型</span></span><br></pre></td></tr></table></figure>
