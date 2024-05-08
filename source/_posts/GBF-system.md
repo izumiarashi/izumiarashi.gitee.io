@@ -6,7 +6,7 @@ category: 游戏拆解
 tags: 
 - 游戏拆解
 - 碧蓝幻想
-cover: true
+cover: false
 coverImg: https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/timg.jpg
 summary: 对碧蓝幻想的核心资源产出和武器、武器盘进行拆解。
 ---

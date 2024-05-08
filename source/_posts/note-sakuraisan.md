@@ -5,7 +5,7 @@ cover: false
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20180413101445_VXV2l.png'
 date: 2022-09-28 18:39:32
 category: 策划笔记
-tags: -基础知识
+tags: 基础知识
 summary:
 ---
 <!--more-->
@@ -17,7 +17,6 @@ summary:
 ![](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20220928184700.png)
 
 ![1664362060453](image/note-sakuraisan/1664362060453.png)
-
 
 2、策略
 

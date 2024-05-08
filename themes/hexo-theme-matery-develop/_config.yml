@@ -66,8 +66,8 @@ cover:
 dream:
   enable: true
   showTitle: true
-  title: 
-  text: 桑海几番覆，人尚醉春风。
+  title: 桑海几番覆，人尚醉春风
+  text: 自娱自乐的自用小站
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -248,9 +248,9 @@ mySkills:
     乐:
       background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
       percent: 100%
-    日语n9:
+    睡:
       background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
-      percent: 1%
+      percent: 80%
     玩游戏:
       background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
       percent: 100%
