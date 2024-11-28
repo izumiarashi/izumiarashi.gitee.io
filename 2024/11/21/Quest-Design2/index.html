@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="宠物系统玩法及规则设计, 窝">
+    <meta name="keywords" content="怎么设计一个任务？（施工中）, 窝">
     <meta name="description" content="随便写写">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>宠物系统玩法及规则设计 | 窝</title>
+    <title>怎么设计一个任务？（施工中） | 窝</title>
     <link rel="icon" type="image/png" href="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/45px-Icon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -201,12 +201,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/7a226b880a482afd.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bcd103cd5348536799144537ed29a9a6.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">宠物系统玩法及规则设计</h1>
+                    <h1 class="description center-align post-title">怎么设计一个任务？（施工中）</h1>
                 </div>
             </div>
         </div>
@@ -323,8 +323,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%B3%BB%E7%BB%9F%E7%AD%96%E5%88%92/">
-                                <span class="chip bg-color">系统策划</span>
+                            <a href="/tags/%E4%BB%BB%E5%8A%A1%E7%AD%96%E5%88%92/">
+                                <span class="chip bg-color">任务策划</span>
                             </a>
                         
                     </div>
@@ -335,8 +335,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                游戏设计
+                            <a href="/categories/%E7%AD%96%E5%88%92%E7%AC%94%E8%AE%B0/" class="post-category">
+                                策划笔记
                             </a>
                         
                     </div>
@@ -348,14 +348,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-28
+                    2024-11-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-01
+                    2024-11-29
                 </div>
                 
 
@@ -371,103 +371,33 @@
             <div id="articleContent">
                 <span id="more"></span>
 
-<p><strong>一、设计目的</strong></p>
-<p>1、满足玩家情感需求</p>
-<p>2、提供数值强度，核心培养模块之一</p>
-<p>3、创造付费点</p>
-<p><strong>二、系统开启条件</strong></p>
-<p>主线任务进度</p>
-<p><strong>三、功能入口</strong></p>
-<p>主界面—宠物（未满足开启条件时隐藏入口）</p>
-<p><strong>四、简要描述</strong></p>
-<p><strong>1、概述</strong></p>
-<p>玩家可同时拥有多个宠物，每个宠物拥有多件外观。外观专属于某一宠物，其他宠物不可穿戴。每次对战时可选择一只宠物携带，并可使用当前其穿戴外观的技能。玩家也可进入宠物界面与宠物进行多种交互。</p>
-<p><strong>2、技能</strong></p>
-<p>宠物每件外观拥有各自不同技能，一件外观拥有一个主动技能和一个被动技能，可在战斗中生效。</p>
-<p><strong>3、好感度</strong></p>
-<p>每个宠物有独立的好感度系统，玩家可通过与宠物交互提高好感度。</p>
-<p><strong>五、具体规则</strong></p>
-<p><strong>1、玩法循环</strong></p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/clip_image005.jpg" alt="img"></p>
-<p><strong>2、基本要素</strong></p>
-<p>（1）种类</p>
-<p>根据角色性格设计不同种类的宠物并与之一一对应（例如高冷→猫、温柔→兔），使宠物与玩家间通过角色建立起情感纽带。</p>
-<p>同一只宠物拥有多种外观样式，一只宠物同时仅能穿着一件外观。</p>
-<p>（2）稀有度</p>
-<p>宠物不设置稀有度系统，外观分为N-R-SR-SSR四类。</p>
-<p>（3）等级</p>
-<p>宠物自身没有等级，外观拥有等级，等级越高提供的基础属性数值越高。等级强化消耗经验素材提供定量的经验值，达到当前等级阈值后提升等级。强化必定成功，有一定几率暴击，获得1.5倍经验值。为单一线性强化，强化目标为外观本身。</p>
-<p>（4）基础属性</p>
-<p>沿用角色基础属性设计。</p>
-<p><strong>3、获取方式</strong></p>
-<p>宠物外观可通过抽卡直接获得或是通过抽卡和活动奖励集齐一定数量的碎片后合成获得。获得外观时解锁支线剧情。</p>
-<p>宠物于第一次获得该宠物外观时解锁。</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/clip_image008.jpg" alt="img"></p>
-<p><strong>4、好感度</strong></p>
-<p>根据好感度高低，宠物有四种状态：冷淡——普通——友好——亲密。好感度初始为20，上限为100，下限为0。不同状态下可交互内容和交互反馈（语音、弹出文字、宠物表情等）不同。好感度达到80时永久解锁该宠物支线剧情。</p>
-<p>好感度会影响宠物技能的发动效果，技能最终效果=技能基础值<em>0.01</em>(60+好感度/2)，即达到亲密状态时获得技能完整效果，并可进一步提升。</p>
-<p><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/clip_image010.jpg" alt="img"><img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/clip_image012.jpg" alt="img"></p>
-<p>不同状态下的交互反馈</p>
-<p>与宠物的交互包括抚摸、梳毛、洗澡。每日第1次交互可以增加好感度。玩家7天未登录后，好感度开始每天减少。</p>
-<p><img src="C:/Users/win8.1/AppData/Local/Temp/msohtmlclip1/01/clip_image013.jpg" alt="img">给宠物喂食可以增加宠物的好感度和饱腹度，饱腹度达到上限时无法继续喂食。食物可通过购买礼包、活动奖励、日常副本，以及作为抽卡的副产物获取。</p>
-<table>
-<thead>
-<tr>
-<th><strong>好感度</strong></th>
-<th><strong>宠物状态</strong></th>
-<th><strong>解锁功能</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0-19</td>
-<td>冷淡</td>
-<td></td>
-</tr>
-<tr>
-<td>20-49</td>
-<td>普通</td>
-<td>梳毛</td>
-</tr>
-<tr>
-<td>50-79</td>
-<td>友好</td>
-<td>洗澡</td>
-</tr>
-<tr>
-<td>80-100</td>
-<td>亲密</td>
-<td>支线剧情</td>
-</tr>
-</tbody></table>
-<p>好感度及宠物状态对应表</p>
-<table>
-<thead>
-<tr>
-<th><strong>玩家操作</strong></th>
-<th><strong>好感度变化</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>每日第1次互动</td>
-<td>+5</td>
-</tr>
-<tr>
-<td>喂喜欢吃的食物</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>喂其他食物</td>
-<td>+5</td>
-</tr>
-<tr>
-<td>7天未登录后，每天日常任务刷新时</td>
-<td>-3</td>
-</tr>
-</tbody></table>
-<p>好感度变化规则</p>
-<p><strong>5**</strong>、外观技能**</p>
-<p>外观拥有一个主动技能和一个被动技能，每件外观拥有的技能固定，由策划进行配置。战斗中被动技能持续生效；主动技能需要玩家手动触发，每局战斗中仅可触发一次。</p>
-<p>技能初始等级为1，最高可强化到10。每次升级需要消耗特定种类和数量的材料，必定成功。</p>
+<p>参考视频：</p>
+<p>【【夜影】连我都能理解的游戏任务设计】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HK421y7gw/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d">https://www.bilibili.com/video/BV1HK421y7gw/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d</a></p>
+<p>【巫师3任务为何让人如此沉浸?【游戏设计艺术04】】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1tp4y1S7GA/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d">https://www.bilibili.com/video/BV1tp4y1S7GA/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d</a></p>
+<p>【游戏任务设计-1: 为什么众多MMO依赖于重复任务？[搬运/烤熟]】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ZF411W7Yz/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d">https://www.bilibili.com/video/BV1ZF411W7Yz/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d</a></p>
+<p>【【中英字幕】如何制作优秀的支线任务 | Design Doc 设计文档】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1u3411z7g7/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d">https://www.bilibili.com/video/BV1u3411z7g7/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d</a></p>
+<p>【【中字】任务设计-好的跑腿任务 不好的跑腿任务【樱井政博】】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Zv4y1r7hb/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d">https://www.bilibili.com/video/BV1Zv4y1r7hb/?share_source=copy_web&amp;vd_source=d4a92c80a83a4864f03c89de7889749d</a></p>
+<h1><span id="确认任务的定位">确认任务的定位</span></h1><p>主线、支线</p>
+<p>（1）对世界的影响程度不同</p>
+<p>（2）任务时长</p>
+<p>（3）任务难度</p>
+<p>（4）任务设计目的</p>
+<p>主线塑造剧情、解锁新机制、前往新地图</p>
+<p>支线补充剧情、拓展机制（让玩家使用不熟悉的机制、不同机制的混合）、提供挑战（数值验证）、体验多样性</p>
+<p>（5）奖励不同</p>
+<h1><span id="梳理任务剧情">梳理任务剧情</span></h1><p>玩家是什么时候，以什么身份参与的</p>
+<p>确认最精华、最想要表现的内容是什么</p>
+<h1><span id="设定任务体验曲线">设定任务体验曲线</span></h1><h2><span id="起不能太繁琐也不能太简单">起——不能太繁琐，也不能太简单</span></h2><p>任务的触发不仅仅可以由“人”发布给玩家，还可以是场景物件——书、信、隐藏门、废墟、尸体</p>
+<p>开启一些从未见过的内容——新的副本、新的角色、新的剧情，或是给已有的物品赋予新意义——场景中随处可见的装饰其实是某种暗号</p>
+<h2><span id="承不止一条的完成途径">承——不止一条的完成途径</span></h2><p>布置一个强力的怪物把守关卡，给玩家正攻、智取、逃避的方法</p>
+<h2><span id="转给一点小小的挫败或是意料之外的发展">转——给一点小小的挫败，或是意料之外的发展</span></h2><h2><span id="合高潮部分">合——高潮部分</span></h2><p>完成最终的挑战，并在最终对这个世界产生了久远的影响</p>
+<p>Npc完成了做事风格的转变</p>
+<h1><span id="明确任务类型">明确任务类型</span></h1><p>击杀任务、获取任务、快递任务、收集任务、快递任务、特殊任务</p>
+<p>除了对话之外，还有很多行为方式可以完成任务</p>
+<h1><span id="确定任务奖励">确定任务奖励</span></h1><p>给一些独特且永久的奖励玩家会更加喜欢：Npc的状态改变、城市的建筑改变、场景BGM改变、永久称号、成就、新的队友、新的玩具（装备、能力）</p>
+<p>根据游戏类型，选择恰当的奖励：养成类——数值提升、剧情导向——补充剧情、演出</p>
+<h1><span id="填补任务流程中的乏味">填补任务流程中的乏味</span></h1><p>更高频率的、零散的POI，但同时不能过于喧宾夺主——掉落物、宝箱、精英怪</p>
+<p>提供奖励的同时，给一些意料之外的展开</p>
 
             </div>
             <hr/>
@@ -493,7 +423,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/izumiarashi/izumiarashi.github.io/2020/09/28/Pet-Rule/">https://github.com/izumiarashi/izumiarashi.github.io/2020/09/28/Pet-Rule/</a>
+                    <a href="https://github.com/izumiarashi/izumiarashi.github.io/2024/11/21/Quest-Design2/">https://github.com/izumiarashi/izumiarashi.github.io/2024/11/21/Quest-Design2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -531,8 +461,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%B3%BB%E7%BB%9F%E7%AD%96%E5%88%92/">
-                                    <span class="chip bg-color">系统策划</span>
+                                <a href="/tags/%E4%BB%BB%E5%8A%A1%E7%AD%96%E5%88%92/">
+                                    <span class="chip bg-color">任务策划</span>
                                 </a>
                             
                         </div>
@@ -574,28 +504,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/01/note-Blockmesh/">
+                <a href="/2024/11/21/Quest-Design2/">
                     <div class="card-image">
                         
-                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/5a6e6c21cacd351.jpg" class="responsive-img" alt="【GDC笔记】Blockmesh">
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/bcd103cd5348536799144537ed29a9a6.jpeg" class="responsive-img" alt="怎么设计一个任务？（施工中）">
                         
-                        <span class="card-title">【GDC笔记】Blockmesh</span>
+                        <span class="card-title">怎么设计一个任务？（施工中）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            白盒设计技巧
+                            
+
+参考视频：
+【【夜影】连我都能理解的游戏任务设计】 https://www.bilibili.com/video/BV1HK421y7gw/?share_source=copy_web&amp;vd_source=d4a92c80a83
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -608,19 +542,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%85%B3%E5%8D%A1%E7%AD%96%E5%88%92/">
-                        <span class="chip bg-color">关卡策划</span>
-                    </a>
-                    
-                    <a href="/tags/Blockmesh/">
-                        <span class="chip bg-color">Blockmesh</span>
-                    </a>
-                    
-                    <a href="/tags/GDC/">
-                        <span class="chip bg-color">GDC</span>
+                    <a href="/tags/%E4%BB%BB%E5%8A%A1%E7%AD%96%E5%88%92/">
+                        <span class="chip bg-color">任务策划</span>
                     </a>
                     
                 </div>
@@ -634,30 +561,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/19/GBF-system/">
+                <a href="/2024/02/21/StoryBoard-Design/">
                     <div class="card-image">
                         
-                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/2040375000.png" class="responsive-img" alt="《碧蓝幻想》系统拆解 （2020.10.13更新）">
+                        <img src="https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240223132408.jpg" class="responsive-img" alt="如何拍动画？">
                         
-                        <span class="card-title">《碧蓝幻想》系统拆解 （2020.10.13更新）</span>
+                        <span class="card-title">如何拍动画？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对碧蓝幻想的核心资源产出和武器、武器盘进行拆解。
+                            之前给组内同学做的分享PPT，翻出来整理成文字版
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/" class="post-category">
-                                    游戏拆解
+                            <a href="/categories/%E8%83%A1%E4%BE%83%E4%B9%B1%E8%B0%88/" class="post-category">
+                                    胡侃乱谈
                                 </a>
                             
                             
@@ -667,12 +594,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%A2%A7%E8%93%9D%E5%B9%BB%E6%83%B3/">
-                        <span class="chip bg-color">碧蓝幻想</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/">
-                        <span class="chip bg-color">游戏拆解</span>
+                    <a href="/tags/%E8%A7%86%E5%90%AC%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">视听语言</span>
                     </a>
                     
                 </div>
