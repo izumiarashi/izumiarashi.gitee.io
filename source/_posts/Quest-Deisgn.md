@@ -1,5 +1,5 @@
 ---
-title: 什么是一个任务？
+title: 什么是一个有趣的任务？
 img: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/cef92b78281704764909909a9e7a4e1d.jpeg'
 cover: true
 coverImg: 'https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/back1.png'
@@ -58,7 +58,7 @@ Elyot Grant在视频《30 Puzzle Design Lessons》中提过，正如斯金纳箱
 
 而玩家所面对的挑战难度也应不断地升级，使玩家不会感到无聊，同时也不能设置太高的难度而使玩家不知所措。这也是著名的Flow模型所要求的。
 
-![FlowModel——游戏行业老生常谈的主题之一](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20230508215816.png)
+![FlowModel——游戏行业老生常谈的主题之一](https://izumi-blog.oss-cn-shanghai.aliyuncs.com/img/20230508215816.png?Expires=1732800773&OSSAccessKeyId=TMP.3Kfg8ybEsvPnsFWc5814NCXnQL18Ck24dsuNBEV6RQNWnZYe22w4aPBMwAu6LmpAZq85MQLWhJqwGA5paCSywwgz5SmSNY&Signature=S8nAeGQ1RC3rUqQrBuud9rK87CA%3D)
 
 ### 3. 结果对于机制、叙事或两者有意义
 
@@ -228,6 +228,10 @@ NpcA被眼前的景象，以及你的行为所打动，决心再试着努力地�
 
 不必多说，不论任务形式如何变化，支撑起任务的剧本和角色才是根基。只有设计出玩家喜爱的角色和故事，玩家才会愿意去与之共情。
 
+## 合适的报酬
+
+与游戏的类型相契合、与获取奖励付出的代价相契合
+
 ## 夸张的风格
 
 语言风格的夸张，美术风格的夸张，都能帮助玩家形成记忆点，带给玩家崭新的体验。
@@ -247,3 +251,17 @@ NpcA被眼前的景象，以及你的行为所打动，决心再试着努力地�
 一直吃精美的糕点总有一天会吃腻，游戏需要设计精巧的任务，但也需要一些“简单无聊”的任务作为调剂，用于穿插在各种精巧的任务之间缓和节奏。
 
 但前提是，必须要真的有“优秀的任务”存在，这样玩家才能在峰值效应的影响下依然会对游戏保有较高的评价。
+
+# 参考视频：
+
+【【夜影】连我都能理解的游戏任务设计】 https://www.bilibili.com/video/BV1HK421y7gw/?share_source=copy_web&vd_source=d4a92c80a83a4864f03c89de7889749d
+
+【巫师3任务为何让人如此沉浸?【游戏设计艺术04】】 https://www.bilibili.com/video/BV1tp4y1S7GA/?share_source=copy_web&vd_source=d4a92c80a83a4864f03c89de7889749d
+
+【游戏任务设计-1: 为什么众多MMO依赖于重复任务？[搬运/烤熟]】 https://www.bilibili.com/video/BV1ZF411W7Yz/?share_source=copy_web&vd_source=d4a92c80a83a4864f03c89de7889749d
+
+【游戏任务设计-2: 对于不同类型玩家的世界观设计】https://www.bilibili.com/opus/663627019129454596
+
+【【中英字幕】如何制作优秀的支线任务 | Design Doc 设计文档】 https://www.bilibili.com/video/BV1u3411z7g7/?share_source=copy_web&vd_source=d4a92c80a83a4864f03c89de7889749d
+
+【【中字】任务设计-好的跑腿任务 不好的跑腿任务【樱井政博】】 https://www.bilibili.com/video/BV1Zv4y1r7hb/?share_source=copy_web&vd_source=d4a92c80a83a4864f03c89de7889749d
